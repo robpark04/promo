@@ -1,0 +1,170 @@
+.content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Changa One", cursive;
+  padding-bottom: 4%;
+  .contentTop {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.8%;
+    width: 80%;
+    align-items: center;
+    .userInfo {
+      display: flex;
+      align-items: flex-start;
+      background-color: #13222a;
+      padding: 1%;
+      //   padding-inline: 0%;
+      border-radius: 8px;
+      height: 165px;
+      width: 56%;
+      img {
+        width: 18%;
+      }
+      .accountInfo {
+        margin-top: -2%;
+        margin-left: 4%;
+        .info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 140%;
+          margin-top: -3%;
+          &:nth-child(2) {
+            border-bottom: 1px solid #20313a;
+          }
+          span {
+            color: #5e7785;
+            width: 12%;
+          }
+          h5 {
+            font-family: "Helvetica Neue", sans-serif;
+            width: 50%;
+          }
+          button {
+            background-color: #20313a;
+            padding: 1.4%;
+            padding-inline: 3%;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-family: "Changa One", cursive;
+          }
+        }
+      }
+    }
+    .userGame {
+      background-color: #13222a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5%;
+      border-radius: 8px;
+      padding-inline: 7%;
+      height: 135px;
+      img {
+        margin-bottom: 22%;
+      }
+      .imgLight {
+        position: absolute;
+        margin-top: -6%;
+        background: #ffa521;
+        height: 50px;
+        width: 50px;
+        filter: blur(40px);
+      }
+      span {
+        color: #5e7785;
+        font-size: 14px;
+      }
+      h5 {
+        font-size: 22px;
+        margin-top: 2%;
+      }
+      &:nth-child(2) {
+        height: 156px;
+        padding-top: 3%;
+      }
+      &:nth-child(3) {
+        h5 {
+          font-size: 34px;
+        }
+      }
+    }
+  }
+  .userGameInfo {
+    margin-top: 2.8%;
+    width: 80%;
+    .userGameButtons {
+      button {
+        border: none;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #7b9bac;
+        background-color: #0e1d26;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        margin-right: 0.4%;
+        font-family: "Changa One", cursive;
+        font-size: 34px;
+      }
+      .active {
+        color: white;
+        background-color: #13222a;
+      }
+    }
+    .userGameInfoDiv {
+      display: flex;
+      align-items: center;
+      background-color: #13222a;
+      padding: 2%;
+      border-top-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      img {
+        width: 20%;
+        height: 20%;
+      }
+      .userGameInfoContent {
+        margin-left: 8%;
+        .rates {
+          display: flex;
+          div {
+            margin: 4%;
+            text-align: center;
+            span {
+              color: #5e7785;
+              font-size: 14px;
+            }
+            h5 {
+              font-size: 22px;
+              margin-top: 5%;
+            }
+          }
+        }
+        .buttons {
+          display: flex;
+          margin-top: 40%;
+          button {
+            background-color: #07161f;
+            font-size: 22px;
+            font-family: "Changa One", cursive;
+            padding: 6%;
+            padding-inline: 18%;
+            margin: 2%;
+            border-radius: 8px;
+            border: none;
+            color: white;
+          }
+          .active {
+            background-color: #20313a;
+          }
+        }
+      }
+    }
+  }
+}
