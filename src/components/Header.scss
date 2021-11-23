@@ -5,58 +5,131 @@
   height: 80px;
   color: white;
   padding-inline: 4%;
+  @media (max-width: 1024px) {
+    align-items: center;
+  }
   .logo {
     position: relative;
     top: 12px;
+    z-index: 9999;
+    @media (max-width: 1024px) {
+      padding-left: 30px;
+      margin: 0 auto;
+    }
   }
   .menu {
     width: 33%;
     margin-left: -20%;
+    padding-left: 4%;
     overflow: hidden;
+    justify-content: center;
     align-items: center;
-    div {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+    a {
+      text-decoration: none;
       width: auto;
       border-left: 1px solid #13222a;
       align-items: center;
-      justify-content: center;
       height: 80px;
-      margin-top: 20%;
-      padding-bottom: 20%;
+      margin-bottom: 42%;
+      padding-top: 42%;
+      margin-top: 10%;
+      padding-bottom: 6%;
       transform: rotate(15deg);
-      padding-inline: 8%;
+      padding-inline: 7.4%;
+      overflow: hidden;
+      &:hover {
+        background: linear-gradient(120deg, #240c4a 6.01%, #6331c9 94.82%);
+      }
       h4 {
         position: relative;
         font-family: "Changa One", cursive;
         color: white;
         transform: rotate(-15deg);
-        -webkit-transform-origin: 50% 125%;
+        -webkit-transform-origin: 50% 52%;
+      }
+      &:first-child {
+        margin-bottom: 46%;
+        padding-top: 46%;
       }
       &:last-child {
         border-right: 1px solid #13222a;
-        margin-bottom: 24%;
-        padding-top: 24%;
-        margin-top: 6%;
-        padding-bottom: 6%;
+        margin-bottom: 30%;
+        padding-top: 35%;
+        margin-top: 7%;
+        padding-bottom: 7%;
       }
     }
   }
   .userData {
     width: 34%;
+    @media (max-width: 1200px) {
+      width: 40%;
+    }
+    @media (max-width: 1024px) {
+      position: absolute;
+      background-color: #091b25;
+      top: 10%;
+      left: -110%;
+      width: 100%;
+      padding-left: 4%;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
+      transition: 1s;
+    }
+    @media (max-width: 420px) {
+      padding-left: 1%;
+    }
+    .adaptiveMenu {
+      display: none;
+      @media (max-width: 1024px) {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        border-top: 1px solid #20313a;
+        padding-left: 8%;
+        margin-top: 2%;
+        margin-left: -4%;
+      }
+      @media (max-width: 420px) {
+        padding-left: 8%;
+      }
+      div {
+        margin-right: 14%;
+      }
+    }
     .coinsAmount {
       background-color: #13222a;
       border-radius: 12px;
       height: 48px;
       padding-right: 5px;
+      @media (max-width: 1024px) {
+        margin-left: 4%;
+      }
       img {
         margin-left: -5px;
+        @media (max-width: 420px) {
+          width: 38%;
+        }
       }
       h4 {
         padding-right: 12px;
+        flex-shrink: 0;
+        @media (max-width: 420px) {
+          font-size: 15px;
+        }
       }
       button {
         display: flex;
         border: none;
         color: #13222a;
+        cursor: pointer;
         font-size: 35px;
         font-weight: 500;
         padding-bottom: 6px;
@@ -71,17 +144,72 @@
           #ff8500 94.82%
         );
         border-radius: 4px;
+        @media (max-width: 420px) {
+          font-size: 32px;
+          height: 24px;
+          width: 24px;
+        }
       }
     }
     .avatar {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
       img {
         padding-right: 14px;
       }
+      h3 {
+        color: white;
+        @media (max-width: 420px) {
+          font-size: 16px;
+        }
+      }
     }
+    .menu {
+      display: none;
+      @media (max-width: 1024px) {
+        display: flex;
+      }
+    }
+  }
+  .activeSubMenu {
+    left: 0;
   }
   div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .barMenu {
+    display: none;
+    height: 30px;
+    // justify-content: space-between;
+    flex-direction: column;
+    // margin-left: 50%;
+    @media (max-width: 1024px) {
+      display: flex;
+    }
+    div {
+      transition: 0.4s;
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin-top: 2px;
+    }
+  }
+  .activeMenu {
+    div {
+      opacity: 0;
+      &:first-child {
+        opacity: 1;
+        // -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-10px, 6px);
+      }
+      &:last-child {
+        opacity: 1;
+        // -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-11px, -8px);
+      }
+    }
   }
 }

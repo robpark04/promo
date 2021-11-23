@@ -1,13 +1,15 @@
 import React, {useState} from 'react'
 import './Content.scss'
+import Swap from './Swap'
 
 import Ava from '../assets/ava.png'
 import YellowSwards from '../assets/yellowSwards.png'
 import Swards from '../assets/swards.png'
 
-export default function Content(){
+export default function Content(props){
   let [num, setNum] = useState(0)
   let [timeFilter, setTimeFilter] = useState(0)
+  
   return(
     <div className="content">
       <div className="contentTop">
@@ -81,6 +83,9 @@ export default function Content(){
           </div>
         </div>
       </div>
+      {props.openSwap ? 
+        <Swap setOpenSwap={props.setOpenSwap}  openSwap={props.openSwap} />
+      : null}
     </div>
   )
 }

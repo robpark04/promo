@@ -1,0 +1,88 @@
+.swapContainer {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  .shadowBackground {
+    cursor: pointer;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .swap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #13222a;
+    border-radius: 8px;
+    padding: 0.8% 2% 1%;
+    width: 44%;
+    z-index: 90000;
+    .inputContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #20313a;
+      padding: 4% 3%;
+      border-radius: 8px;
+      width: 96%;
+      &:nth-child(4) {
+        padding: 3% 3%;
+        margin-top: 5%;
+      }
+      .chooseCurency {
+        span {
+          color: #ffce84;
+          font-size: 14px;
+        }
+        div {
+          display: flex;
+          h1 {
+            margin: 0;
+          }
+          img {
+            margin-left: 20%;
+          }
+        }
+      }
+      input {
+        background-color: #13222a;
+        border-radius: 8px;
+        height: 4vw;
+        font-size: 20px;
+        border: none;
+        font-size: 24px;
+        padding-left: 3%;
+        font-family: "Changa One", cursive;
+        color: white;
+        margin-left: 6%;
+      }
+    }
+    .convert {
+      position: absolute;
+      margin-top: -1.5%;
+      background-color: #13222a;
+      border-radius: 50%;
+      padding: 0.6%;
+      margin-right: 34%;
+    }
+    .connect {
+      background: linear-gradient(120deg, #6331c9 26.01%, #240c4a 100%);
+      border: none;
+      margin: 3%;
+      padding: 3%;
+      width: 98%;
+      font-size: 24px;
+      border-radius: 10px;
+      font-family: "Changa One", cursive;
+      color: white;
+    }
+  }
+}

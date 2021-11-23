@@ -1,0 +1,23 @@
+.addBotContainer {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  .addBot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #13222a;
+    border-radius: 8px;
+    padding: 0.8% 2% 1%;
+    width: 44%;
+    height: 70%;
+  }
+}

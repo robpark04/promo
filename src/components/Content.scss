@@ -8,41 +8,100 @@
   padding-bottom: 4%;
   .contentTop {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 2.8%;
     width: 80%;
     align-items: center;
+    @media (max-width: 1024px) {
+      justify-content: flex-start;
+    }
+    @media (max-width: 500px) {
+      margin-top: 6%;
+      width: 96%;
+    }
     .userInfo {
       display: flex;
       align-items: flex-start;
       background-color: #13222a;
       padding: 1%;
-      //   padding-inline: 0%;
       border-radius: 8px;
       height: 165px;
+      min-width: 520px;
       width: 56%;
+      @media (max-width: 1024px) {
+        min-width: 570px;
+        margin-bottom: 2%;
+      }
+      @media (max-width: 800px) {
+        min-width: 410px;
+        width: 80%;
+      }
+      @media (max-width: 500px) {
+        min-width: 320px;
+        padding: 3%;
+        height: 200px;
+      }
       img {
-        width: 18%;
+        width: 8.5vw;
+        @media (max-width: 500px) {
+          width: 15vw;
+        }
       }
       .accountInfo {
         margin-top: -2%;
         margin-left: 4%;
+        @media (max-width: 500px) {
+          margin-top: 2%;
+        }
+        h1 {
+          @media (max-width: 500px) {
+            font-size: 24px;
+          }
+        }
         .info {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          width: 140%;
-          margin-top: -3%;
+          width: 33vw;
+          margin: 3%;
+          padding-bottom: 0px;
+          min-width: 400px;
+          @media (max-width: 800px) {
+            margin-left: -10vw;
+          }
+          @media (max-width: 500px) {
+            min-width: 200px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+          }
           &:nth-child(2) {
+            padding-bottom: 10px;
             border-bottom: 1px solid #20313a;
+          }
+          &:nth-child(3) {
+            margin-top: 0%;
           }
           span {
             color: #5e7785;
             width: 12%;
+            @media (max-width: 1200px) {
+              width: 6%;
+            }
+            @media (max-width: 500px) {
+              width: 14%;
+            }
           }
           h5 {
             font-family: "Helvetica Neue", sans-serif;
             width: 50%;
+            @media (max-width: 500px) {
+              width: 30%;
+              margin-right: 20%;
+              margin-left: 10%;
+            }
+            margin: 0;
           }
           button {
             background-color: #20313a;
@@ -52,6 +111,10 @@
             border: none;
             color: white;
             font-family: "Changa One", cursive;
+            @media (max-width: 500px) {
+              margin-top: 4%;
+              width: 30%;
+            }
           }
         }
       }
@@ -64,8 +127,20 @@
       justify-content: center;
       padding-top: 5%;
       border-radius: 8px;
-      padding-inline: 7%;
-      height: 135px;
+      padding-inline: 5vw;
+      height: 140px;
+      @media (max-width: 1200px) {
+        padding-inline: 4vw;
+      }
+      @media (max-width: 1024px) {
+        min-width: 40px;
+        margin-right: 2%;
+        padding-inline: 8vw;
+      }
+      @media (max-width: 800px) {
+        padding-inline: 10vw;
+        height: 147px;
+      }
       img {
         margin-bottom: 22%;
       }
@@ -99,6 +174,9 @@
   .userGameInfo {
     margin-top: 2.8%;
     width: 80%;
+    @media (max-width: 500px) {
+      width: 96%;
+    }
     .userGameButtons {
       button {
         border: none;
@@ -111,6 +189,9 @@
         margin-right: 0.4%;
         font-family: "Changa One", cursive;
         font-size: 34px;
+        @media (max-width: 800px) {
+          font-size: 28px;
+        }
       }
       .active {
         color: white;
@@ -128,9 +209,15 @@
       img {
         width: 20%;
         height: 20%;
+        @media (max-width: 500px) {
+          display: none;
+        }
       }
       .userGameInfoContent {
         margin-left: 8%;
+        @media (max-width: 500px) {
+          margin-left: 4%;
+        }
         .rates {
           display: flex;
           div {
@@ -139,9 +226,15 @@
             span {
               color: #5e7785;
               font-size: 14px;
+              @media (max-width: 800px) {
+                font-size: 12px;
+              }
             }
             h5 {
               font-size: 22px;
+              @media (max-width: 800px) {
+                font-size: 18px;
+              }
               margin-top: 5%;
             }
           }
@@ -159,6 +252,10 @@
             border-radius: 8px;
             border: none;
             color: white;
+            @media (max-width: 800px) {
+              font-size: 18px;
+              padding-inline: 14%;
+            }
           }
           .active {
             background-color: #20313a;

@@ -1,0 +1,191 @@
+.earnings {
+  display: flex;
+  margin-top: 2%;
+  font-family: "Changa One", cursive;
+  color: white;
+  justify-content: flex-start;
+  .characterContainer {
+    width: 40%;
+    margin-left: 5%;
+    .character {
+      display: flex;
+      align-items: center;
+      background-color: #13222a;
+      padding: 1.8%;
+      border-radius: 8px;
+      .bot {
+        width: 44%;
+      }
+      .botInfo {
+        width: 80%;
+        padding-inline: 2%;
+        .botName {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          h3 {
+            margin: 0;
+          }
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 65px;
+            padding: 1.6%;
+            border-radius: 8px;
+            background-color: #07161f;
+          }
+        }
+        .num {
+          margin: 0;
+          color: #899094;
+        }
+        .coinAmount {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin-top: 5%;
+          img {
+            width: 14%;
+          }
+          h1 {
+            margin: 0;
+          }
+        }
+        .crypto {
+          display: flex;
+          justify-content: flex-end;
+          color: #ffce84;
+          margin: 0;
+        }
+        .stop {
+          display: flex;
+          justify-content: space-between;
+          background-color: #1f2d35;
+          width: 62px;
+          margin-top: 7%;
+          padding: 1.6%;
+          padding-inline: 2.4%;
+          border-radius: 8px;
+        }
+      }
+    }
+    .addCharacter {
+      background: linear-gradient(120deg, #6331c9 26.01%, #240c4a 100%);
+      border: none;
+      margin: 3% 0;
+      padding: 3%;
+      width: 100%;
+      font-size: 24px;
+      border-radius: 10px;
+      font-family: "Changa One", cursive;
+      color: white;
+    }
+  }
+  .myEarnings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #13222a;
+    padding: 1.4%;
+    border-radius: 8px;
+    margin-left: 8%;
+    h3 {
+      margin: 0;
+    }
+    .convert {
+      display: flex;
+      align-items: center;
+      margin-top: 4%;
+      span {
+        color: #ffce84;
+      }
+      img {
+        width: 7%;
+      }
+      h4 {
+        margin: 0;
+      }
+    }
+    .block {
+      margin-top: 6%;
+      border-radius: 5px;
+      float: left;
+      width: 240px;
+      overflow: hidden;
+    }
+
+    .donut-chart-block {
+      overflow: hidden;
+    }
+
+    .donut-chart {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 2rem auto;
+      border-radius: 100%;
+    }
+
+    .donut-chart .center {
+      background: #13222a;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      height: 170px;
+      width: 170px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .centerInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h5 {
+          margin: 0;
+        }
+        h1 {
+          margin: 0;
+          background: linear-gradient(180deg, white 26.01%, #7adb01 100%);
+
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        span {
+          color: #7ada00;
+          font-size: 26px;
+        }
+      }
+    }
+
+    .clip {
+      border-radius: 50%;
+      clip: rect(0px, 200px, 200px, 100px);
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+
+    .item {
+      border-radius: 50%;
+      clip: rect(0px, 100px, 200px, 0px);
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      font-family: monospace;
+      font-size: 1.5rem;
+    }
+    .withdraw {
+      background: linear-gradient(120deg, #7adb01 26.01%, #075200 100%);
+      border: none;
+      margin: 10% 0 0;
+      padding: 4% 3%;
+      width: 100%;
+      font-size: 24px;
+      border-radius: 10px;
+      font-family: "Changa One", cursive;
+      color: white;
+    }
+  }
+}
