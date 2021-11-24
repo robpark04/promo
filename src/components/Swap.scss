@@ -23,32 +23,99 @@
     background-color: #13222a;
     border-radius: 8px;
     padding: 0.8% 2% 1%;
-    width: 44%;
+    width: 40%;
+    min-width: 470px;
     z-index: 90000;
+    font-family: "Changa One", cursive;
+    color: white;
+    @media (max-width: 800px) {
+      padding: 0.8% 1% 1%;
+      min-width: 310px;
+    }
+    h1 {
+      @media (max-width: 800px) {
+        font-size: 20px;
+      }
+    }
     .inputContainer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       background-color: #20313a;
-      padding: 4% 3%;
+      padding: 2% 3%;
       border-radius: 8px;
       width: 96%;
+      @media (max-width: 800px) {
+        padding: 1% 1.6%;
+      }
+      .coin {
+        width: 70px;
+        @media (max-width: 800px) {
+          width: 40px;
+        }
+      }
+      .bnbcoin {
+        width: 60px;
+        padding: 5px;
+        @media (max-width: 800px) {
+          width: 30px;
+        }
+      }
       &:nth-child(4) {
-        padding: 3% 3%;
-        margin-top: 5%;
+        margin-top: -2%;
       }
       .chooseCurency {
         span {
           color: #ffce84;
           font-size: 14px;
+          @media (max-width: 800px) {
+            font-size: 10px;
+          }
         }
         div {
           display: flex;
+          select {
+            background: none;
+            border: none;
+            font-family: "Changa One", cursive;
+            color: white;
+            font-size: 30px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            padding-right: 38%;
+            z-index: 9999;
+            outline: none;
+            @media (max-width: 800px) {
+              font-size: 20px;
+            }
+            &::before {
+              content: "";
+              width: 0.8em;
+              margin-top: 10px;
+              height: 0.5em;
+            }
+            option {
+              margin-top: 10px;
+              font-family: "Changa One", cursive !important;
+              font-size: 20px;
+              background-color: #20313a;
+              border: none;
+              outline: none;
+            }
+          }
           h1 {
             margin: 0;
           }
           img {
-            margin-left: 20%;
+            position: absolute;
+            margin-top: 0.7%;
+            margin-left: 70px;
+            z-index: 1000;
+            @media (max-width: 800px) {
+              width: 10px;
+              margin-top: 1%;
+              margin-left: 50px;
+            }
           }
         }
       }
@@ -56,6 +123,7 @@
         background-color: #13222a;
         border-radius: 8px;
         height: 4vw;
+        width: 22vw;
         font-size: 20px;
         border: none;
         font-size: 24px;
@@ -63,15 +131,65 @@
         font-family: "Changa One", cursive;
         color: white;
         margin-left: 6%;
+        min-width: 250px;
+        @media (max-width: 800px) {
+          min-width: 171px;
+          height: 30px;
+        }
+      }
+      .balance {
+        position: absolute;
+        margin-left: 368px;
+        color: #5e7785;
+        @media (max-width: 800px) {
+          margin-left: 228px;
+          font-size: 11px;
+        }
       }
     }
     .convert {
-      position: absolute;
+      position: relative;
       margin-top: -1.5%;
       background-color: #13222a;
       border-radius: 50%;
       padding: 0.6%;
-      margin-right: 34%;
+      margin-left: -82%;
+      @media (max-width: 800px) {
+        width: 26px;
+      }
+    }
+    .swap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      span {
+        font-size: 14px;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 600;
+      }
+      h6 {
+        display: flex;
+        align-items: center;
+        align-self: flex-end;
+        margin: 0;
+        width: auto;
+        span {
+          color: #5e7785;
+          font-family: "Changa One", cursive;
+          padding-right: 12px;
+        }
+      }
+    }
+    p {
+      font-family: "Helvetica Neue", sans-serif;
+      color: #5e7785;
+      font-weight: 600;
+      font-size: 14px;
+      @media (max-width: 800px) {
+        font-size: 11px;
+      }
     }
     .connect {
       background: linear-gradient(120deg, #6331c9 26.01%, #240c4a 100%);
@@ -83,6 +201,63 @@
       border-radius: 10px;
       font-family: "Changa One", cursive;
       color: white;
+      cursor: pointer;
+      @media (max-width: 800px) {
+        font-size: 18px;
+      }
+    }
+    .convertData {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 1%;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        span {
+          display: flex;
+          align-items: center;
+          color: #5e7785;
+          font-family: "Helvetica Neue", sans-serif;
+          font-size: 13px;
+          font-weight: 600;
+          width: 200px;
+          margin-top: 2%;
+          @media (max-width: 800px) {
+            font-size: 11px;
+            width: 152px;
+          }
+          img {
+            margin-left: 3%;
+            @media (max-width: 800px) {
+              width: 10px;
+            }
+          }
+        }
+        h4 {
+          display: flex;
+          align-items: center;
+          margin: 2% 0 0;
+          @media (max-width: 800px) {
+            font-size: 12px;
+          }
+          &:nth-child(2) {
+            color: #ffce84;
+          }
+        }
+        .h4WithIcon {
+          width: auto;
+          margin: 0% 0 -2%;
+          img {
+            margin-left: 10px;
+            @media (max-width: 800px) {
+              width: 20px;
+            }
+          }
+        }
+      }
     }
   }
 }

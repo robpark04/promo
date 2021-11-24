@@ -17,8 +17,9 @@
       justify-content: flex-start;
     }
     @media (max-width: 500px) {
+      justify-content: center;
       margin-top: 6%;
-      width: 96%;
+      width: 100%;
     }
     .userInfo {
       display: flex;
@@ -38,7 +39,7 @@
         width: 80%;
       }
       @media (max-width: 500px) {
-        min-width: 320px;
+        min-width: 90%;
         padding: 3%;
         height: 200px;
       }
@@ -141,11 +142,23 @@
         padding-inline: 10vw;
         height: 147px;
       }
+      @media (max-width: 500px) {
+        padding-inline: 17.8vw;
+      }
+      @media (max-width: 400px) {
+        padding-inline: 16.5vw;
+      }
+      &:nth-child(3) {
+        @media (max-width: 500px) {
+          margin-right: 0vw;
+        }
+      }
       img {
         margin-bottom: 22%;
       }
       .imgLight {
         position: absolute;
+        z-index: 0;
         margin-top: -6%;
         background: #ffa521;
         height: 50px;
@@ -163,6 +176,13 @@
       &:nth-child(2) {
         height: 156px;
         padding-top: 3%;
+        @media (max-width: 500px) {
+          padding-top: 5%;
+          height: 148px;
+        }
+        @media (max-width: 400px) {
+          height: 146px;
+        }
       }
       &:nth-child(3) {
         h5 {
@@ -175,6 +195,7 @@
     margin-top: 2.8%;
     width: 80%;
     @media (max-width: 500px) {
+      margin-top: 4%;
       width: 96%;
     }
     .userGameButtons {
@@ -229,11 +250,17 @@
               @media (max-width: 800px) {
                 font-size: 12px;
               }
+              @media (max-width: 500px) {
+                font-size: 14px;
+              }
             }
             h5 {
               font-size: 22px;
               @media (max-width: 800px) {
                 font-size: 18px;
+              }
+              @media (max-width: 500px) {
+                font-size: 22px;
               }
               margin-top: 5%;
             }
@@ -242,6 +269,9 @@
         .buttons {
           display: flex;
           margin-top: 40%;
+          @media (max-width: 500px) {
+            margin-top: 10%;
+          }
           button {
             background-color: #07161f;
             font-size: 22px;

@@ -71,15 +71,14 @@
     @media (max-width: 1024px) {
       position: absolute;
       background-color: #091b25;
-      top: 10%;
+      top: 85px;
       left: -110%;
       width: 100%;
-      padding-left: 4%;
       flex-wrap: wrap;
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-      align-items: center;
+      flex-direction: column-reverse;
+      align-items: flex-start;
       transition: 1s;
+      z-index: 1000;
     }
     @media (max-width: 420px) {
       padding-left: 1%;
@@ -91,19 +90,21 @@
         width: 100%;
         justify-content: flex-start;
         align-items: flex-start;
-        flex-direction: row;
-        border-top: 1px solid #20313a;
-        padding-left: 8%;
+        flex-direction: column;
         margin-top: 2%;
-        margin-left: -4%;
-      }
-      @media (max-width: 420px) {
-        padding-left: 8%;
       }
       a {
         text-decoration: none;
         color: white;
         margin-right: 14%;
+        &:hover {
+          background: linear-gradient(120deg, #240c4a 6.01%, #6331c9 94.82%);
+        }
+        @media (max-width: 1024px) {
+          width: 88%;
+          border-top: 1px solid #20313a;
+          padding-left: 12%;
+        }
       }
     }
     .coinsAmount {
@@ -112,7 +113,7 @@
       height: 48px;
       padding-right: 5px;
       @media (max-width: 1024px) {
-        margin-left: 4%;
+        margin: 6% 0 4% 12%;
       }
       img {
         margin-left: -5px;
@@ -130,15 +131,12 @@
       button {
         display: flex;
         border: none;
-        color: #13222a;
-        cursor: pointer;
-        font-size: 35px;
-        font-weight: 500;
-        padding-bottom: 6px;
-        height: 28px;
-        width: 28px;
         align-items: center;
         justify-content: center;
+        color: #13222a;
+        cursor: pointer;
+        height: 28px;
+        width: 28px;
         background: linear-gradient(
           196.65deg,
           #fff48c 6.01%,
@@ -146,10 +144,11 @@
           #ff8500 94.82%
         );
         border-radius: 4px;
+        img {
+          width: 20px;
+          margin: 0 auto;
+        }
         @media (max-width: 420px) {
-          font-size: 32px;
-          height: 24px;
-          width: 24px;
         }
       }
     }
@@ -157,6 +156,9 @@
       display: flex;
       align-items: center;
       text-decoration: none;
+      @media (max-width: 1024px) {
+        margin: 2% 0 0 12%;
+      }
       img {
         padding-right: 14px;
       }
@@ -185,9 +187,7 @@
   .barMenu {
     display: none;
     height: 30px;
-    // justify-content: space-between;
     flex-direction: column;
-    // margin-left: 50%;
     @media (max-width: 1024px) {
       display: flex;
     }
@@ -204,12 +204,12 @@
       opacity: 0;
       &:first-child {
         opacity: 1;
-        // -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        -webkit-transform: rotate(-45deg) translate(-10px, 6px);
         transform: rotate(-45deg) translate(-10px, 6px);
       }
       &:last-child {
         opacity: 1;
-        // -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        -webkit-transform: rotate(45deg) translate(-11px, -8px);
         transform: rotate(45deg) translate(-11px, -8px);
       }
     }

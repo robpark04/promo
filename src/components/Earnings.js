@@ -1,4 +1,4 @@
-import React from 'react' 
+import React, {useState} from 'react' 
 import './Earnings.scss'
 import AddBot from './AddBot'
 
@@ -10,6 +10,9 @@ import Coin from '../assets/qzq_coin.png'
 import Stop from '../assets/stop.svg'
 
 export default function Earnings(props){
+
+  let [addBot, setAddBot] = useState(false)
+
   return(
     <div className="earnings">
       <div className="characterContainer">
@@ -35,7 +38,7 @@ export default function Earnings(props){
             </div>
           </div>
         </div>
-        <button className="addCharacter">+ ADD NFT CHARACTER</button>
+        <button className="addCharacter" onClick={() => setAddBot(!addBot)}>+ ADD NFT CHARACTER</button>
       </div>        
       <div className="myEarnings">
         <h3>MY EARNINGS</h3>
@@ -51,7 +54,7 @@ export default function Earnings(props){
               <div style={{ background: 'red', transform: 'rotate(' + String(3.6*50) + 'deg)' }} className="item" data-rel="21"></div>
             </div>
             <div style={{ transform: 'rotate(' + String(3.6*50) + 'deg)' }} className="clip">
-              <div style={{ background: 'green', transform: 'rotate(' + String(3.6*50) + 'deg)' }} className="item" data-rel="21"></div>
+              <div style={{ background: 'linear-gradient(120deg, #7adb01 0.01%, #075200 100%)', transform: 'rotate(' + String(3.6*50) + 'deg)' }} className="item" data-rel="21"></div>
             </div>
             <div className="center">
               <div className="centerInfo">
@@ -64,7 +67,9 @@ export default function Earnings(props){
         </div>
         <button className="withdraw">WITHDRAW</button>
       </div>        
-      {/* <AddBot /> */}
+      {addBot ?
+        <AddBot addBot={addBot} setAddBot={setAddBot} />
+      : null}
       {props.openSwap ? 
         <Swap setOpenSwap={props.setOpenSwap}  openSwap={props.openSwap} />
       : null}
