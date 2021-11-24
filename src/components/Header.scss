@@ -48,7 +48,7 @@
         font-family: "Changa One", cursive;
         color: white;
         transform: rotate(-15deg);
-        -webkit-transform-origin: 50% 52%;
+        -webkit-transform-origin: 50% 76%;
       }
       &:first-child {
         margin-bottom: 46%;
@@ -57,8 +57,9 @@
       &:last-child {
         border-right: 1px solid #13222a;
         margin-bottom: 30%;
-        padding-top: 35%;
+        padding-top: 33.5%;
         margin-top: 7%;
+        -webkit-transform-origin: 50% 57%;
         padding-bottom: 7%;
       }
     }
