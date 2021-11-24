@@ -45,7 +45,7 @@ export default function Swap(props){
       <div className="shadowBackground" onClick={() => props.setOpenSwap(!props.openSwap)} />
       <div className="swap" style={showSwapConfirm? { width: '38%'} : null}>
         <h1>SWAP</h1>
-        <div className="inputContainer" style={showSwapConfirm? {padding: '0% 3%'} : null}>
+        <div className="inputContainer" style={showSwapConfirm? {padding: '0% 3% 1%', borderBottomLeftRadius: '0px', borderBottomRightRadius: '0px'} : null}>
         {option === 'BNB'?
           <img className="bnbcoin" src={Icon_bnb} alt="coin" />
           : option === 'QZQ' ? <img className="coin" src={Coin} alt="coin" />
@@ -74,9 +74,9 @@ export default function Swap(props){
         </div>
         {!showSwapConfirm ?
         <img className="convert" src={Convert} alt="convert" />
-        : <img className="convert" style={{background: '#20313a', width: '17px'}} src={ArrowDown} alt="convert" />}
+        : <img className="convert arrow" style={{background: '#20313a'}} src={ArrowDown} alt="convert" />}
 
-        <div className="inputContainer" style={showSwapConfirm? {padding: '0% 3%'} : null}>
+        <div className="inputContainer" style={showSwapConfirm? {padding: '1% 3%', borderTopLeftRadius: '0px', borderTopRightRadius: '0px'} : null}>
           {secondOption === 'QZQ'?
             <img className="coin" src={Coin} alt="coin" />
           : secondOption === 'BNB' ? <img className="bnbcoin" src={Icon_bnb} alt="coin" />
