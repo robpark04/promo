@@ -3,6 +3,7 @@ import './Header.scss'
 
 import Logo from '../assets/header/logo.png'
 import Coin from '../assets/header/coin.png'
+import Energy from '../assets/header/icon_energy.svg'
 import Ava from '../assets/header/ava.png'
 import Plus from '../assets/header/plus.svg'
 import { Link } from 'react-router-dom';
@@ -32,6 +33,13 @@ export default function Header(props){
                      </Link>
                   )
                })}
+            </div>
+            <div className="energyAmount">
+               <img src={Energy} className="coin" alt="coin"/>
+               <h4>15 500</h4>
+               <button onClick={() => props.setOpenSwap(!props.openSwap)}>
+                  <img src={Plus} alt="plus"/>
+               </button>
             </div>
             <div className="coinsAmount">
                <img src={Coin} className="coin" alt="coin"/>

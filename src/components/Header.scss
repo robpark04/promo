@@ -19,7 +19,7 @@
   }
   .menu {
     width: 33%;
-    margin-left: -20%;
+    margin-left: -9%;
     padding-left: 4%;
     overflow: hidden;
     justify-content: center;
@@ -65,7 +65,7 @@
     }
   }
   .userData {
-    width: 34%;
+    width: 48%;
     @media (max-width: 1200px) {
       width: 40%;
     }
@@ -108,6 +108,10 @@
         }
       }
     }
+    // .energyAmount {
+    //   width: 30%;
+    // }
+    .energyAmount,
     .coinsAmount {
       background-color: #13222a;
       border-radius: 12px;
