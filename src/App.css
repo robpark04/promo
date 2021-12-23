@@ -1,6 +1,7 @@
-.App {
+body {
   background-color: #07161f;
   min-height: 100vh;
+  color: white;
 }
 
 /* .App-logo {
