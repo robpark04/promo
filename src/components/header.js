@@ -42,23 +42,35 @@ export default function Header() {
     }
   }, [openMenu])
 
+  const anchors = [
+    {title: 'Roadmap', link: '#Roadmap'}, 
+    {title: 'Team', link: '#Team'}, 
+    {title: 'Backers', link: '#Backers'}
+  ]
+  const footer = [
+    {icon: Discord, link: 'https://discord.com/invite/HFVAnBS9qA'},
+    {icon: In, link: 'https://ru.linkedin.com/company/battleverse-io?trk=ppro_cprof'},
+    {icon: Telegram, link: 'https://t.me/battleverse_news'},
+    {icon: Twitter, link: 'https://twitter.com/BattleVerse_io'},
+    {icon: Medium, link: 'https://battleverse.medium.com/'}
+  ]
   return (
     <header>
       <div className='topBarContainer'>
         <div className='topBar'>
-          <Link to='battleVersePromo'>
+          <Link to='/' className='logo'>
             <img src={Logo} alt="logo" />
           </Link>
           <div className='barCenter'>
-            {['Roadmap', 'Team', 'Backers'].map((item, index) => (
+            {anchors.map((item, index) => (
               <div key={index}>
-                <span>{item}</span>
+                <a href={item.link}>{item.title}</a>
               </div>
             ))}
           </div>
           <div className='additionalMenu'>
-            <span>Docs</span>
-            <span>Marketplace</span>
+            <a href="https://docs.battleverse.io">Docs</a>
+            <a href="https://battleverse.picipo.io">Marketplace</a>
           </div>
           <div className={openMenu ? 'openMenu active' : 'openMenu'}  onClick={() => setOpenMenu(!openMenu)}>
               <div />
@@ -80,28 +92,28 @@ export default function Header() {
             <div className='lightRight'/>
             <img src={Persons} alt="persons" />
             <div className='links'>
-              <Link to='#'>
+              <a href='https://opensea.io/collection/baby-combat-bots-g1'>
                 MINT
-              </Link>
-              <Link to='#'>
+              </a>
+              <a href='http://shrooms.battleverse.io'>
                 BUY
-              </Link>
+              </a>
             </div>
           </div>
         </div>
         <footer>
-          {[Discord, In, Telegram, Twitter, Medium].map((item, index) => (
-            <div key={index}>
-              <img src={item} alt="icon" />
-            </div>
+          {footer.map((item, index) => (
+            <a href={item.link} key={index}>
+              <img src={item.icon} alt="icon" />
+            </a>
           ))}
         </footer>
       </div>
       <div className='adaptiveMenuShadow' style={{ zIndex: openMenu ? '99999' : '-1000000', backgroundColor: openMenu ? 'rgba(0, 0, 0, 0.6)' : 'rgba(0, 0, 0, 0)'}} />
       <div className='adaptiveMenu' style={{ left: openMenu ? '0%' : '-100%'}}>
-        {['Roadmap', 'Team', 'Backers'].map((item, index) => (
+        {anchors.map((item, index) => (
           <div key={index}>
-            <span>{item}</span>
+            <a onClick={() => setOpenMenu(!openMenu)} href={item.link}>{item.title}</a>
           </div>
         ))}
       </div>

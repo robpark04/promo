@@ -12,11 +12,11 @@ import Medium from '../assets/footer/medium.svg'
 export default function Footer(){
 
   const footer = [
-    {icon: Discord, link: ''},
-    {icon: In, link: ''},
+    {icon: Discord, link: 'https://discord.com/invite/HFVAnBS9qA'},
+    {icon: In, link: 'https://ru.linkedin.com/company/battleverse-io?trk=ppro_cprof'},
     {icon: Telegram, link: 'https://t.me/battleverse_news'},
     {icon: Twitter, link: 'https://twitter.com/BattleVerse_io'},
-    {icon: Medium, link: ''}
+    {icon: Medium, link: 'https://battleverse.medium.com/'}
   ]
 
   return(
