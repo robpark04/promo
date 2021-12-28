@@ -92,12 +92,12 @@ export default function Header() {
             <div className='lightRight'/>
             <img src={Persons} alt="persons" />
             <div className='links'>
-              <Link to='#'>
+              <a href='https://opensea.io/collection/baby-combat-bots-g1'>
                 MINT
-              </Link>
-              <Link to='#'>
+              </a>
+              <a href='http://shrooms.battleverse.io'>
                 BUY
-              </Link>
+              </a>
             </div>
           </div>
         </div>
