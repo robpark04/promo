@@ -69,7 +69,7 @@ export default function Header() {
             ))}
           </div>
           <div className='additionalMenu'>
-            <span>Docs</span>
+            <a href="https://docs.battleverse.io">Docs</a>
             <a href="https://battleverse.picipo.io">Marketplace</a>
           </div>
           <div className={openMenu ? 'openMenu active' : 'openMenu'}  onClick={() => setOpenMenu(!openMenu)}>
