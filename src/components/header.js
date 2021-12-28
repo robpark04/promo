@@ -47,12 +47,18 @@ export default function Header() {
     {title: 'Team', link: '#Team'}, 
     {title: 'Backers', link: '#Backers'}
   ]
-
+  const footer = [
+    {icon: Discord, link: 'https://discord.com/invite/HFVAnBS9qA'},
+    {icon: In, link: 'https://ru.linkedin.com/company/battleverse-io?trk=ppro_cprof'},
+    {icon: Telegram, link: 'https://t.me/battleverse_news'},
+    {icon: Twitter, link: 'https://twitter.com/BattleVerse_io'},
+    {icon: Medium, link: 'https://battleverse.medium.com/'}
+  ]
   return (
     <header>
       <div className='topBarContainer'>
         <div className='topBar'>
-          <Link to='battleVersePromo' className='logo'>
+          <Link to='/' className='logo'>
             <img src={Logo} alt="logo" />
           </Link>
           <div className='barCenter'>
@@ -96,10 +102,10 @@ export default function Header() {
           </div>
         </div>
         <footer>
-          {[Discord, In, Telegram, Twitter, Medium].map((item, index) => (
-            <div key={index}>
-              <img src={item} alt="icon" />
-            </div>
+          {footer.map((item, index) => (
+            <a href={item.link} key={index}>
+              <img src={item.icon} alt="icon" />
+            </a>
           ))}
         </footer>
       </div>
