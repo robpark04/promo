@@ -24,7 +24,7 @@ export default function Footer(){
       <div className='footerContent'>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '1%', paddingBottom: '1%'}}>
           {footer.map((item, index) => (
-            <a key={index} href={item.link}>
+            <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
               <img src={item.icon} alt="icon" />
             </a>
           ))}

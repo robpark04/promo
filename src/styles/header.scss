@@ -258,12 +258,17 @@ header {
         }
         .lightLeft {
           position: absolute;
-          margin-top: 8%;
+          margin-top: 6.4em;
+          margin-left: 3em;
           width: 346px;
           height: 222px;
           background: #23da98;
           filter: blur(200px);
           z-index: -99999999;
+          @media (max-width: 1440px) {
+            margin-top: 8%;
+            margin-left: 0%;
+          }
           @media (max-width: 800px) {
             width: 188px;
             height: 162px;
@@ -271,13 +276,16 @@ header {
         }
         .lightRight {
           position: absolute;
-          margin-top: 8%;
-          margin-left: 22%;
+          margin-top: 6em;
+          margin-left: 20em;
           width: 228px;
           height: 222px;
           background: #5924af;
           filter: blur(200px);
           z-index: -99999999;
+          @media (max-width: 1440px) {
+            margin-left: 22%;
+          }
           @media (max-width: 800px) {
             margin-left: 42%;
             width: 188px;

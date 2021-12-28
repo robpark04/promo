@@ -69,8 +69,8 @@ export default function Header() {
             ))}
           </div>
           <div className='additionalMenu'>
-            <a href="https://docs.battleverse.io">Docs</a>
-            <a href="https://battleverse.picipo.io">Marketplace</a>
+            <a href="https://docs.battleverse.io" target="_blank" rel="noopener noreferrer">Docs</a>
+            <a href="https://battleverse.picipo.io" target="_blank" rel="noopener noreferrer">Marketplace</a>
           </div>
           <div className={openMenu ? 'openMenu active' : 'openMenu'}  onClick={() => setOpenMenu(!openMenu)}>
               <div />
@@ -92,10 +92,10 @@ export default function Header() {
             <div className='lightRight'/>
             <img src={Persons} alt="persons" />
             <div className='links'>
-              <a href='https://opensea.io/collection/baby-combat-bots-g1'>
+              <a href='https://opensea.io/collection/baby-combat-bots-g1' target="_blank" rel="noopener noreferrer">
                 BUY
               </a>
-              <a href='http://shrooms.battleverse.io'>
+              <a href='http://shrooms.battleverse.io' target="_blank" rel="noopener noreferrer">
                 MINT
               </a>
             </div>
@@ -103,7 +103,7 @@ export default function Header() {
         </div>
         <footer>
           {footer.map((item, index) => (
-            <a href={item.link} key={index}>
+            <a href={item.link} key={index} target="_blank" rel="noopener noreferrer">
               <img src={item.icon} alt="icon" />
             </a>
           ))}

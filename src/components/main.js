@@ -547,7 +547,7 @@ export default function Main() {
               <div className='memberText'>
                 <h4>{item.name}</h4>
                 <span>{item.position}</span>
-                <a href={item.link}>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
                   <img src={item.icon} alt={item.link} />
                 </a>
               </div>
