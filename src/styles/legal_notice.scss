@@ -1,6 +1,8 @@
 .legal_notice {
   margin: 4%;
   width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
   @media (max-width: 800px) {
     margin-top: 12%;
   }
