@@ -45,7 +45,7 @@ export default function Header() {
   const anchors = [
     {title: 'Roadmap', link: '#Roadmap'}, 
     {title: 'Team', link: '#Team'}, 
-    {title: 'Backers', link: '#Backers'}
+    {title: 'Tokenomics', link: '#Tokenomics'}
   ]
   const footer = [
     {icon: Discord, link: 'https://discord.com/invite/HFVAnBS9qA'},
@@ -92,12 +92,12 @@ export default function Header() {
             <div className='lightRight'/>
             <img src={Persons} alt="persons" />
             <div className='links'>
-              <Link to='#'>
+              <a href='http://shrooms.battleverse.io'>
                 MINT
-              </Link>
-              <Link to='#'>
+              </a>
+              <a href='https://opensea.io/collection/baby-combat-bots-g1'>
                 BUY
-              </Link>
+              </a>
             </div>
           </div>
         </div>

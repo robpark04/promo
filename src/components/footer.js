@@ -29,7 +29,7 @@ export default function Footer(){
             </a>
           ))}
         </div>
-        <p style={{marginTop: '1%'}}>Copyright © 2021. All Rights Reserved by BattleVerse</p>
+        <p style={{marginTop: '1%'}}>Copyright © 2021. All Rights Reserved by BVGAME Limited</p>
         <p style={{paddingBottom: '1%'}} >New Horizon Building, Ground Floor, 3.5 Miles Philip S.W. Goldson Highway, Belize City, Belize</p>
         <Link style={{paddingBottom: '1%'}} to='legal_notice'>
           Legal Notice & Disclaimers

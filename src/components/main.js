@@ -485,7 +485,7 @@ export default function Main() {
           ))}
         </div>
       </div>
-      <div className='distribution'>
+      <div className='distribution' id="Tokenomics">
         <h1>TOKEN DISTRIBUTION</h1>
         <div className='canvas'>
           {width > 600 ? distribution.map((item, index) => (
