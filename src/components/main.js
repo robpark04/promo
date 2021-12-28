@@ -292,7 +292,7 @@ export default function Main() {
         {
           info: ['Team building', 'Landing page and concepts',
             '8k Discord community',
-            'Baby Combar Bots G1 solt out in 5 min',
+            'Baby Combar Bots G1 sold out in 5 min',
             'Team expansion',
             'BattleVerse concept development',
             'Detailed gameplay explainer video',
@@ -364,7 +364,7 @@ export default function Main() {
         },
         {
           info: ['Generation of special NPCs (PVE)', 'Introduction of bases with a bar',
-            'In-dAppa functionality',
+            'In-dApps functionality',
             'Creation of clans, guilds, organizations, cooperatives, and corporations',
             'Direct exchange of resources within clans']
         },
