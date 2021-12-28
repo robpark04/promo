@@ -242,9 +242,12 @@
           padding-inline: 18px;
         }
         @media (max-width: 600px) {
-          width: 9%;
-          padding-inline: 10px;
+          width: 30px;
+          padding: 0 6px 0 14px;
           border-radius: 20px !important;
+          &:last-child {
+            padding: 0 14px 0 6px;
+          }
         }
       }
       .botsFrame {
@@ -1038,13 +1041,13 @@
   .team {
     display: flex;
     margin-left: 4%;
-    margin-top: -4%;
+    margin-top: 2%;
     margin-bottom: -10%;
     overflow: hidden;
     @media (max-width: 1024px) {
     }
     @media (max-width: 800px) {
-      margin-top: 6%;
+      margin-top: 8%;
       margin-bottom: -28%;
     }
     @media (max-width: 800px) {

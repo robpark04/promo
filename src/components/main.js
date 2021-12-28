@@ -269,6 +269,7 @@ export default function Main() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 500,
