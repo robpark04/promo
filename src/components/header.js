@@ -45,7 +45,7 @@ export default function Header() {
   const anchors = [
     {title: 'Roadmap', link: '#Roadmap'}, 
     {title: 'Team', link: '#Team'}, 
-    //{title: 'Backers', link: '#Backers'}
+    {title: 'Tokenomics', link: '#Tokenomics'}
   ]
   const footer = [
     {icon: Discord, link: 'https://discord.com/invite/HFVAnBS9qA'},
