@@ -1,0 +1,84 @@
+.legal_notice {
+  margin: 4%;
+  width: 90%;
+  h1 {
+    position: relative;
+    font-size: 50px;
+    line-height: 58px;
+    font-family: "Dela Gothic One", cursive;
+    background: -webkit-linear-gradient(
+      45deg,
+      #ffffff 0%,
+      #ffcd95 40%,
+      #764204 100%
+    );
+    background: -moz-linear-gradient(
+      45deg,
+      #ffffff 0%,
+      #ffcd95 40%,
+      #764204 100%
+    );
+    background: linear-gradient(45deg, #ffffff 0%, #ffcd95 40%, #764204 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 9999;
+    @media (max-width: 1200px) {
+      margin-top: 4%;
+      font-size: 40px;
+      line-height: 48px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 30px;
+      line-height: 38px;
+    }
+    @media (max-width: 600px) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+  h2 {
+    padding-inline: 2%;
+    position: relative;
+    z-index: 9999;
+    @media (max-width: 1200px) {
+      margin-top: 4%;
+      font-size: 36px;
+      line-height: 44px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+    @media (max-width: 600px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  h3 {
+    padding-inline: 3%;
+    position: relative;
+    z-index: 9999;
+    @media (max-width: 1200px) {
+      margin-top: 4%;
+      font-size: 34px;
+      line-height: 40px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    @media (max-width: 600px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  p {
+    padding-inline: 4%;
+    position: relative;
+    z-index: 9999;
+    @media (max-width: 600px) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
