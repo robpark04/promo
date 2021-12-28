@@ -413,8 +413,6 @@ export default function Main() {
             ))}
           </div>
         </div>
-
-
         <div className='slider'>
           <Slider {...settings} className="slider">
             {slides.map((item, index) => (
@@ -502,7 +500,7 @@ export default function Main() {
         ))}
         </div>
       </div>
-      <div className='roadmap'>
+      <div className='roadmap' id="Roadmap">
         <h1 className='roadTitle'>ROADMAP</h1>
         <div className='back'>
           <div className='left' style={{ backgroundImage: `url(${Left})` }} />
@@ -536,7 +534,7 @@ export default function Main() {
           ))}
         </Slider>
       </div>
-      <div className='team'>
+      <div className='team' id="Team">
         <div className='blockInfo'>
           <h1>TEAM</h1>
           <p>Highly qualified, expertized and energetic professionals

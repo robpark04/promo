@@ -19,7 +19,7 @@ header {
       @media (max-width: 600px) {
         padding-inline: 4%;
       }
-      a {
+      .logo {
         padding-top: 1.5%;
         width: 10%;
         min-width: 85px;
@@ -55,6 +55,10 @@ header {
         @media (max-width: 600px) {
           display: none;
         }
+        a {
+          text-decoration: none;
+          color: white;
+        }
       }
       .additionalMenu {
         display: flex;
@@ -88,9 +92,12 @@ header {
         @media (max-width: 380px) {
           width: 50vw;
         }
-        span {
+        span,
+        a {
           padding: 2% 10%;
           border-radius: 11px;
+          text-decoration: none;
+          color: white;
           @media (max-width: 1024px) {
             padding: 2% 8%;
           }
@@ -364,11 +371,13 @@ header {
       &:last-child {
         border-bottom-right-radius: 22px;
         border-bottom-left-radius: 22px;
-        span {
+        a {
           border-color: #0b1e29;
         }
       }
-      span {
+      a {
+        text-decoration: none;
+        color: white;
         display: block;
         border-bottom: 1px solid #112d3d;
         width: 100%;

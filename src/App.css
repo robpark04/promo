@@ -2,9 +2,11 @@ body {
   background-color: #07161f;
   min-height: 100vh;
   color: white;
-  overflow-x: hidden;
 }
 
+.App {
+  overflow-x: hidden !important;
+}
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;

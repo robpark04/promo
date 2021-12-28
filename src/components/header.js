@@ -42,23 +42,29 @@ export default function Header() {
     }
   }, [openMenu])
 
+  const anchors = [
+    {title: 'Roadmap', link: '#Roadmap'}, 
+    {title: 'Team', link: '#Team'}, 
+    {title: 'Backers', link: '#Backers'}
+  ]
+
   return (
     <header>
       <div className='topBarContainer'>
         <div className='topBar'>
-          <Link to='battleVersePromo'>
+          <Link to='battleVersePromo' className='logo'>
             <img src={Logo} alt="logo" />
           </Link>
           <div className='barCenter'>
-            {['Roadmap', 'Team', 'Backers'].map((item, index) => (
+            {anchors.map((item, index) => (
               <div key={index}>
-                <span>{item}</span>
+                <a href={item.link}>{item.title}</a>
               </div>
             ))}
           </div>
           <div className='additionalMenu'>
             <span>Docs</span>
-            <span>Marketplace</span>
+            <a href="https://battleverse.picipo.io">Marketplace</a>
           </div>
           <div className={openMenu ? 'openMenu active' : 'openMenu'}  onClick={() => setOpenMenu(!openMenu)}>
               <div />
@@ -99,9 +105,9 @@ export default function Header() {
       </div>
       <div className='adaptiveMenuShadow' style={{ zIndex: openMenu ? '99999' : '-1000000', backgroundColor: openMenu ? 'rgba(0, 0, 0, 0.6)' : 'rgba(0, 0, 0, 0)'}} />
       <div className='adaptiveMenu' style={{ left: openMenu ? '0%' : '-100%'}}>
-        {['Roadmap', 'Team', 'Backers'].map((item, index) => (
+        {anchors.map((item, index) => (
           <div key={index}>
-            <span>{item}</span>
+            <a onClick={() => setOpenMenu(!openMenu)} href={item.link}>{item.title}</a>
           </div>
         ))}
       </div>

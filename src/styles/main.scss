@@ -1,11 +1,8 @@
 .mainPage {
   max-width: 1440px;
   margin: 0 auto;
-  overflow: hidden;
-
   .mission {
     width: 100%;
-    background-repeat: no-repeat;
     padding: 2% 0 14%;
     background: #041016;
     border-top-left-radius: 52px;
@@ -247,6 +244,7 @@
         @media (max-width: 600px) {
           width: 9%;
           padding-inline: 10px;
+          border-radius: 20px !important;
         }
       }
       .botsFrame {

@@ -15,7 +15,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/battleVersePromo" element={<Main />} />
+          <Route path="/" element={<Main />} />
           <Route path="/privacy_policy" element={<PrivacyPolicy />} />
           <Route path="/legal_notice" element={<LegalNotice />} />
         </Routes>

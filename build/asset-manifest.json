@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/battleVersePromo/static/css/main.0bd98d7e.chunk.css",
-    "main.js": "/battleVersePromo/static/js/main.612ae029.chunk.js",
-    "main.js.map": "/battleVersePromo/static/js/main.612ae029.chunk.js.map",
+    "main.css": "/battleVersePromo/static/css/main.94a68808.chunk.css",
+    "main.js": "/battleVersePromo/static/js/main.68313bda.chunk.js",
+    "main.js.map": "/battleVersePromo/static/js/main.68313bda.chunk.js.map",
     "runtime-main.js": "/battleVersePromo/static/js/runtime-main.dfe5b34b.js",
     "runtime-main.js.map": "/battleVersePromo/static/js/runtime-main.dfe5b34b.js.map",
     "static/js/2.dd338c1f.chunk.js": "/battleVersePromo/static/js/2.dd338c1f.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ac025e72.chunk.js": "/battleVersePromo/static/js/3.ac025e72.chunk.js",
     "static/js/3.ac025e72.chunk.js.map": "/battleVersePromo/static/js/3.ac025e72.chunk.js.map",
     "index.html": "/battleVersePromo/index.html",
-    "static/css/main.0bd98d7e.chunk.css.map": "/battleVersePromo/static/css/main.0bd98d7e.chunk.css.map",
+    "static/css/main.94a68808.chunk.css.map": "/battleVersePromo/static/css/main.94a68808.chunk.css.map",
     "static/js/2.dd338c1f.chunk.js.LICENSE.txt": "/battleVersePromo/static/js/2.dd338c1f.chunk.js.LICENSE.txt",
     "static/media/1f.7b66a88b.svg": "/battleVersePromo/static/media/1f.7b66a88b.svg",
     "static/media/1fa.f342dec7.svg": "/battleVersePromo/static/media/1fa.f342dec7.svg",
@@ -101,7 +101,7 @@
   "entrypoints": [
     "static/js/runtime-main.dfe5b34b.js",
     "static/js/2.dd338c1f.chunk.js",
-    "static/css/main.0bd98d7e.chunk.css",
-    "static/js/main.612ae029.chunk.js"
+    "static/css/main.94a68808.chunk.css",
+    "static/js/main.68313bda.chunk.js"
   ]
 }
