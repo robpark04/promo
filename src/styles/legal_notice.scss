@@ -1,10 +1,12 @@
 .legal_notice {
   margin: 4%;
   width: 90%;
+  @media (max-width: 800px) {
+    margin-top: 12%;
+  }
   h1 {
     position: relative;
     font-size: 50px;
-    line-height: 58px;
     font-family: "Dela Gothic One", cursive;
     background: -webkit-linear-gradient(
       45deg,
@@ -55,7 +57,7 @@
     }
   }
   h3 {
-    padding-inline: 3%;
+    padding-inline: 2%;
     position: relative;
     z-index: 9999;
     @media (max-width: 1200px) {
@@ -72,8 +74,11 @@
       line-height: 20px;
     }
   }
+  h4 {
+    padding-inline: 2%;
+  }
   p {
-    padding-inline: 4%;
+    padding-inline: 2%;
     position: relative;
     z-index: 9999;
     @media (max-width: 600px) {

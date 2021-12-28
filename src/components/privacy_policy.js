@@ -109,11 +109,15 @@ export default function PrivacyPolicy(){
       <h2>
         5. Your rights as a data subject (GDPR)
       </h2>
+      <p>
       You have certain rights under applicable legislation, and in particular under Regulation EU 2016/679 (General Data Protection Regulation or ‘GDPR’). You can find out more about the GDPR and your rights by accessing the European Commission’s website.
+      </p>
       <h3>
         Right Information and access
       </h3>
+      <p>
       You have a right to be informed about the processing of your personal data (and if you did not give it to us, information as to the source) and this Privacy Policy intends to provide the information. Of course, if you have any further questions you can contact us on the above details.
+      </p>
       <h3>
         Right to rectification
       </h3>

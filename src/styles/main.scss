@@ -385,7 +385,9 @@
             width: 28%;
             @media (max-width: 800px) {
             }
-            span {
+            span,
+            a {
+              text-decoration: none;
               display: flex;
               flex-direction: column;
               justify-content: center;
@@ -609,6 +611,7 @@
         &:nth-child(3) {
           .border {
             height: 27.4em;
+            padding-left: 2.4%;
           }
           main {
             margin-top: 0em;
@@ -641,6 +644,7 @@
         &:nth-child(4) {
           .border {
             height: 8.7em;
+            padding-left: 2.4%;
           }
         }
         .mainPic {
@@ -724,7 +728,7 @@
                   display: flex;
                   margin: 2% 0;
                   img {
-                    width: 24%;
+                    width: 20%;
                   }
                 }
                 h4 {

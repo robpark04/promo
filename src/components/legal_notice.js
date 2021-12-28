@@ -61,7 +61,9 @@ export default function LegalNotice(){
             <p>
             You agree and acknowledge that this Whitepaper, the undertaking and/or the completion of the listing of QZQ & BVC, or future trading of QZQ & BVC on digital token exchanges, shall not be construed, interpreted, or deemed by you as an indication of the merits of QZQ & BVC or the digital token exchanges;
             </p>
+            <p>
             The distribution or dissemination of this Whitepaper, any part thereof or any copy thereof, or acceptance of the same by you, is not prohibited or restricted by the applicable laws, regulations, or rules in your jurisdiction, and where any restrictions in relation to possession are applicable, you have observed and complied with all such restrictions at your own expense and without liability to QZQ & BVC;
+            </p>
             <p>
             You are fully aware of and understand that you are not eligible to purchase any QZQ & BVC if you are a person from any restricted locations as set forth in the Terms of Service (or an equivalent document) of the digital token exchanges where QZQ & BVC is listed;
             </p>

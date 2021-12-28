@@ -33,11 +33,6 @@ import SecondBorder from '../assets/how_to_play/2f.svg'
 import ThirdBorder from '../assets/how_to_play/3f.svg'
 import FourthBorder from '../assets/how_to_play/4f.svg'
 
-import FirstBorderAdaptive from '../assets/how_to_play/1fa.svg'
-import SecondBorderAdaptive from '../assets/how_to_play/2fa.svg'
-import ThirdBorderAdaptive from '../assets/how_to_play/3fa.svg'
-import FourthBorderAdaptive from '../assets/how_to_play/4fa.svg'
-
 import Bot from '../assets/how_to_play/bot.svg'
 import Mashroom from '../assets/how_to_play/mashroom.svg'
 import Question from '../assets/how_to_play/question.svg'
@@ -50,10 +45,6 @@ import Point from '../assets/how_to_play/point.svg'
 import Pick from '../assets/how_to_play/pick.svg'
 import Settings from '../assets/how_to_play/setting.svg'
 import Building from '../assets/how_to_play/building.svg'
-
-import Sword from '../assets/how_to_play/sword.svg'
-import ShieldIcon from '../assets/how_to_play/shield.svg'
-import Ways from '../assets/how_to_play/ways.svg'
 
 // DISTRIBUTION 
 import Eco from '../assets/distribution/eco.svg'
@@ -154,7 +145,7 @@ export default function Main() {
       desc: 'The main goal of Baby Combat Bots in BattleVerse is to humanize themselves.',
       secondDesc: 'The uniqueness is determined by the following components: weapons, protection, platform.',
       gen: [
-        { genr: '1 GEN', state: 'SOLD OUT', color: '#FFFFFF', txtColor: 'black' },
+        { genr: '1 GEN', state: 'SOLD OUT', color: '#FFFFFF', txtColor: 'black', link: 'https://opensea.io/collection/baby-combat-bots-g1' },
         { genr: '2 GEN', state: 'SOON' },
         { genr: '3 GEN', state: 'SOON' }
       ],
@@ -164,7 +155,7 @@ export default function Main() {
       desc: 'Originally a peace-loving race with the collective consciousness of the Shpores from the very center of the BattleVerse.',
       secondDesc: 'Each Battle Shroom is endowed with a unique ability, depending on the region of origin and species: someone is stronger, someone is more agile, and someone does have poisonous or hallucinogenic properties.',
       gen: [
-        { genr: '1 GEN', state: 'ON SALE', color: '#10C684' },
+        { genr: '1 GEN', state: 'ON SALE', color: '#10C684', link: 'http://shrooms.battleverse.io' },
         { genr: '2 GEN', state: 'PLANNED' },
         { genr: '3 GEN', state: 'PLANNED' }
       ],
@@ -187,7 +178,7 @@ export default function Main() {
 
   const gameplay = [
     {
-      image: ShroomPlay, border: window.innerWidth>0? FirstBorder : FirstBorderAdaptive, title: 'GET A CHARACTER',
+      image: ShroomPlay, border: FirstBorder, title: 'GET A CHARACTER',
       color: '#00FF66',
       desc: 'Mint or purchase on the market',
       info: [
@@ -197,7 +188,7 @@ export default function Main() {
       ]
     },
     {
-      image: Swords, border: window.innerWidth>0? SecondBorder : SecondBorderAdaptive, title: 'START YOUR GAME',
+      image: Swords, border: SecondBorder, title: 'START YOUR GAME',
       color: '#FF36A3',
       desc: 'Choose the best for you option',
       info: [
@@ -207,7 +198,7 @@ export default function Main() {
       ]
     },
     {
-      image: Coins, border: window.innerWidth>0? ThirdBorder : ThirdBorderAdaptive, title: 'PRODUCTION',
+      image: Coins, border: ThirdBorder, title: 'PRODUCTION',
       color: '#00C2FF',
       desc: 'Get areas and buildings to start manufacturing',
       info: [
@@ -218,7 +209,7 @@ export default function Main() {
       ]
     },
     {
-      image: Shield, border: window.innerWidth>0? FourthBorder : FourthBorderAdaptive, title: 'TOURNAMENT',
+      image: Shield, border: FourthBorder, title: 'TOURNAMENT',
       color: '#c98e18',
       desc: 'Fight to upgrade, breed, and win a prize',
       info:
@@ -430,12 +421,24 @@ export default function Main() {
                     <footer>
                       {item.gen && item.gen.map((elem, index) => (
                         <div key={index}>
-                          <span style={{ background: elem.color ? elem.color : `rgba(${hexToRgb(item.color)}, 0.1)`, color: elem.txtColor ? elem.txtColor : 'white'}}
-                        className={elem.color ? 'sold_out' : null}>
-                            {elem.genr}
-                            {elem.txtColor &&
-                              <img src={OpenSea} alt="open sea" />}
-                          </span>
+                            {!elem.link ?
+
+                              <span style={{ background: elem.color ? elem.color : `rgba(${hexToRgb(item.color)}, 0.1)`, color: elem.txtColor ? elem.txtColor : 'white'}}
+                                className={elem.color ? 'sold_out' : null}>
+                                {elem.genr}
+                              </span>
+
+                            : 
+                            <>
+                            <a href={elem.link} target="_blank" rel="noopener noreferrer" style={{ background: elem.color ? elem.color : `rgba(${hexToRgb(item.color)}, 0.1)`, color: elem.txtColor ? elem.txtColor : 'white'}}
+                                className={elem.color&&elem.txtColor ? 'sold_out' : null}>
+                                {elem.genr}
+                                {elem.txtColor &&
+                                  <img src={OpenSea} alt="open sea" />
+                                }
+                                </a>
+                              </> 
+                              }
                           <span style={{ color: elem.color ? 'white' : item.color}} className={elem.txtColor ? '' : 'soon'}>{elem.state}</span>
                         </div>
                       ))}
