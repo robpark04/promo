@@ -1198,9 +1198,16 @@
               line-height: 12px;
             }
           }
-          img {
+          a {
+            width: 18%;
+            z-index: 9999;
             @media (max-width: 800px) {
               width: 16%;
+            }
+            img {
+              @media (max-width: 800px) {
+                width: 90%;
+              }
             }
           }
         }

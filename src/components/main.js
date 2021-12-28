@@ -301,7 +301,7 @@ export default function Main() {
         },
         {
           info: ['White paper and tokenomics presentation',
-            'Combat Shrooms G1 launch',
+            'Battle Shrooms G1 launch',
             'Seed and private token sale launch',
             'Game beta test']
         },
@@ -319,7 +319,7 @@ export default function Main() {
             'Smart contracts audit',
             'Public sale and IDO', 'In-game marketplace launch',
             'Observer funding launch',
-            'Combat Shrooms G2 and 3 launch',
+            'Battle Shrooms G2 and 3 launch',
             'PvE mode launch',
             'Cross-chains transfers launch'
           ]
