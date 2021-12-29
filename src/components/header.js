@@ -113,7 +113,7 @@ export default function Header() {
       <div className='adaptiveMenu' style={{ left: openMenu ? '0%' : '-100%'}}>
         {anchors.map((item, index) => (
           <div key={index}>
-            <a onClick={() => setOpenMenu(!openMenu)} href={item.link}>{item.title}</a>
+            <Link to='/' onClick={() => {setTimeout(() => {document.getElementById(item.link).scrollIntoView()}, 200); setOpenMenu(!openMenu)}}>{item.title}</Link>
           </div>
         ))}
       </div>
