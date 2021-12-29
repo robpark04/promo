@@ -13,6 +13,7 @@ import Back from '../assets/header/nft.svg'
 // import Shroom from '../assets/header/Shroom_v05.glb'
 
 import Persons from '../assets/header/image.png'
+// import Video from '../assets/header/shroom-anim_01.mp4'
 import Top3 from '../assets/header/top3.png'
 
 
@@ -92,10 +93,10 @@ export default function Header() {
             <div className='lightRight'/>
             <img src={Persons} alt="persons" />
             <div className='links'>
-              <a href='https://opensea.io/collection/baby-combat-bots-g1' target="_blank" rel="noopener noreferrer">
+              <a href='http://shrooms.battleverse.io' target="_blank" rel="noopener noreferrer">
                 BUY
               </a>
-              <a href='http://shrooms.battleverse.io' target="_blank" rel="noopener noreferrer">
+              <a href='https://opensea.io/collection/baby-combat-bots-g1' target="_blank" rel="noopener noreferrer">
                 MINT
               </a>
             </div>
