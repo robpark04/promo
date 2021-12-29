@@ -94,10 +94,10 @@ export default function Header() {
             <img src={Persons} alt="persons" />
             <div className='links'>
               <a href='http://shrooms.battleverse.io' target="_blank" rel="noopener noreferrer">
-                BUY
+                MINT
               </a>
               <a href='https://opensea.io/collection/baby-combat-bots-g1' target="_blank" rel="noopener noreferrer">
-                MINT
+                BUY
               </a>
             </div>
           </div>
