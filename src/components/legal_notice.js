@@ -16,19 +16,29 @@ export default function LegalNotice(){
             any equity or other ownership interest in BattleVerse or its affiliates;
             any rights to dividends or other distribution rights from BattleVerse or its affiliates;
             any governance rights in BattleVerse or its affiliates, except DAO functionality expressly described in this Whitepaper.
+            </p>  
+            <p>  
             For example, if you buy QZQ & BVC at some point in the future, this won't mean you “own a piece of BattleVerse” QZQ & BVC do not give their holders any special rights, just like owning Euro doesn’t give you shares in the European Union.
+            </p>  
+            <p>  
             In deciding whether to purchase QZQ & BVC, you should be fully aware of the risk that QZQ & BVC may decrease in value over time or even lose all monetary value. There are a number of risks related to purchasing cryptocurrencies like QZQ & BVC, including volatility in cryptocurrency markets, the possibility of increased regulation of cryptocurrency exchanges, and other risks.
             </p>  
             
             <h2>Purpose of this Whitepaper</h2>
             <p>  
             This Whitepaper is meant to provide more information on the BattleVerse Token Economy and functions of QZQ & BVC, and does not constitute a prospectus or offer document of any sort. This Whitepaper does not constitute or form part of any opinion or any advice to sell, or any recommendation or solicitation of any offer to purchase QZQ & BVC nor shall it or any part of it or the fact of its presentation form the basis of, or be relied upon in connection with, any contract or investment decision.
+            </p>  
+            <p>  
             No person is bound to enter into any contract or binding legal commitment in relation to the sale and purchase of QZQ & BVC and no digital tokens or another form of payment is to be accepted on the basis of this Whitepaper. Any agreement between BattleVerse and you as a recipient or purchaser, and in relation to any airdrop, sale, or purchase of QZQ & BVC is to be governed by a separate document setting out the terms and conditions (the “T&Cs”) of such agreement and no other document. In the event of any inconsistencies between the T&Cs and this Whitepaper, the T&Cs shall prevail.
             </p>  
 
             <p>
             Your eligibility to receive, purchase, or sell QZQ & BVC on digital token exchanges, is subject to your compliance with their respective terms and conditions and the applicable KYC and AML requirements. No regulatory authority has examined or approved any of the information set out in this Whitepaper. No such action has been or will be taken under the laws, regulatory requirements, or rules of any jurisdiction.
+            </p>  
+            <p>
             All statements contained in this White Paper, statements made in press releases or in any place accessible by the public, and oral statements that may be made by BattleVerse or its directors, executive officers, employees, or agents acting on its behalf, that are not statements of historical fact, constitute “forward-looking statements”. All statements regarding BattleVerse financial position, business strategies, plans and prospects, and the future prospects of the industry in which BattleVerse is are forward-looking statements. These forward-looking statements, including but not limited to statements as to BattleVerse revenue and profitability, prospects, future plans, other expected industry trends, and other matters discussed in this White Paper regarding BattleVerse are matters that are not historic facts, but only predictions. 
+            </p>  
+            <p>
             The publication, distribution, or dissemination of this Whitepaper does not imply that the applicable laws, regulatory requirements, or rules have been complied with.
             </p>  
            
@@ -90,7 +100,11 @@ export default function LegalNotice(){
             </h2>
             <p>
             The distribution or dissemination of this Whitepaper or any part thereof may be prohibited or restricted by the laws, regulatory requirements, and rules of any jurisdiction. In the case where any restriction applies, you are to inform yourself about, and to observe, any restrictions which are applicable to your possession of this Whitepaper or such part thereof (as the case may be) at your own expense and without liability to BattleVerse. Persons who have been provided access to this Whitepaper or to whom a copy of this Whitepaper has been distributed or disseminated or who otherwise have the White Paper in their possession shall not circulate it to any other persons, reproduce or otherwise distribute this Whitepaper or any information contained herein for any purpose whatsoever nor permit or cause the same to occur.
+            </p>
+            <h3>
             Risks and uncertainties
+            </h3>
+            <p>
             Prospective purchasers of QZQ & BVC should carefully consider and evaluate all risks and uncertainties associated with QZQ & BVC, and its businesses and operations, and all information set out in this Whitepaper and the T&Cs, prior to any purchase of QZQ & BVC.
             </p>
             <h3>

@@ -519,7 +519,9 @@ export default function Main() {
             </div>
           ))}
         </div>
-        <Slider {...settingsRoadmap} className="slider" afterChange={e => setActiveSlide(e)}>
+        <Slider {...settingsRoadmap} className="slider" onSwipe={() => setTimeout(() => {
+            setActiveSlide(Array.from(document.querySelectorAll('.slick-dots')[0].childNodes).indexOf(document.querySelectorAll('.slick-active')[2]))},
+          500)}>
           {roadmap.map((item, index) => (
             <div key={index} className='q_container' onScroll={() => alert('s')}>
               {item.q_blocks.map((item, indx) => (

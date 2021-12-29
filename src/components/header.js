@@ -43,9 +43,9 @@ export default function Header() {
   }, [openMenu])
 
   const anchors = [
-    {title: 'Roadmap', link: '#Roadmap'}, 
-    {title: 'Team', link: '#Team'}, 
-    {title: 'Tokenomics', link: '#Tokenomics'}
+    {title: 'Roadmap', link: 'Roadmap'}, 
+    {title: 'Team', link: 'Team'}, 
+    {title: 'Tokenomics', link: 'Tokenomics'}
   ]
   const footer = [
     {icon: Discord, link: 'https://discord.com/invite/HFVAnBS9qA'},
@@ -64,7 +64,7 @@ export default function Header() {
           <div className='barCenter'>
             {anchors.map((item, index) => (
               <div key={index}>
-                <a href={item.link}>{item.title}</a>
+                <Link to='/' onClick={() => setTimeout(() => {document.getElementById(item.link).scrollIntoView()}, 200) }>{item.title}</Link>
               </div>
             ))}
           </div>

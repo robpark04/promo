@@ -542,7 +542,7 @@
           margin-top: 6%;
         }
         @media (max-width: 600px) {
-          margin-top: 8%;
+          margin-top: 10%;
           width: 80%;
         }
         @media (max-width: 500px) {
@@ -559,6 +559,9 @@
         &:nth-child(1) {
           .border {
             height: 21.4em;
+            @media (max-width: 600px) {
+              height: 19em;
+            }
           }
           main {
             margin-top: 0em;
@@ -567,16 +570,22 @@
               @media (max-width: 1200px) {
                 margin-top: 1.4em;
               }
+              @media (max-width: 600px) {
+                margin-top: 1.7em;
+              }
               &:nth-child(2) {
                 margin-top: 1.9em;
-                @media (max-width: 1200px) {
-                  margin-top: 1.9em;
+                @media (max-width: 600px) {
+                  margin-top: 1.6em;
                 }
               }
               &:last-child {
                 margin-top: 2.2em;
                 @media (max-width: 1200px) {
                   margin-top: 2.6em;
+                }
+                @media (max-width: 600px) {
+                  margin-top: 1.6em;
                 }
               }
               p {
@@ -588,18 +597,30 @@
         &:nth-child(2) {
           .border {
             height: 22.6em;
+            @media (max-width: 600px) {
+              height: 20em;
+            }
           }
           main {
             margin-top: 1em;
+            @media (max-width: 600px) {
+              margin-top: 2.4em;
+            }
             .stepInfo {
               margin-top: 1.6em;
               @media (max-width: 1200px) {
                 margin-top: 2em;
               }
+              @media (max-width: 600px) {
+                margin-top: 1.6em;
+              }
               &:last-child {
                 margin-top: 3.4em;
                 @media (max-width: 1200px) {
                   margin-top: 3.4em;
+                }
+                @media (max-width: 600px) {
+                  margin-top: 2.6em;
                 }
               }
               p {
@@ -628,6 +649,9 @@
               }
               &:nth-child(3) {
                 margin-top: 2.2em;
+                @media (max-width: 600px) {
+                  margin-top: 2.4em;
+                }
               }
               &:last-child {
                 margin-top: 2.6em;
@@ -674,6 +698,9 @@
           display: flex;
           align-items: flex-start;
           z-index: 9999;
+          @media (max-width: 600px) {
+            width: 90%;
+          }
           .gameInfo {
             margin-left: 5%;
             h3 {
@@ -723,6 +750,9 @@
                 margin-top: 2.2em;
                 @media (max-width: 1200px) {
                   margin-top: 2.4em;
+                }
+                @media (max-width: 600px) {
+                  margin-top: 2.6em;
                 }
                 .icons {
                   display: flex;
@@ -862,6 +892,11 @@
       font-size: 50px;
       line-height: 110px;
       margin-left: 5%;
+      @media (max-width: 600px) {
+        font-size: 38px;
+        line-height: 110px;
+        margin-bottom: 0;
+      }
     }
     .back {
       position: absolute;

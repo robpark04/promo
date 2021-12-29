@@ -11,29 +11,51 @@ export default function PrivacyPolicy(){
         BattleVerse Company (“Company”) respects your privacy and is committed to protecting your personal data. This policy (together with our Terms) sets out how we will process and use any personal data we collect from you, or that you provide to us. Please read the following carefully to understand our views and practices regarding your personal data and how we will handle it. By using our Products and/or Services, you accept and consent to the practices described in this policy.
       </p>
       <p>
-        The data controller is BattleVerse, a company incorporated in Belize. We have appointed a data protection officer who is responsible for overseeing questions in relation to this privacy policy. If you have any questions about this privacy policy, including any requests to exercise your legal rights, please contact our data protection officer by email at: info@battleverse.io.
+        The data controller is BattleVerse, a company incorporated in Belize. We have appointed a data protection officer who is responsible for overseeing questions in relation to this privacy policy. If you have any questions about this privacy policy, including any requests to exercise your legal rights, please contact our data protection officer by email at: <span style={{color: '#C9A061'}}>info@battleverse.io</span>.
       </p>
       <h2>
         1. How Do We Collect Your Data:
       </h2>
       <p>
         When you register an account with us or connect your wallet:
+        </p>
+      <ul>
+        <li>
         We will use your personal information to process your registration and to carry out our obligations arising from any agreements entered into between you and us.
-        Information about you that we collect from you may include, your name, age, e-mail location, cryptocurrency wallet public address,
+        </li>
+        <li>
+      Information about you that we collect from you may include, your name, age, e-mail location, cryptocurrency wallet public address,
+      </li>
+      <li>
         We may also share your personal information with our affiliates, and selected third parties including business partners, suppliers, and subcontractors for the performance of any contract we enter into with them or you
+        </li>
+        <li>
         Where you have expressed an interest in receiving communications from us:
+        </li>
+      <li>
         This section applies if you have opted in to receive communications regarding our project from us, including your participation in our activities or events.
+        </li>
         We will handle your personal information (such as your name and email address) to provide you with communications regarding our project.
+      <li>
         When we send you emails regarding our project because you have opted-in to receive them, we rely on your consent to contact you.
+      <li>
         Every email we send to you regarding our project will also contain instructions on how to unsubscribe from receiving them.
-        You can tell us that you do not want your personal information to be processed in this way at any time by contacting us at the Contact Information set out below or, where relevant, by following the unsubscribe link shown in every email you receive from us
+        </li>
+        </li>
+        </ul>
+        <p>
+      You can tell us that you do not want your personal information to be processed in this way at any time by contacting us at the Contact Information set out below or, where relevant, by following the unsubscribe link shown in every email you receive from us
       </p>
       <h2>
         To make our experience better:
       </h2>
       <p>
         We share your aggregated, anonymous data with third-party analytics providers that assist us in the improvement and optimization of our product.
+      <p>
+      </p>  
         We will also use your personal information for the purposes of making our Service and Product more secure, and to administer our app and for internal operations, including troubleshooting, data analysis, testing, research, statistical, and survey purposes.
+      <p>
+      </p>  
         We process your data for this reason because we have a legitimate interest to provide you with the best experience we can, and to ensure that our site is kept secure.
       </p>
       <h2>
@@ -54,55 +76,89 @@ export default function PrivacyPolicy(){
       <h3>
         We may employ third-party companies and individuals due to the following reasons:
       </h3>
-      <p>
+      <ul>
+      <li>
       To facilitate our Service;
-      </p>
-      <p>
+      </li>
+      <li>
       To provide the Service on our behalf;
-      </p>
-      <p>
+      </li>
+      <li>
       To perform Service-related services; or
-        </p>
-      <p>
+        </li>
+      <li>
         To assist us in analyzing how our Service is used.
-      </p>
-      <p>
+      </li>
+      <li>
         We want to inform our Service users that these third parties have access to their Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
-      </p>
+      </li>
+      </ul>
       <h2>
         2. How We Use Your Information.
       </h2>
-      <p>
+      <ul>
+      <li>
         We may use the information we collect about you in a variety of ways, including to:
-      </p>
-      <p>
+      </li>
+      <li>
         provide the Services and its content to you;
+        </li>
+      <li> 
         respond to comments and questions, and provide customer service;
+      </li>
+      <li>
         fulfill any other purpose for which you provide such information;
+      </li>
+      <li>        
         communicate with you about your purchase;
+      </li>
+      <li>
         inform you about important changes to, or other news about, the Services or any of its features or content;
+      </li>
+      <li>
         operate, maintain, improve, personalize, and analyze the Services;
+      </li>
+      <li>
         monitor and analyze trends, usage, and activities for marketing or advertising purposes;
+      </li>
+      <li>
         detect, prevent, or investigate security breaches, fraud, and other unauthorized or illegal activity;
+      </li>
+      <li>
         carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection;
+      </li>
+      <li>
         maintain appropriate records for internal administrative purposes;
+      </li>
+      <li>  
         allow you to participate in interactive features on the Services;
+      </li>
+      <li>
         send promotional communications, such as information about features, newsletters, offers, promotions, contests, and events;
+      </li>
+      <li>
         share information across the Company's products and devices to provide a more tailored and consistent experience on all Company products you use;
+      </li>
+      <li>
         develop, test, and improve new products or services, including by conducting surveys and research, and testing and troubleshooting new products and features;
-      </p>
+      </li>
+      </ul>
        <h2>
         3. Where we store your personal data
       </h2>
       <p>
-       We engage commercial cloud storage providers to store the data that we collect from you. Therefore, your data may be transferred to and stored in different jurisdictions and may also be processed by staff operating within the various countries who work for us or for one of our contractors. By submitting your personal data, you agree to this transfer, storing, or processing. We will take commercially reasonable steps to ensure that your data is handled securely and in accordance with this privacy policy and the relevant privacy laws.
-       Where we have given you (or where you have chosen) a password that enables you to access certain parts of our site, you are responsible for keeping this password confidential. We ask you not to share the password with anyone. Unfortunately, the transmission of information via the internet is not completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to our site; any transmission is at your own risk. Once we have received your information, we will take all commercially reasonable efforts to prevent unauthorized access.
+        We engage commercial cloud storage providers to store the data that we collect from you. Therefore, your data may be transferred to and stored in different jurisdictions and may also be processed by staff operating within the various countries who work for us or for one of our contractors. By submitting your personal data, you agree to this transfer, storing, or processing. We will take commercially reasonable steps to ensure that your data is handled securely and in accordance with this privacy policy and the relevant privacy laws.
+      </p>
+      <p> 
+        Where we have given you (or where you have chosen) a password that enables you to access certain parts of our site, you are responsible for keeping this password confidential. We ask you not to share the password with anyone. Unfortunately, the transmission of information via the internet is not completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to our site; any transmission is at your own risk. Once we have received your information, we will take all commercially reasonable efforts to prevent unauthorized access.
       </p>
       <h2>
         4. How long do we retain your data for
       </h2>
       <p>
         We will only retain your personal information for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any accounting or legal requirements.
+      </p>
+      <p>
         To determine the appropriate retention period for the personal information we hold, we consider the amount, nature, and sensitivity of the personal information, the risk of harm from unauthorized use or disclosure of your personal information, the reasons why we handle your personal information, and whether we can achieve those purposes through other means, and the applicable legal requirements.
         In some circumstances, we may anonymize your personal data so that it can no longer be associated with you for research or statistical purposes, in which case we may use this information indefinitely without further notice to you.
       </p>
@@ -197,9 +253,9 @@ export default function PrivacyPolicy(){
       <p>
         Where the legal basis for processing your personal information is your consent, you have the right to withdraw that consent at any time by contacting us on the above details.
       </p>
-      <p>
+      <h3>
         Raising a complaint about how we have handled your personal data
-      </p>
+      </h3>
       <p>
       If you wish to raise a complaint on how we have handled your personal data, you can contact us as set out above and we will then investigate the matter.
       </p>
