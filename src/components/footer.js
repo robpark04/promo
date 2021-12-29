@@ -8,6 +8,7 @@ import In from '../assets/footer/in.svg'
 import Telegram from '../assets/footer/telegram.svg'
 import Twitter from '../assets/footer/twitter.svg'
 import Medium from '../assets/footer/medium.svg'
+import Youtube from '../assets/footer/youtube.svg'
 
 export default function Footer(){
 
@@ -16,7 +17,8 @@ export default function Footer(){
     {icon: In, link: 'https://ru.linkedin.com/company/battleverse-io?trk=ppro_cprof'},
     {icon: Telegram, link: 'https://t.me/battleverse_news'},
     {icon: Twitter, link: 'https://twitter.com/BattleVerse_io'},
-    {icon: Medium, link: 'https://battleverse.medium.com/'}
+    {icon: Medium, link: 'https://battleverse.medium.com/'},
+    {icon: Youtube, link: 'https://www.youtube.com/c/BattleVerse/'}
   ]
 
   return(
