@@ -265,6 +265,7 @@ header {
           background-size: cover;
           width: 35%;
           height: 18%;
+          max-width: 500px;
           @media (max-width: 800px) {
             top: 50%;
             width: 95%;
