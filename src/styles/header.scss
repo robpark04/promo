@@ -177,6 +177,10 @@ header {
       }
       @media (max-width: 600px) {
         margin-top: 8%;
+        background-position: 40% 100px;
+      }
+      @media (max-width: 380px) {
+        background-position: 40% 120px;
       }
       .info {
         width: 60%;
