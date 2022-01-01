@@ -12,8 +12,8 @@ import Back from '../assets/header/nft.svg'
 // import * as THREE from 'three'
 // import Shroom from '../assets/header/Shroom_v05.glb'
 
-import Persons from '../assets/header/image.png'
-// import Video from '../assets/header/shroom-anim_01.mp4'
+import Particles from '../assets/header/particles.svg'
+import Video from '../assets/header/shroom-anim_02.mp4'
 import Top3 from '../assets/header/top3.png'
 
 
@@ -89,9 +89,13 @@ export default function Header() {
             <img src={Top3} alt="top3" />
           </div>
           <div className='threeD'>
-            <div className='lightLeft'/>
+            {/* <div className='lightLeft'/>
             <div className='lightRight'/>
-            <img src={Persons} alt="persons" />
+            <img src={Persons} alt="persons" /> */}
+            <div style={{ backgroundImage: `url(${Particles})`}} className='particles'/>
+            <video controls={false} autoPlay loop muted>
+              <source src={Video} type="video/mp4"/>
+            </video>            
             <div className='links'>
               <a href='http://shrooms.battleverse.io' target="_blank" rel="noopener noreferrer">
                 MINT
