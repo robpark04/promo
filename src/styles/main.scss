@@ -944,13 +944,13 @@
       }
       &:after {
         position: absolute;
-        z-index: -9999;
         margin-top: 2.5em;
         content: "";
         height: 2px;
         width: 90%;
         max-width: 1280px;
         background: #182e3b;
+        z-index: -99999;
       }
       div {
         font-family: Dela Gothic One;
@@ -1006,13 +1006,6 @@
             }
           }
         }
-        &:last-child {
-          span {
-            &:after {
-              background-color: #244458;
-            }
-          }
-        }
         @media (max-width: 1024px) {
           font-size: 22px;
           line-height: 32px;
@@ -1033,28 +1026,60 @@
         &:first-child {
           .active,
           :hover {
-            color: #4cff9e;
+            color: #4cff9e !important;
             z-index: 9999;
           }
         }
         &:nth-child(2) {
           .active,
           :hover {
-            color: #ff59b4;
+            color: #ff59b4 !important;
           }
         }
         &:nth-child(3) {
           .active,
           :hover {
-            color: #7fe8ff;
+            color: #7fe8ff !important;
           }
         }
-        &:last-child {
-          color: #182e3c;
-          .active,
-          :hover {
-            color: #244458;
-          }
+      }
+      .dropdownItem {
+        display: flex;
+        align-items: center;
+        z-index: 9999;
+      }
+      .dropdown {
+        display: block;
+        position: absolute;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 40em;
+        margin-top: -0.6%;
+        pointer-events: none;
+        padding: 0.6% 2% 0.6% 8%;
+        width: 39em;
+        background-color: #101e27;
+        z-index: -9999;
+        color: white;
+        border-radius: 20px;
+        text-transform: none;
+        @media (max-width: 1366px) {
+          font-size: 11px;
+          margin-left: 46em;
+          width: 44em;
+        }
+        @media (max-width: 1024px) {
+          margin-top: 4em;
+          margin-left: 0;
+          margin-right: 14em;
+          z-index: 9999;
+          width: 18em;
+          padding: 2%;
+          font-size: 14px;
+          line-height: 20px;
         }
       }
     }

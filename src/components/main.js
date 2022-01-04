@@ -373,12 +373,6 @@ export default function Main() {
           ]
         },
       ]
-    },
-    {
-      year: 2024,
-      q_blocks: [
-        { info: ['Continuous BattleVerse improvement, expansion and addition new functionality in accordance with the community requests'] },
-      ]
     }
   ]
 
@@ -426,12 +420,10 @@ export default function Main() {
                       {item.gen && item.gen.map((elem, index) => (
                         <div key={index}>
                             {!elem.link ?
-
                               <span style={{ background: elem.color ? elem.color : `rgba(${hexToRgb(item.color)}, 0.1)`, color: elem.txtColor ? elem.txtColor : 'white'}}
                                 className={elem.color ? 'sold_out' : null}>
                                 {elem.genr}
                               </span>
-
                             : 
                             <>
                             <a href={elem.link} target="_blank" rel="noopener noreferrer" style={{ background: elem.color ? elem.color : `rgba(${hexToRgb(item.color)}, 0.1)`, color: elem.txtColor ? elem.txtColor : 'white'}}
@@ -519,7 +511,17 @@ export default function Main() {
             <div key={index}>
               {activeSlide === index ?
                 <span className='active' onClick={() => document.querySelectorAll('.slick-dots')[0].children[index].children[0].click()} key={index}>{item}</span>
-                : <span onClick={() => { document.querySelectorAll('.slick-dots')[0].children[index].children[0].click(); setActiveSlide(index) }} key={index}>{item}</span>}
+                : index<3 ? <span onClick={() => { document.querySelectorAll('.slick-dots')[0].children[index].children[0].click(); setActiveSlide(index) }} key={index}
+                style={{color: 'white', cursor: 'pointer'}}>{item}</span>
+              : <span key={index}
+                  style={{}}
+                  className='dropdownItem'
+                  onMouseEnter={e => e.target.children[0].style.display = 'block'}
+                  onMouseLeave={e => e.target.children[0].style.display = 'none'}
+                >{item}
+                  <span className='dropdown'>Continuous BattleVerse improvement, expansion and addition new functionality in accordance with the community requests</span>
+                </span>
+              }
             </div>
           ))}
         </div>
@@ -527,7 +529,7 @@ export default function Main() {
             setActiveSlide(Array.from(document.querySelectorAll('.slick-dots')[0].childNodes).indexOf(document.querySelectorAll('.slick-active')[2]))},
           500)}>
           {roadmap.map((item, index) => (
-            <div key={index} className='q_container' onScroll={() => alert('s')}>
+            <div key={index} className='q_container'>
               {item.q_blocks.map((item, indx) => (
                 <>
                 {!(indx===0&&index===0&&width<768) &&
