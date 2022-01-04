@@ -516,7 +516,8 @@ export default function Main() {
               : <span key={index}
                   style={{}}
                   className='dropdownItem'
-                  onMouseEnter={e => {e.target.children[0].style.display = 'block'; width < 1024 && setTimeout(() => {e.target.children[0].style.display = 'none'; document.querySelectorAll('body')[0].click()}, 5000)}}
+                  onMouseEnter={width>1024 ? e => e.target.children[0].style.display = 'block' : null}
+                  onClick={e =>  {e.target.children[0].style.display = 'block'; setTimeout(() => {e.target.children[0].style.display = 'none';}, 5000)}}
                   onMouseLeave={e => e.target.children[0].style.display = 'none'}
                 >{item}
                   <span className='dropdown'>Continuous BattleVerse improvement, expansion and addition new functionality in accordance with the community requests</span>
