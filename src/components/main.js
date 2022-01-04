@@ -516,7 +516,7 @@ export default function Main() {
               : <span key={index}
                   style={{}}
                   className='dropdownItem'
-                  onMouseEnter={e => e.target.children[0].style.display = 'block'}
+                  onMouseEnter={e => {e.target.children[0].style.display = 'block'; width < 1024 && setTimeout(() => {e.target.children[0].style.display = 'none'}, 3000)}}
                   onMouseLeave={e => e.target.children[0].style.display = 'none'}
                 >{item}
                   <span className='dropdown'>Continuous BattleVerse improvement, expansion and addition new functionality in accordance with the community requests</span>
