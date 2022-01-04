@@ -169,7 +169,7 @@
       background: linear-gradient(45deg, #ffffff 0%, #ffcd95 20%, #764204 80%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-left: 5%;
+      margin-left: 6.4%;
       margin-bottom: 0;
       @media (max-width: 1200px) {
         font-size: 52px;
@@ -186,7 +186,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-left: 5%;
+      margin-left: 6.4%;
+      width: 88%;
       @media (max-width: 600px) {
         align-items: flex-start;
         flex-direction: column;
@@ -199,6 +200,10 @@
         line-height: 26px;
         color: #63a3c9;
         width: 58%;
+        @media (max-width: 800px) {
+          font-size: 16px;
+          width: 88%;
+        }
         @media (max-width: 600px) {
           width: 100%;
         }
@@ -207,7 +212,11 @@
         display: flex;
         margin: 2% 0;
         width: 12%;
+        @media (max-width: 1024px) {
+          width: 18%;
+        }
         @media (max-width: 800px) {
+          width: 24%;
           margin-left: 10%;
         }
         @media (max-width: 600px) {
@@ -832,14 +841,13 @@
         margin-left: -4em;
       }
     }
-
     .comb,
     .combAdaptive {
       width: 10%;
       position: relative;
       display: inline-block;
-      margin-bottom: 5.4em;
-      margin-inline: 1%;
+      margin-bottom: 5.6em;
+      margin-inline: 0.9%;
       @media (max-width: 1440px) {
         margin-bottom: 6.4vw;
       }
@@ -952,6 +960,59 @@
         line-height: 37px;
         text-transform: uppercase;
         color: #182e3c;
+        span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          &:after {
+            content: "";
+            position: absolute;
+            margin-top: 1.44em;
+            width: 3.4em;
+            height: 6px; /* Height of border */
+            border-radius: 5rem; /* This can be any number but is normally set very high for the pill-shape */
+            display: none;
+            @media (max-width: 1024px) {
+              margin-top: 1.7em;
+            }
+            @media (max-width: 800px) {
+              margin-top: 1.9em;
+            }
+          }
+        }
+        span {
+          &:hover:after {
+            display: block;
+          }
+        }
+        &:first-child {
+          span {
+            &:after {
+              background-color: #4cff9e;
+            }
+          }
+        }
+        &:nth-child(2) {
+          span {
+            &:after {
+              background-color: #ff59b4;
+            }
+          }
+        }
+        &:nth-child(3) {
+          span {
+            &:after {
+              background-color: #7fe8ff;
+            }
+          }
+        }
+        &:last-child {
+          span {
+            &:after {
+              background-color: #244458;
+            }
+          }
+        }
         @media (max-width: 1024px) {
           font-size: 22px;
           line-height: 32px;
@@ -964,11 +1025,15 @@
           font-size: 18px;
           line-height: 28px;
         }
+        .active {
+          &:after {
+            display: block !important;
+          }
+        }
         &:first-child {
           .active,
           :hover {
             color: #4cff9e;
-            border-bottom: 6px solid #4cff9e;
             z-index: 9999;
           }
         }
@@ -976,14 +1041,12 @@
           .active,
           :hover {
             color: #ff59b4;
-            border-bottom: 6px solid #ff59b4;
           }
         }
         &:nth-child(3) {
           .active,
           :hover {
             color: #7fe8ff;
-            border-bottom: 6px solid #7fe8ff;
           }
         }
         &:last-child {
@@ -991,7 +1054,6 @@
           .active,
           :hover {
             color: #244458;
-            border-bottom: 6px solid #244458;
           }
         }
       }

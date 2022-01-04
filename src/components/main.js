@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import '../styles/main.scss'
+
+import HeaderBanner from './header_banner';
+
 import Slider from "react-slick";
 
 import frame1 from '../assets/frame0.png'
@@ -381,6 +384,7 @@ export default function Main() {
 
   return (
     <div className='mainPage'>
+      <HeaderBanner />
       <div className='mission'>
         <h1>OUR MISSION</h1>
         <div className='missions'>
