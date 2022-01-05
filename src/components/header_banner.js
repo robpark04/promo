@@ -14,7 +14,7 @@ import Telegram from '../assets/services/telegram.svg'
 import Twitter from '../assets/services/twitter.svg'
 import Medium from '../assets/services/medium.svg'
 
-export default function headerBanner() {
+export default function HeaderBanner() {
 
   const footer = [
     {icon: Discord, color: '#525FFF',
@@ -28,6 +28,10 @@ export default function headerBanner() {
     {icon: Medium, color: '#000000', 
       link: 'https://battleverse.medium.com/'}
   ]
+
+  let [width, setWidth] = React.useState(window.innerWidth)
+
+  window.addEventListener("resize", () => setWidth(window.innerWidth));
 
   return(
     <div className='contentContainer'>
@@ -50,8 +54,10 @@ export default function headerBanner() {
           <div className='links'>
 
             {[{link: 'http://shrooms.battleverse.io', value: 'MINT'}, {link: 'https://opensea.io/collection/baby-combat-bots-g1', value: 'BUY'}].map((item, index) => (
-              <a key={index} onMouseDown={e => {e.target.style.fontSize = '16.78px'; e.target.style.filter = 'brightness(85%)'}}
-                onMouseLeave={e => {e.target.style.fontSize = '18px'; e.target.style.filter = 'brightness(100%)'}} 
+              <a key={index} 
+                onMouseDown={e => {e.target.style.fontSize = '16px'; e.target.style.marginInline = '2px'; e.target.style.filter = 'brightness(85%)'}}
+                onMouseLeave={e => {e.target.style.fontSize = '18px'; e.target.style.marginInline = '0px'; e.target.style.filter = 'brightness(100%)'}} 
+                onMouseUp={e => {e.target.style.fontSize = '18px'; e.target.style.marginInline = '0px'; e.target.style.filter = 'brightness(100%)'}} 
                 href={item.link} target="_blank" rel="noopener noreferrer">
                 {item.value}
               </a>
@@ -62,9 +68,9 @@ export default function headerBanner() {
       <footer>
         {footer.map((item, index) => (
           <a onMouseEnter={e => {e.target.style.background = item.color}} 
-            onMouseLeave={e => {e.target.style.background = '#122632'; e.target.style.padding = '0.7em'; e.target.style.filter = 'brightness(100%)'}} 
-            onMouseDown={e => {e.target.style.padding = '0.6em'; e.target.style.filter = 'brightness(55%)'}} 
-            onMouseUp={e => {e.target.style.padding = '0.7em'; e.target.style.filter = 'brightness(100%)'}} 
+            onMouseLeave={e => {e.target.style.background = '#122632'; e.target.style.padding = width>800? '0.7em' : '0.6em'; e.target.style.margin = width>800? '0em 1em 0em 0em' : '0em 0.8em 0em 0em'; e.target.style.filter = 'brightness(100%)'}} 
+            onMouseDown={e => {e.target.style.padding = width>800? '0.6em':'0.5em'; e.target.style.margin = width>800? '0.1em 1.1em 0.1em 0.1em' : '0.1em 0.9em 0.1em 0.1em'; e.target.style.filter = 'brightness(55%)'}} 
+            onMouseUp={e => {e.target.style.padding = width>800? '0.7em' : '0.6em'; e.target.style.margin = width>800? '0em 1em 0em 0em' : '0em 0.8em 0em 0em'; e.target.style.filter = 'brightness(100%)'}} 
             href={item.link} key={index} target="_blank" rel="noopener noreferrer">
             <img src={item.icon} alt="icon" />
           </a>

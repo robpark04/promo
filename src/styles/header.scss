@@ -53,8 +53,8 @@ header {
           width: 15em;
         }
         @media (max-width: 800px) {
-          margin-left: 3.5em;
-          width: 14.4em;
+          margin-left: 6.2em;
+          width: 17.4em;
           font-size: 14px;
         }
         @media (max-width: 600px) {
@@ -63,7 +63,7 @@ header {
         a {
           text-decoration: none;
           color: white;
-          transition: all 0.2s;
+          transition: all 0.1s;
           &:after {
             content: "";
             position: absolute;
@@ -106,7 +106,7 @@ header {
           line-height: 28px;
         }
         @media (max-width: 800px) {
-          width: 13.6em;
+          width: 16.2em;
           font-size: 11px;
           line-height: 22px;
         }
@@ -128,6 +128,7 @@ header {
           border-radius: 11px;
           text-decoration: none;
           color: white;
+          transition: all 0.2s;
           @media (max-width: 1024px) {
             padding: 2% 8%;
           }
@@ -148,9 +149,19 @@ header {
           &:first-child {
             background-color: #0b1e29;
             border: 2px solid #112d3d;
+            &:hover {
+              background-color: #112d3d;
+            }
           }
           &:last-child {
             background: linear-gradient(94.04deg, #e8b86f 1.76%, #523112 94.7%);
+            &:hover {
+              background: linear-gradient(
+                94.04deg,
+                #ffd18b 1.76%,
+                #98602d 94.7%
+              );
+            }
           }
         }
       }

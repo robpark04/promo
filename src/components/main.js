@@ -109,6 +109,12 @@ export default function Main() {
         className={'slick-arrow slick-prev arrow'}
         style={{ ...style, display: "block", }}
         onClick={onClick}
+        onMouseDown={e => {e.target.style.background = '#051017'; 
+          e.target.style.padding = width>1024 ? '0 30.6px 0 30.6px' : width>600 ? '0 20px 0 20px' : '0 16px 0 16px'; e.target.style.width = width>600 ? '1.6%' : '16px'}}
+        onMouseLeave={e => {e.target.style.background = '#081620';
+          e.target.style.padding = width>1024 ? '0 28.6px 0 28.6px' : width>600 ? '0 18px 0 18px' : '0 14px 0 14px'; e.target.style.width = width>600 ? '2%' : '20px'}}
+        onMouseUp={e => {e.target.style.background = '#081620';
+          e.target.style.padding = width>1024 ? '0 28.6px 0 28.6px' : width>600 ? '0 18px 0 18px' : '0 14px 0 14px'; e.target.style.width = width>600 ? '2%' : '20px'}}                   
       />
     );
   }
@@ -120,10 +126,15 @@ export default function Main() {
         className={'slick-arrow slick-next arrow'}
         style={{ ...style, display: "block", }}
         onClick={onClick}
+        onMouseDown={e => {e.target.style.background = '#051017'; 
+          e.target.style.padding = width>1024 ? '0 30.6px 0 30.6px' : width>600 ? '0 20px 0 20px' : '0 16px 0 16px'; e.target.style.width = width>600 ? '1.6%' : '16px'}}
+        onMouseLeave={e => {e.target.style.background = '#081620';
+          e.target.style.padding = width>1024 ? '0 28.6px 0 28.6px' : width>600 ? '0 18px 0 18px' : '0 14px 0 14px'; e.target.style.width = width>600 ? '2%' : '20px'}}
+        onMouseUp={e => {e.target.style.background = '#081620';
+          e.target.style.padding = width>1024 ? '0 28.6px 0 28.6px' : width>600 ? '0 18px 0 18px' : '0 14px 0 14px'; e.target.style.width = width>600 ? '2%' : '20px'}}              
       />
     );
   }
-
   const settings = {
     dots: false,
     infinite: true,
@@ -257,6 +268,7 @@ export default function Main() {
   ]
 
   const settingsRoadmap = {
+    initialSlide: 1,
     dots: true,
     infinite: true,
     speed: 500,
@@ -273,7 +285,7 @@ export default function Main() {
       },
     ]
   };
-  let [activeSlide, setActiveSlide] = useState(0)
+  let [activeSlide, setActiveSlide] = useState(1)
 
   const roadmap = [
     {
@@ -425,16 +437,16 @@ export default function Main() {
                                 {elem.genr}
                               </span>
                             : 
-                            <>
-                            <a href={elem.link} target="_blank" rel="noopener noreferrer" style={{ background: elem.color ? elem.color : `rgba(${hexToRgb(item.color)}, 0.1)`, color: elem.txtColor ? elem.txtColor : 'white'}}
-                                className={elem.color&&elem.txtColor ? 'sold_out' : null}>
-                                {elem.genr}
-                                {elem.txtColor &&
-                                  <img src={OpenSea} alt="open sea" />
-                                }
+                              <>
+                                <a href={elem.link} target="_blank" rel="noopener noreferrer" style={{ background: elem.color ? elem.color : `rgba(${hexToRgb(item.color)}, 0.1)`, color: elem.txtColor ? elem.txtColor : 'white'}}
+                                  className={elem.color&&elem.txtColor ? 'sold_out' : null}>
+                                  {elem.genr}
+                                  {elem.txtColor &&
+                                    <img src={OpenSea} alt="open sea" />
+                                  }
                                 </a>
                               </> 
-                              }
+                            }
                           <span style={{ color: elem.color ? 'white' : item.color}} className={elem.txtColor ? '' : 'soon'}>{elem.state}</span>
                         </div>
                       ))}
@@ -534,7 +546,7 @@ export default function Main() {
               {item.q_blocks.map((item, indx) => (
                 <>
                 {!(indx===0&&index===0&&width<768) &&
-                <div className='q_block' style={{ border: index === 0 && indx === 3 ? '2px solid #48F197' : null}} key={indx}>
+                <div className='q_block' style={{ border: index === 1 && indx === 0 && '2px solid #ff59b4', }} key={indx}>
                   {index < 3 &&
                     <h1 style={{ color: index === 0 && indx === 0 ? '#07161F' : index === 0 ? '#4cff9e' : index === 1 ? '#ff59b4' : index === 2 ? '#7fe8ff' : null }}>{'Q' + (indx + 1)}</h1>
                   }

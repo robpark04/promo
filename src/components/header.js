@@ -29,14 +29,18 @@ export default function Header() {
               <Link  
                 key={index} to='/' onClick={() => {
                   setTimeout(() => {document.getElementById(item.link).scrollIntoView()}, 200)}}
-                  onMouseUp={e => {e.target.style.fontSize = '16px'; e.target.style.filter = 'brightness(100%)'}}
-                  onMouseDown={e => {e.target.style.fontSize = '13.76px'; e.target.style.filter = 'brightness(55%)'}}
-                  onMouseLeave={e => {e.target.style.fontSize = '16px'; e.target.style.filter = 'brightness(100%)'}}>{item.title}</Link>
+                  onMouseUp={e => {e.target.style.fontSize = '16px'; e.target.style.paddingInline = '0px'; e.target.style.filter = 'brightness(100%)'}}
+                  onMouseDown={e => {e.target.style.fontSize = '13.76px'; e.target.style.paddingInline = '5.2px'; e.target.style.filter = 'brightness(55%)'}}
+                  onMouseLeave={e => {e.target.style.fontSize = '16px'; e.target.style.paddingInline = '0px'; e.target.style.filter = 'brightness(100%)'}}>{item.title}</Link>
             ))}
           </div>
           <div className='additionalMenu'>
-            <a href="https://docs.battleverse.io" target="_blank" rel="noopener noreferrer">Docs</a>
-            <a href="https://battleverse.picipo.io" target="_blank" rel="noopener noreferrer">Marketplace</a>
+            {[{link: 'https://docs.battleverse.io', value: 'Docs'}, {link: 'https://battleverse.picipo.io', value: 'Marketplace'}].map((item, index) => (
+              <a key={index} 
+                onMouseUp={e => {e.target.style.fontSize = width>1024? '16px' : width>800 ? '14px' : width>380 ?  '15px' : '14px' ; e.target.style.marginInline = '0px'; e.target.style.filter = 'brightness(100%)'}}
+                onMouseDown={e => {e.target.style.fontSize = width>1024? '15px' : width>800 ? '13px' : width>380 ? '14px' : '13px' ; e.target.style.marginInline = '1px'; e.target.style.filter = 'brightness(55%)'}}
+                onMouseLeave={e => {e.target.style.fontSize = width>1024? '16px' : width>800 ? '14px' : width>380 ? '15px' : '14px' ; e.target.style.marginInline = '0px'; e.target.style.filter = 'brightness(100%)'}} href={item.link} target="_blank" rel="noopener noreferrer">{item.value}</a>
+            ))}
           </div>
           <div className={openMenu ? 'openMenu active' : 'openMenu'}  onClick={() => {setOpenMenu(!openMenu)}}>
               <div />
