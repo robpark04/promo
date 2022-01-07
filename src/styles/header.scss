@@ -68,9 +68,9 @@ header {
             content: "";
             position: absolute;
             margin-top: 17px;
-            height: 2px; /* Height of border */
-            border-top-left-radius: 5rem; /* This can be any number but is normally set very high for the pill-shape */
-            border-top-right-radius: 5rem; /* This can be any number but is normally set very high for the pill-shape */
+            height: 2px;
+            border-top-left-radius: 5rem;
+            border-top-right-radius: 5rem;
             display: block;
             background-color: #d4924f;
           }
@@ -138,6 +138,7 @@ header {
           }
           @media (max-width: 600px) {
             padding: 3% 7%;
+            line-height: 24px;
           }
           @media (max-width: 400px) {
             padding: 3% 4vw;
@@ -155,6 +156,10 @@ header {
           }
           &:last-child {
             background: linear-gradient(94.04deg, #e8b86f 1.76%, #523112 94.7%);
+            line-height: 32px;
+            @media (max-width: 800px) {
+              line-height: 26px;
+            }
             &:hover {
               background: linear-gradient(
                 94.04deg,

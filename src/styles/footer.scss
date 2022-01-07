@@ -41,13 +41,22 @@
       font-family: Montserrat;
       font-style: normal;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 14px;
+      line-height: 14px;
       color: #c9a061;
+      text-decoration: none;
       @media (max-width: 600px) {
         font-size: 12px;
       }
       @media (max-width: 400px) {
         font-size: 11px;
+      }
+    }
+    a {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+        color: white;
       }
     }
   }

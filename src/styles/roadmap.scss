@@ -1,0 +1,275 @@
+.roadmap {
+  width: 100%;
+  .roadTitle {
+    font-family: Dela Gothic One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110px;
+    margin-left: 5%;
+    @media (max-width: 600px) {
+      font-size: 38px;
+      line-height: 110px;
+      margin-bottom: 0;
+    }
+  }
+  .back {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    z-index: -9999;
+    margin-top: 0;
+    height: 100%;
+    .left,
+    .right {
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      width: 12em;
+    }
+    .left {
+      margin-left: -0.4%;
+    }
+    .right {
+      right: 8vw;
+      margin-top: -1%;
+      @media (max-width: 1440px) {
+        right: -2%;
+      }
+    }
+  }
+  .years {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-self: flex-start;
+    margin-left: 5%;
+    z-index: 9999;
+    @media (max-width: 800px) {
+      width: 90%;
+    }
+    &:after {
+      position: absolute;
+      margin-top: 2.5em;
+      content: "";
+      height: 2px;
+      width: 90%;
+      max-width: 1280px;
+      background: #182e3b;
+      z-index: -99999;
+    }
+    div {
+      font-family: Dela Gothic One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 26px;
+      line-height: 37px;
+      text-transform: uppercase;
+      color: #182e3c;
+      span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:after {
+          content: "";
+          position: absolute;
+          margin-top: 1.44em;
+          width: 3.4em;
+          height: 6px; /* Height of border */
+          border-radius: 5rem; /* This can be any number but is normally set very high for the pill-shape */
+          display: none;
+          @media (max-width: 1024px) {
+            margin-top: 1.7em;
+          }
+          @media (max-width: 800px) {
+            margin-top: 1.9em;
+          }
+        }
+      }
+      span {
+        &:hover:after {
+          display: block;
+        }
+      }
+      &:first-child {
+        span {
+          &:after {
+            background-color: #4cff9e;
+          }
+        }
+      }
+      &:nth-child(2) {
+        span {
+          &:after {
+            background-color: #ff59b4;
+          }
+        }
+      }
+      &:nth-child(3) {
+        span {
+          &:after {
+            background-color: #7fe8ff;
+          }
+        }
+      }
+      @media (max-width: 1024px) {
+        font-size: 22px;
+        line-height: 32px;
+      }
+      @media (max-width: 800px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      @media (max-width: 400px) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+      .active {
+        &:after {
+          display: block !important;
+        }
+      }
+      &:first-child {
+        .active,
+        :hover {
+          color: #4cff9e !important;
+          z-index: 9999;
+        }
+      }
+      &:nth-child(2) {
+        .active,
+        :hover {
+          color: #ff59b4 !important;
+        }
+      }
+      &:nth-child(3) {
+        .active,
+        :hover {
+          color: #7fe8ff !important;
+        }
+      }
+    }
+    .dropdownItem {
+      display: flex;
+      align-items: center;
+      z-index: 9999;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      margin-left: 40em;
+      margin-top: -0.6%;
+      pointer-events: none;
+      padding: 0.6% 2% 0.6% 8%;
+      width: 39em;
+      background-color: #101e27;
+      z-index: -9999;
+      color: white;
+      border-radius: 20px;
+      text-transform: none;
+      @media (max-width: 1366px) {
+        font-size: 11px;
+        margin-left: 46em;
+        width: 44em;
+      }
+      @media (max-width: 1024px) {
+        margin-top: 4em;
+        margin-left: 0;
+        margin-right: 14em;
+        z-index: 9999;
+        width: 18em;
+        padding: 2%;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+  .slider {
+    width: 90%;
+    margin: 0 auto;
+    .q_container {
+      display: flex !important;
+      align-items: flex-start;
+      margin-top: 4%;
+      flex-wrap: wrap;
+      .q_block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #0b1a23;
+        border-radius: 20px;
+        margin-right: 2%;
+        padding: 1% 2%;
+        width: 23%;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box; /* Firefox, other Gecko */
+        box-sizing: border-box; /* Opera/IE 8+ */
+        @media (max-width: 800px) {
+          width: 44%;
+        }
+        @media (max-width: 450px) {
+          margin-top: 4% !important;
+          width: 80%;
+          margin: 0 auto;
+        }
+        @media (max-width: 400px) {
+          width: 90%;
+        }
+        &:nth-child(n + 3) {
+          @media (max-width: 800px) {
+            margin-top: 2%;
+          }
+        }
+        &:last-child {
+          margin-right: 1%;
+          @media (max-width: 800px) {
+            margin-right: auto;
+          }
+        }
+        h1 {
+          font-family: Dela Gothic One;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 33px;
+          line-height: 37px;
+          text-transform: uppercase;
+          color: #4cff9e;
+          margin-top: 0;
+        }
+        .curveLine {
+          align-self: center;
+          background: #07161f;
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          transform: rotate(-45deg);
+          margin: 5em 0 7em;
+          width: 254px;
+          height: 4px;
+        }
+        p {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          border-bottom: 2px solid #07161f;
+          margin-top: 0;
+          padding-bottom: 2%;
+          &:last-child {
+            padding-bottom: 0%;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    .slick-dots {
+      display: none !important;
+    }
+  }
+}

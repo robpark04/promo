@@ -32,12 +32,14 @@ export default function Footer(){
           ))}
         </div>
         <p style={{marginTop: '1%'}}>Copyright © 2021. All Rights Reserved by BVGAME Limited</p>
-        <Link style={{paddingBottom: '1%'}} to='legal_notice'>
-          Legal Notice & Disclaimers
-        </Link>
-        <Link style={{marginTop: '1%', paddingBottom: '2%'}} to='privacy_policy'>
-          Privacy policy
-        </Link>
+        <div style={{marginTop: '0%', padding: '0.5% 0 3% 0', width: '30em'}}>
+          <Link to='legal_notice'>
+            Legal Notice & Disclaimers
+          </Link>
+          <Link  to='privacy_policy'>
+            Privacy policy
+          </Link>
+        </div>
       </div>
     </footer>
   )
