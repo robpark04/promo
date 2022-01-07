@@ -17,8 +17,19 @@ export default function Header() {
 
   window.addEventListener("resize", () => setWidth(window.innerWidth));
 
+  let className = "inverted";
+  let scrollTrigger = 60;
+
+  window.onscroll = function() {
+    if (window.scrollY >= scrollTrigger) {
+      document.getElementsByTagName("header")[0].classList.add(className);
+    } else {
+      document.getElementsByTagName("header")[0].classList.remove(className);
+    }
+  };
+
   return (
-    <header>
+    <header id="header">
       <div className='topBarContainer'>
         <div className='topBar'>
           <Link to='/' className='logo'>

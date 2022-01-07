@@ -25,16 +25,29 @@ header {
         padding-inline: 4%;
       }
       .logo {
-        padding-top: 1.5%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 14px;
         width: 10%;
+        height: 140%;
         min-width: 85px;
         z-index: 999999;
+        @media (max-width: 800px) {
+          top: 6px;
+          width: 8%;
+        }
         @media (max-width: 400px) {
           width: 23%;
           min-width: 75px;
         }
         img {
-          width: 100%;
+          transition: all 400ms;
+          height: 6em;
+          @media (max-width: 800px) {
+            height: 5em;
+          }
         }
       }
       .barCenter {
@@ -53,7 +66,7 @@ header {
           width: 15em;
         }
         @media (max-width: 800px) {
-          margin-left: 6.2em;
+          margin-left: 4.2em;
           width: 17.4em;
           font-size: 14px;
         }
@@ -115,13 +128,11 @@ header {
           line-height: 16px;
         }
         @media (max-width: 400px) {
-          width: 51vw;
+          width: 54vw;
         }
         @media (max-width: 380px) {
+          width: 52vw;
           line-height: 14px;
-        }
-        @media (max-width: 380px) {
-          width: 50vw;
         }
         a {
           padding: 2% 10%;
@@ -246,6 +257,18 @@ header {
         font-weight: 600;
         font-size: 18px;
         line-height: 54px;
+      }
+    }
+  }
+}
+.inverted {
+  .logo {
+    height: 100% !important;
+    img {
+      height: 44px !important;
+      margin-top: -20px;
+      @media (max-width: 800px) {
+        margin-top: -6px;
       }
     }
   }

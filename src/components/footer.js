@@ -21,6 +21,11 @@ export default function Footer(){
     {icon: Youtube, link: 'https://www.youtube.com/c/BattleVerse/'}
   ]
 
+  const links = [
+    {value: 'Legal Notice & Disclaimers', to: 'legal_notice'},
+    {value: 'Privacy policy', to: 'privacy_policy'}
+  ]
+
   return(
     <footer className='footer'>
       <div className='footerContent'>
@@ -33,12 +38,12 @@ export default function Footer(){
         </div>
         <p style={{marginTop: '1%'}}>Copyright © 2021. All Rights Reserved by BVGAME Limited</p>
         <div style={{marginTop: '0%', padding: '0.5% 0 3% 0', width: '30em'}}>
-          <Link to='legal_notice'>
-            Legal Notice & Disclaimers
-          </Link>
-          <Link  to='privacy_policy'>
-            Privacy policy
-          </Link>
+          {links.map((item, index) => (
+            <Link key={index} to={item.to}
+              onClick={() => setTimeout(() => {window.scrollTo(0,0)}, 200)}>
+              {item.value}
+            </Link>
+          ))}
         </div>
       </div>
     </footer>
