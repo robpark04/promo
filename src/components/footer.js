@@ -40,7 +40,7 @@ export default function Footer(){
         <div style={{marginTop: '0%', padding: '0.5% 0 3% 0', width: '30em'}}>
           {links.map((item, index) => (
             <Link key={index} to={item.to}
-              onClick={() => setTimeout(() => {window.scrollTo(0,0)}, 200)}>
+              onClick={() => setTimeout(() => {window.scrollTo(10,0)}, 200)}>
               {item.value}
             </Link>
           ))}
