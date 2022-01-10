@@ -1,8 +1,24 @@
-import React from 'react' 
+import React, {useState, useEffect} from 'react' 
 
 import '../styles/header_banner.scss'
 
 import Back from '../assets/header/nft.svg'
+
+// PARTICLES 
+import Blue from '../assets/header/particles/blue.svg'
+import Blue1 from '../assets/header/particles/blue1.svg'
+import Blue2 from '../assets/header/particles/blue2.svg'
+import Blue3 from '../assets/header/particles/blue3.svg'
+import Blue4 from '../assets/header/particles/blue4.svg'
+
+import Green from '../assets/header/particles/green.svg'
+import Green1 from '../assets/header/particles/green2.svg'
+import Green2 from '../assets/header/particles/green3.svg'
+
+import Purple1 from '../assets/header/particles/purple1.svg'
+import Purple2 from '../assets/header/particles/purple2.svg'
+import Purple3 from '../assets/header/particles/purple3.svg'
+import Purple4 from '../assets/header/particles/purple4.svg'
 
 import Particles from '../assets/header/particles.svg'
 import Video from '../assets/header/shroom-anim_02.mp4'
@@ -15,6 +31,63 @@ import Twitter from '../assets/services/twitter.svg'
 import Medium from '../assets/services/medium.svg'
 
 export default function HeaderBanner() {
+
+
+  function randomBoolean(){
+    return Math.random() < 0.7
+  }
+
+  function randomBoolean1(){
+    return Math.random() < 0.8
+  }
+
+  let [blueParticles, setBlueParticles] = useState([
+    {bar: Blue, state: randomBoolean() },
+    {bar: Blue1, state: randomBoolean() },
+    {bar: Blue2, state: randomBoolean() },
+    {bar: Blue3, state: randomBoolean() },
+    {bar: Blue4, state: randomBoolean() }
+  ])
+
+  let [greenParticles, setGreenParticles] = useState([ 
+    {bar: Green, state: randomBoolean() }, 
+    {bar: Green1, state: randomBoolean() }, 
+    {bar: Green2, state: randomBoolean() } ])
+
+  let [purpleParticles, setPurpleParticles] = useState([ 
+    {bar: Purple1, state: randomBoolean()}, 
+    {bar: Purple2, state: randomBoolean()}, 
+    {bar: Purple3, state: randomBoolean()}, 
+    {bar: Purple4, state: randomBoolean()} ])
+
+
+  useEffect(() => {
+    const interval1 = setInterval(() => {
+      let newArr1 = [...blueParticles]
+      for(let x=0; x<blueParticles.length; x++){
+        blueParticles[x].state = randomBoolean()
+      }
+      setBlueParticles(newArr1)
+    }, 4000);
+
+    const interval = setInterval(() => {
+      let newArr = [...greenParticles]
+      for(let x=0; x<greenParticles.length; x++){
+        greenParticles[x].state = randomBoolean()
+      }
+      setGreenParticles(newArr)
+    }, 3000);
+  
+    const interval2 = setInterval(() => {
+      let newArr2 = [...purpleParticles]
+      for(let x=0; x<purpleParticles.length; x++){
+        purpleParticles[x].state = randomBoolean1()
+      }
+      setPurpleParticles(newArr2)
+    }, 4000);
+
+  }, [blueParticles, greenParticles, purpleParticles])
+
 
   const footer = [
     {icon: Discord, color: '#525FFF',
@@ -35,7 +108,24 @@ export default function HeaderBanner() {
 
   return(
     <div className='contentContainer'>
-      <div className='content' style={{ backgroundImage: `url(${Back})` }}>
+      <div className='content'>
+        <div className='particlesAnime'>
+          <div className='blueParticles'>
+            {blueParticles.map((item, index) => (
+              <img key={index} src={item.bar} alt="particle" style={item.state ? {paddingTop: "2%", opacity: "1"} : {paddingTop: "5%", opacity: "0"}} />
+            ))}
+          </div>
+          <div className='greenParticles'>
+            {greenParticles.map((item, index) => (
+              <img key={index} src={item.bar} alt="particle" style={item.state ? {paddingTop: "1%", opacity: "1"} : {paddingTop: "5%", opacity: "0"}} />
+            ))}
+          </div>
+          <div className='purpleParticles'>
+            {purpleParticles.map((item, index) => (
+              <img key={index} src={item.bar} alt="particle" style={item.state ? {paddingTop: "1%", opacity: "1"} : {paddingTop: "3%", opacity: "0"}}/>
+            ))}
+          </div>          
+        </div>
         <div className='info'>
           <h1>Multichain
             Play-To-Earn Metaverse</h1>
@@ -44,15 +134,11 @@ export default function HeaderBanner() {
           <img src={Top3} alt="top3" />
         </div>
         <div className='threeD'>
-          {/* <div className='lightLeft'/>
-          <div className='lightRight'/>
-          <img src={Persons} alt="persons" /> */}
           <div style={{ backgroundImage: `url(${Particles})`}} className='particles'/>
           <video controls={false} autoPlay loop muted>
             <source src={Video} type="video/mp4"/>
           </video>            
           <div className='links'>
-
             {[{link: 'http://shrooms.battleverse.io', value: 'MINT'}, {link: 'https://opensea.io/collection/baby-combat-bots-g1', value: 'BUY'}].map((item, index) => (
               <a key={index} 
                 onMouseDown={e => {e.target.style.fontSize = '16px'; e.target.style.marginInline = '2px'; e.target.style.filter = 'brightness(85%)'}}
