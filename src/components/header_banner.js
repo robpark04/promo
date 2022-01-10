@@ -62,14 +62,19 @@ export default function HeaderBanner() {
 
 
   useEffect(() => {
-    const interval1 = setInterval(() => {
-      let newArr1 = [...blueParticles]
+    const interval = setInterval(() => {
+      let newArr = [...blueParticles]
       for(let x=0; x<blueParticles.length; x++){
         blueParticles[x].state = randomBoolean()
       }
-      setBlueParticles(newArr1)
+      setBlueParticles(newArr)
     }, 4000);
 
+    return () => clearInterval(interval); 
+
+  }, [blueParticles])
+
+  useEffect(() => {
     const interval = setInterval(() => {
       let newArr = [...greenParticles]
       for(let x=0; x<greenParticles.length; x++){
@@ -77,17 +82,23 @@ export default function HeaderBanner() {
       }
       setGreenParticles(newArr)
     }, 3000);
+
+    return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
   
-    const interval2 = setInterval(() => {
-      let newArr2 = [...purpleParticles]
+  }, [greenParticles])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      let newArr = [...purpleParticles]
       for(let x=0; x<purpleParticles.length; x++){
         purpleParticles[x].state = randomBoolean1()
       }
-      setPurpleParticles(newArr2)
+      setPurpleParticles(newArr)
     }, 4000);
 
-  }, [blueParticles, greenParticles, purpleParticles])
-
+    return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+  
+  }, [purpleParticles])
 
   const footer = [
     {icon: Discord, color: '#525FFF',
