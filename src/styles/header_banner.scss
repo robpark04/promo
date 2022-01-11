@@ -64,9 +64,9 @@
             margin-top: 0%;
             margin-left: 4%;
             animation-name: blueBar;
-            animation-duration: 5s;
+            animation-duration: 11s;
             @keyframes blueBar {
-              0%  {margin-top: 10%; opacity: 0;}
+              0%  {margin-top: 15%; opacity: 0;}
               50% {margin-top: 2%; opacity: 1;}
               100% {margin-top: 0%; opacity: 0;}
             }
@@ -78,7 +78,7 @@
             margin-top: 28.4%;
             margin-left: 10%;
             animation-name: blueBar1;
-            animation-duration: 5s;
+            animation-duration: 8s;
             @keyframes blueBar1 {
               0%  {margin-top: 34.4%; opacity: 0;}
               50% {margin-top: 32.4%; opacity: 1;}
@@ -112,9 +112,9 @@
             margin-top: -1%;
             margin-left: 11%;
             animation-name: blueBar3;
-            animation-duration: 8s;
+            animation-duration: 14s;
             @keyframes blueBar3 {
-              0%  {margin-top: 8.4%; opacity: 0;}
+              0%  {margin-top: 14.4%; opacity: 0;}
               50% {margin-top: 2.4%; opacity: 1;}
               100% {margin-top: -1%; opacity: 0;}
             }             
@@ -125,7 +125,7 @@
             animation-name: blueBar4;
             animation-duration: 8s;
             @keyframes blueBar4 {
-              0%  {margin-top: 11.4%; opacity: 0;}
+              0%  {margin-top: 12.4%; opacity: 0;}
               50% {margin-top: 6.4%; opacity: 1;}
               100% {margin-top: 2.4%; opacity: 0;}
             }             
@@ -156,19 +156,19 @@
           &:nth-child(1){
             margin-top: 7%;
             animation-name: greenBar;
-            animation-duration: 5s;
+            animation-duration: 11s;
             @keyframes greenBar {
-              0%  {margin-top: 12%; opacity: 0;}
-              50% {margin-top: 9%; opacity: 1;}
+              0%  {margin-top: 15%; opacity: 0;}
+              50% {margin-top: 10%; opacity: 1;}
               100% {margin-top: 7%; opacity: 0;}
             }
           }
           &:nth-child(2){
             margin-left: 19%;
             animation-name: greenBar1;
-            animation-duration: 5s;
+            animation-duration: 14s;
             @keyframes greenBar1 {
-              0%  {margin-top: 7%; opacity: 0;}
+              0%  {margin-top: 11%; opacity: 0;}
               50% {margin-top: 2%; opacity: 1;}
               100% {margin-top: 0%; opacity: 0;}
             }
@@ -177,7 +177,7 @@
             margin-top: 28.4%;
             margin-left: 20.4%;
             animation-name: greenBar2;
-            animation-duration: 5s;
+            animation-duration: 8s;
             @keyframes greenBar2 {
               0%  {margin-top: 35.4%; opacity: 0;}
               50% {margin-top: 30.4%; opacity: 1;}
@@ -213,9 +213,9 @@
           &:nth-child(1){
             margin-top: 10%;
             animation-name: purpleBar;
-            animation-duration: 3s;
+            animation-duration: 10s;
             @keyframes purpleBar {
-              0%  {margin-top: 15%; opacity: 0;}
+              0%  {margin-top: 20%; opacity: 0;}
               50% {margin-top: 12%; opacity: 1;}
               100% {margin-top: 10%; opacity: 0;}
             }
@@ -224,9 +224,9 @@
             margin-left: 1%;
             margin-top: 4%;
             animation-name: purpleBar1;
-            animation-duration: 6s;
+            animation-duration: 12s;
             @keyframes purpleBar1 {
-              0%  {margin-top: 11%; opacity: 0;}
+              0%  {margin-top: 15%; opacity: 0;}
               50% {margin-top: 6%; opacity: 1;}
               100% {margin-top: 4%; opacity: 0;}
             }
@@ -235,8 +235,8 @@
             margin-top: 28.4%;
             margin-left: 2.4%;
             animation-name: purpleBar2;
-            animation-duration: 4s;
-            @keyframes purplBar2 {
+            animation-duration: 9s;
+            @keyframes purpleBar2 {
               0%  {margin-top: 35.4%; opacity: 0;}
               50% {margin-top: 30.4%; opacity: 1;}
               100% {margin-top: 28.4%; opacity: 0;}
@@ -245,9 +245,9 @@
           &:nth-child(4){
             margin-top: 22.4%;
             margin-left: 4.4%;
-            animation-name: purpleBar4;
-            animation-duration: 5s;
-            @keyframes purpleBar4 {
+            animation-name: purpleBar3;
+            animation-duration: 11s;
+            @keyframes purpleBar3 {
               0%  {margin-top: 32.5%; opacity: 0;}
               50% {margin-top: 24.4%; opacity: 1;}
               100% {margin-top: 22.4%; opacity: 0;}
