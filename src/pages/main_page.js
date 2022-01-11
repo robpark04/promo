@@ -5,9 +5,18 @@ import HeaderBanner from '../components/header_banner';
 import Characters from '../components/characters';
 import Roadmap from '../components/roadmap';
 
-import frame1 from '../assets/frame0.png'
-import frame2 from '../assets/frame1.png'
-import frame3 from '../assets/frame2.png'
+// CHARACTERS
+import frame1 from '../assets/mission/frame0.png'
+import frame2 from '../assets/mission/frame1.png'
+import frame3 from '../assets/mission/frame2.png'
+
+import Gaypad from '../assets/mission/gaypad.png'
+
+import Cube from '../assets/mission/cube.png'
+import Cube1 from '../assets/mission/cube1.png'
+import Cube2 from '../assets/mission/cube2.png'
+
+import Blockchain from '../assets/mission/blockchain.png'
 
 // CHARACTERS
 import SwordSvg from '../assets/sword.svg'
@@ -15,7 +24,6 @@ import ShieldSvg from '../assets/shield.svg'
 import Vector from '../assets/vectors.svg'
 
 // HOW TO PLAY 
-
 import ShroomPlay from '../assets/how_to_play/shroom.png'
 import Swords from '../assets/how_to_play/swords.png'
 import Coins from '../assets/how_to_play/coins.png'
@@ -82,9 +90,9 @@ import Github from '../assets/services/github.svg'
 export default function Main() {
 
   const missions = [
-    { img: frame1, title: 'Infinite gaming Universe', description: 'Battle, become an adventurer or a merchant, own factories, plants, fields, groves, etc.', color: '#00FF66' },
-    { img: frame2, title: 'Play-to-earn mass adoption', description: 'Play and manage your game assets by interacting with different blockchains.', color: '#FF36A3' },
-    { img: frame3, title: 'Meta-Governance, Council', description: 'BattleVerse will be open, transparent, and governed by the community.', color: '#00C2FF' }
+    { img: frame1, imgs: [Gaypad], title: 'Infinite gaming Universe', description: 'Battle, become an adventurer or a merchant, own factories, plants, fields, groves, etc.', color: '#00FF66', particlesNumb: 3 },
+    { img: frame2, imgs: [Cube, Cube1, Cube2], title: 'Play-to-earn mass adoption', description: 'Play and manage your game assets by interacting with different blockchains.', color: '#FF36A3', particlesNumb: 2 },
+    { img: frame3, imgs: [Blockchain], title: 'Meta-Governance, Council', description: 'BattleVerse will be open, transparent, and governed by the community.', color: '#00C2FF', particlesNumb: 4 }
   ]
 
   const gameplay = [
@@ -140,9 +148,9 @@ export default function Main() {
 
   const distributionAdapt = [
     Shape0, Shape1, Eco, Shape0,
-    Shape0, Token, Team, Shape0, Shape3,
+    Shape4, Token, Team, Shape2, Shape3,
     Reserve, Marketing, Shape6, Shape3,
-    Liq, Advisor, Shape3, null, Shape3, null, Shape3
+    Liq, Advisor, Shape3, null, Shape3, null, Shape5
   ]
 
   const team = [
@@ -172,7 +180,17 @@ export default function Main() {
           {missions.map((item, index) => (
             <div key={index}>
               <div className='light' style={{ background: item.color }} />
-              <img src={item.img} alt="icon"  />
+              <div className='icons'>
+                {(item.imgs).map((elem, index) => (
+                  <img src={elem} key={index} />
+                ))}
+              </div>
+              <img className='strangeForm' src={item.img} alt="icon"  />
+              <div className='particles'>
+                {[...Array(item.particlesNumb).keys()].map((index) => (
+                  <div className='particle' key={index} style={{background: item.color}}/>
+                ))}
+              </div>
               <h2>{item.title}</h2>
               <p>{item.description}</p>
             </div>

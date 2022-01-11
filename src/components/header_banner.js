@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react'
 
 import '../styles/header_banner.scss'
 
-import Back from '../assets/header/nft.svg'
-
 // PARTICLES 
 import Blue from '../assets/header/particles/blue.svg'
 import Blue1 from '../assets/header/particles/blue1.svg'
@@ -32,73 +30,24 @@ import Medium from '../assets/services/medium.svg'
 
 export default function HeaderBanner() {
 
+  let blueParticles = [
+    Blue,
+    Blue1,
+    Blue2,
+    Blue3,
+    Blue4
+  ]
 
-  function randomBoolean(){
-    return Math.random() < 0.7
-  }
+  let greenParticles = [ 
+    Green, 
+    Green1, 
+    Green2 ]
 
-  function randomBoolean1(){
-    return Math.random() < 0.8
-  }
-
-  let [blueParticles, setBlueParticles] = useState([
-    {bar: Blue, state: randomBoolean() },
-    {bar: Blue1, state: randomBoolean() },
-    {bar: Blue2, state: randomBoolean() },
-    {bar: Blue3, state: randomBoolean() },
-    {bar: Blue4, state: randomBoolean() }
-  ])
-
-  let [greenParticles, setGreenParticles] = useState([ 
-    {bar: Green, state: randomBoolean() }, 
-    {bar: Green1, state: randomBoolean() }, 
-    {bar: Green2, state: randomBoolean() } ])
-
-  let [purpleParticles, setPurpleParticles] = useState([ 
-    {bar: Purple1, state: randomBoolean()}, 
-    {bar: Purple2, state: randomBoolean()}, 
-    {bar: Purple3, state: randomBoolean()}, 
-    {bar: Purple4, state: randomBoolean()} ])
-
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      let newArr = [...blueParticles]
-      for(let x=0; x<blueParticles.length; x++){
-        blueParticles[x].state = randomBoolean()
-      }
-      setBlueParticles(newArr)
-    }, 4000);
-
-    return () => clearInterval(interval); 
-
-  }, [blueParticles])
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      let newArr = [...greenParticles]
-      for(let x=0; x<greenParticles.length; x++){
-        greenParticles[x].state = randomBoolean()
-      }
-      setGreenParticles(newArr)
-    }, 3000);
-
-    return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-  
-  }, [greenParticles])
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      let newArr = [...purpleParticles]
-      for(let x=0; x<purpleParticles.length; x++){
-        purpleParticles[x].state = randomBoolean1()
-      }
-      setPurpleParticles(newArr)
-    }, 4000);
-
-    return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-  
-  }, [purpleParticles])
+  let purpleParticles = [ 
+    Purple1, 
+    Purple2, 
+    Purple3, 
+    Purple4 ]
 
   const footer = [
     {icon: Discord, color: '#525FFF',
@@ -123,17 +72,17 @@ export default function HeaderBanner() {
         <div className='particlesAnime'>
           <div className='blueParticles'>
             {blueParticles.map((item, index) => (
-              <img key={index} src={item.bar} alt="particle" style={item.state ? {paddingTop: "2%", opacity: "1"} : {paddingTop: "5%", opacity: "0"}} />
+              <img key={index} src={item} alt="particle" />
             ))}
           </div>
           <div className='greenParticles'>
             {greenParticles.map((item, index) => (
-              <img key={index} src={item.bar} alt="particle" style={item.state ? {paddingTop: "1%", opacity: "1"} : {paddingTop: "5%", opacity: "0"}} />
+              <img key={index} src={item} alt="particle"/>
             ))}
           </div>
           <div className='purpleParticles'>
             {purpleParticles.map((item, index) => (
-              <img key={index} src={item.bar} alt="particle" style={item.state ? {paddingTop: "1%", opacity: "1"} : {paddingTop: "3%", opacity: "0"}}/>
+              <img key={index} src={item} alt="particle"/>
             ))}
           </div>          
         </div>
