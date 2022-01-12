@@ -165,19 +165,19 @@ export default function Roadmap() {
         {roadmap.map((item, index) => (
           <div key={index} className='q_container'>
             {item.q_blocks.map((item, indx) => (
-              <>
-              {!(indx===0&&index===0&&width<768) &&
-              <div className='q_block' style={{ border: index === 1 && indx === 0 && '2px solid #ff59b4', }} key={indx}>
-                {index < 3 &&
-                  <h1 style={{ color: index === 0 && indx === 0 ? '#07161F' : index === 0 ? '#4cff9e' : index === 1 ? '#ff59b4' : index === 2 ? '#7fe8ff' : null }}>{'Q' + (indx + 1)}</h1>
-                }
-                {index === 0 && indx === 0 &&
-                  <div className='curveLine' />}
-                {item.info && item.info.map((item, index) => (
-                  <p key={index}>{item}</p>
-                ))}
-              </div>}
-              </>
+              <div key={indx} className='q_blocks' >
+                {!(indx===0&&index===0&&width<768) &&
+                <div className='q_block' style={{ border: index === 1 && indx === 0 && '2px solid #ff59b4', }}>
+                  {index < 3 &&
+                    <h1 style={{ color: index === 0 && indx === 0 ? '#07161F' : index === 0 ? '#4cff9e' : index === 1 ? '#ff59b4' : index === 2 ? '#7fe8ff' : null }}>{'Q' + (indx + 1)}</h1>
+                  }
+                  {index === 0 && indx === 0 &&
+                    <div className='curveLine' />}
+                  {item.info && item.info.map((item, index) => (
+                    <p key={index}>{item}</p>
+                  ))}
+                </div>}
+              </div>
             ))}
           </div>
         ))}

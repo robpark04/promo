@@ -182,7 +182,7 @@ export default function Main() {
               <div className='light' style={{ background: item.color }} />
               <div className='icons'>
                 {(item.imgs).map((elem, index) => (
-                  <img src={elem} key={index} />
+                  <img src={elem} key={index} alt="gold shape"/>
                 ))}
               </div>
               <img className='strangeForm' src={item.img} alt="icon"  />
