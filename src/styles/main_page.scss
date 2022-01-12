@@ -61,10 +61,10 @@
         }
         .light {
           position: absolute;
-          width: 300px;
-          height: 232px;
+          width: 310px;
+          height: 252px;
           opacity: 0.2;
-          filter: blur(200px);
+          filter: blur(90px);
           z-index: 0;
           @media (max-width: 1024px) {
             width: 200px;
@@ -82,7 +82,7 @@
           z-index: 99999;
           max-width: 30%;
           img{
-            animation-iteration-count: infinite;
+            animation: linear infinite;
             height: auto;
             animation-delay: 0s;
           }
@@ -117,10 +117,12 @@
               }
             }
             @keyframes example {
-              0%   {margin-top: 0%;}
-              25%  {margin-top: 3%;}
-              75%  {margin-top: -3%;}
-              100% {margin-top: 0%;}
+              0%, 100% {
+                margin-top: -3%;
+              }
+              50% {
+                margin-top: 3%;
+              }
             }
           }
         }
@@ -143,10 +145,12 @@
                 animation-name: cube;
                 animation-duration: 10s;
                 @keyframes cube {
-                  0%   {margin-top: 0%;}
-                  25%  {margin-top: 3%;}
-                  75%  {margin-top: -3%;}
-                  100% {margin-top: 0%;}
+                  0%, 100% {
+                    margin-top: -3%;
+                  }
+                  50% {
+                    margin-top: 3%;
+                  }
                 }
                 @media (max-width: 1440px) {
                   width: 8%;
@@ -165,10 +169,12 @@
                 animation-name: cube1;
                 animation-duration: 7s;
                 @keyframes cube1 {
-                  0%   {margin-top: 0%;}
-                  25%  {margin-top: 3%;}
-                  75%  {margin-top: -3%;}
-                  100% {margin-top: 0%;}
+                  0%, 100% {
+                    margin-top: -4%;
+                  }
+                  50% {
+                    margin-top: 4%;
+                  }
                 }
                 @media (max-width: 1440px) {
                   margin-inline: -4%;
@@ -187,20 +193,24 @@
                 animation-name: cube2;
                 animation-duration: 8s;
                 @keyframes cube2 {
-                  0%   {margin-top: 4em;}
-                  25%  {margin-top: 5em;}
-                  75%  {margin-top: 3em;}
-                  100% {margin-top: 4em;}
+                  0%, 100% {
+                    margin-top: 4em;
+                  }
+                  50% {
+                    margin-top: 6em;
+                  }                  
                 }                
                 @media (max-width: 1440px) {
                   margin-top: 20%;
                   width: 6%;
                   height: 6%;
                   @keyframes cube2 {
-                    0%   {margin-top: 20%;}
-                    25%  {margin-top: 24%;}
-                    75%  {margin-top: 20%;}
-                    100% {margin-top: 24%;}
+                    0%, 100% {
+                      margin-top: 20%;
+                    }
+                    50% {
+                      margin-top: 24%;
+                    }                            
                   }  
                 }
                 @media (max-width: 500px) {
@@ -209,10 +219,12 @@
                   height: 20%;
                   animation-duration: 6s;
                   @keyframes cube2 {
-                    0%   {margin-top: 48%;}
-                    25%  {margin-top: 52%;}
-                    75%  {margin-top: 48%;}
-                    100% {margin-top: 52%;}
+                    0%, 100% {
+                      margin-top: 48%;
+                    }
+                    50% {
+                      margin-top: 52%;
+                    }                        
                   }  
                 }
               }              
@@ -242,13 +254,15 @@
               width: 8em;
               height: 9em;
               animation-name: blockchain;
-              animation-duration: 4s;
+              animation-duration: 8s;
               margin-top: 10%;
               @keyframes blockchain {
-                0%   {margin-top: 0%;}
-                25%  {margin-top: 10%;}
-                75%  {margin-top: -10%;}
-                100% {margin-top: 0%;}
+                0%, 100% {
+                  margin-top: -14%;
+                }
+                50% {
+                  margin-top: 20%;
+                }                        
               }
               @media (max-width: 1440px) {
                 width: 100%;
@@ -275,6 +289,7 @@
           .particle{
             width: 2px;
             height: 2px;
+            animation-iteration-count: infinite;
           }
         }
         &:first-child{
@@ -285,28 +300,68 @@
               margin-top: 9.4%;
               margin-left: 6%; 
             }
+            @media (max-width: 500px) {
+              margin-top: 25.6%;
+              margin-left: 10%;  
+            }
             .particle{
               &:first-child{
                 margin-top: 1.8em;
+                animation-name: greenDot;
+                animation-duration: 7s;
+                @keyframes greenDot {
+                  0%  {margin-top: 5.8em; margin-left: 1em; opacity: 1;}
+                  100% {margin-top: -1.8em; margin-left: -1.8em; opacity: 0;}
+                }    
                 @media (max-width: 1440px) {
                   margin-top: 5.6%;
+                  @keyframes greenDot {
+                    0%  {margin-top: 17.6%; margin-left: 1%; opacity: 1;}
+                    100% {margin-top: 2.6%; margin-left: -2.6%; opacity: 0;}
+                  }
                 }
               }
               &:nth-child(2){
                 margin-top: -1em;
                 margin-left: 8.4em;
+                animation-name: greenDot1;
+                animation-duration: 8s;
+                @keyframes greenDot1 {
+                  0%  {margin-top: 1.8em; margin-left: 9.4em; opacity: 1;}
+                  100% {margin-top: -1em; margin-left: 8.4em; opacity: 0;}
+                }    
                 @media (max-width: 1440px) {
                   margin-top: -4%;
                   margin-left: 29.8%;
+                  @keyframes greenDot1 {
+                    0%  {margin-top: 10%; margin-left: 29.8%; opacity: 1;}
+                    100% {margin-top: -6%; margin-left: 23.8%; opacity: 0;}
+                  }                  
+                }
+                @media (max-width: 500px) {
+                  margin-left: 39.8%;
                 }
               }
               &:last-child{
                 margin-top: 2em;
                 margin-left: 10em;
+                animation-name: greenDot2;
+                animation-duration: 8s;
+                @keyframes greenDot2 {
+                  0%  {margin-top: 3.8em; margin-left: 10em; opacity: 1;}
+                  100% {margin-top: -1em; margin-left: 14.4em; opacity: 0;}
+                } 
                 @media (max-width: 1440px) {
                   margin-top: 8%;
                   margin-left: 35%;
-                }                
+                  @keyframes greenDot2 {
+                    0%  {margin-top: 20%; margin-left: 28.8%; opacity: 1;}
+                    100% {margin-top: 4%; margin-left: 38%; opacity: 0;}
+                  }                    
+                }   
+                @media (max-width: 500px) {
+                  margin-left: 55%;
+                }                              
               }
             }
           }
@@ -319,20 +374,46 @@
               margin-top: 0%;
               margin-left: 4%;
             }              
+            @media (max-width: 500px) {
+              margin-top: 3%;
+            }
             .particle{
               &:first-child{
                  margin-top: 3.4em;
+                 animation-name: redDot;
+                 animation-duration: 8s;
+                 @keyframes redDot {
+                   0%  {margin-top: 3.4em; margin-left: 0; opacity: 1;}
+                   100% {margin-top: -1em; margin-left: -2.4em; opacity: 0;}
+                 } 
                  @media (max-width: 1440px) {
                     margin-top: 11%;
+                    @keyframes redDot {
+                      0%  {margin-top: 18%; margin-left: 0; opacity: 1;}
+                      100% {margin-top: 8%; margin-left: -10%; opacity: 0;}
+                    }                     
                 }  
               }
               &:last-child{
                 margin-top: -4em;
                 margin-left: 8em;
+                animation-name: redDot1;
+                animation-duration: 9s;
+                @keyframes redDot1 {
+                  0%  {margin-top: 2.4em; margin-left: 5em; opacity: 1;}
+                  100% {margin-top: -4em; margin-left: 8em; opacity: 0;}
+                }                 
                 @media (max-width: 1440px) {
                   margin-top: -14%;
                   margin-left: 28%;  
+                  @keyframes redDot1 {
+                    0%  {margin-top: -4%; margin-left: 22%; opacity: 1;}
+                    100% {margin-top: -18%; margin-left: 32%; opacity: 0;}
+                  }                   
                 }
+                @media (max-width: 500px) {
+                  margin-top: -12%;
+                  margin-left: 38%;   }
               }
             }
           }
@@ -341,36 +422,77 @@
           .particles{
             width: 10%;
             margin-top: 0em;
-            margin-left: 9.4em;
+            margin-left: 9.4em;           
             @media (max-width: 1440px) {
               margin-left: 11%;
+            }
+            @media (max-width: 500px) {
+              margin-top: 4%;
+              margin-left: 21%;
+              width: 22%;
             }
             .particle{
               &:first-child{
                 margin-top: 0em;
                 margin-left: 0em;
+                animation-name: blueDot;
+                animation-duration: 9s;
+                @keyframes blueDot {
+                  0%  {margin-top: 1em; margin-left: 0em; opacity: 1;}
+                  100% {margin-top: -1em; margin-left: -1em; opacity: 0;}
+                }   
               }
               &:nth-child(2){
                 margin-top: 1em;
                 margin-left: 8em;
+                animation-name: blueDot1;
+                animation-duration: 7s;
+                @keyframes blueDot1 {
+                  0%  {margin-top: 4em; margin-left: 4em; opacity: 1;}
+                  100% {margin-top: 1em; margin-left: 8em; opacity: 0;}
+                }                   
                 @media (max-width: 1440px) {
                   margin-top: 8%;
                   margin-left: 78%;
+                  @keyframes blueDot1 {
+                    0%  {margin-top: 18%; margin-left: 70%; opacity: 1;}
+                    100% {margin-top: 6%; margin-left: 88%; opacity: 0;}
+                  }                    
                 }
               }         
               &:nth-child(3){
                 margin-top: 5em;
                 margin-left: 10em;
+                animation-name: blueDot2;
+                animation-duration: 7s;
+                @keyframes blueDot2 {
+                  0%  {margin-top: 10em; margin-left: 8em; opacity: 1;}
+                  100% {margin-top: 5em; margin-left: 12em; opacity: 0;}
+                }                   
                 @media (max-width: 1440px) {
                   margin-top: 58%;
                   margin-left: 98%;
+                  @keyframes blueDot2 {
+                    0%  {margin-top: 64%; margin-left: 82%; opacity: 1;}
+                    100% {margin-top: 50%; margin-left: 102%; opacity: 0;}
+                  }                  
                 }                
               }                     
               &:last-child{
                 margin-top: -1em;
                 margin-left: 0em;
+                animation-name: blueDot3;
+                animation-duration: 4s;
+                @keyframes blueDot3 {
+                  0%  {margin-top: 2em; margin-left: -2em; opacity: 1;}
+                  100% {margin-top: -2em; margin-left: 0em; opacity: 0;}
+                }                    
                 @media (max-width: 1440px) {
                   margin-top: -10%;
+                  @keyframes blueDot3 {
+                    0%  {margin-top: 0; margin-left: 0; opacity: 1;}
+                    100% {margin-top: -14%; margin-left: 10%; opacity: 0;}
+                  }                       
                 }                        
               }
             }
