@@ -289,7 +289,7 @@
           .particle{
             width: 2px;
             height: 2px;
-            animation-iteration-count: infinite;
+            animation: linear infinite;
           }
         }
         &:first-child{
@@ -464,7 +464,7 @@
                 margin-top: 5em;
                 margin-left: 10em;
                 animation-name: blueDot2;
-                animation-duration: 7s;
+                animation-duration: 10s;
                 @keyframes blueDot2 {
                   0%  {margin-top: 10em; margin-left: 8em; opacity: 1;}
                   100% {margin-top: 5em; margin-left: 12em; opacity: 0;}
@@ -482,7 +482,7 @@
                 margin-top: -1em;
                 margin-left: 0em;
                 animation-name: blueDot3;
-                animation-duration: 4s;
+                animation-duration: 8s;
                 @keyframes blueDot3 {
                   0%  {margin-top: 2em; margin-left: -2em; opacity: 1;}
                   100% {margin-top: -2em; margin-left: 0em; opacity: 0;}
