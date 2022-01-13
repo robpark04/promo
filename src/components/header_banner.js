@@ -95,9 +95,7 @@ export default function HeaderBanner() {
         </div>
         <div className='threeD'>
           <div style={{ backgroundImage: `url(${Particles})`}} className='particles'/>
-          <video controls={false} autoPlay loop muted>
-            <source src={Video} type="video/mp4"/>
-          </video>            
+          <video controls={false} src={Video} loop={true} muted={true} autoPlay={true} playsInline={true} />            
           <div className='links'>
             {[{link: 'http://shrooms.battleverse.io', value: 'MINT'}, {link: 'https://opensea.io/collection/baby-combat-bots-g1', value: 'BUY'}].map((item, index) => (
               <a key={index} 
