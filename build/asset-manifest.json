@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.bc0debef.chunk.css",
-    "main.js": "/static/js/main.5bba5a7d.chunk.js",
-    "main.js.map": "/static/js/main.5bba5a7d.chunk.js.map",
+    "main.js": "/static/js/main.d2644445.chunk.js",
+    "main.js.map": "/static/js/main.d2644445.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3a417a0b.js",
     "runtime-main.js.map": "/static/js/runtime-main.3a417a0b.js.map",
     "static/js/2.461bded2.chunk.js": "/static/js/2.461bded2.chunk.js",
@@ -91,7 +91,7 @@
     "static/media/setting.bae1efce.svg": "/static/media/setting.bae1efce.svg",
     "static/media/shield.5a9d38ce.png": "/static/media/shield.5a9d38ce.png",
     "static/media/shield.7f75553a.svg": "/static/media/shield.7f75553a.svg",
-    "static/media/shroom-anim_02.98b61d7c.mp4": "/static/media/shroom-anim_02.98b61d7c.mp4",
+    "static/media/shroom-anim_02.21a6bc99.mp4": "/static/media/shroom-anim_02.21a6bc99.mp4",
     "static/media/shroom.7abea704.png": "/static/media/shroom.7abea704.png",
     "static/media/shrooms.e0e3d8fc.png": "/static/media/shrooms.e0e3d8fc.png",
     "static/media/sword.565b080d.svg": "/static/media/sword.565b080d.svg",
@@ -111,6 +111,6 @@
     "static/js/runtime-main.3a417a0b.js",
     "static/js/2.461bded2.chunk.js",
     "static/css/main.bc0debef.chunk.css",
-    "static/js/main.5bba5a7d.chunk.js"
+    "static/js/main.d2644445.chunk.js"
   ]
 }
