@@ -46,7 +46,7 @@
       color: #c9a061;
       text-decoration: none;
       @media (max-width: 600px) {
-        font-size: 12px;
+        font-size: 12px !important;
       }
       @media (max-width: 420px) {
         font-size: 11px !important;

@@ -102,6 +102,7 @@
             }
             img{
               width: 9.4em;
+              height: 100%;
               animation-name: example;
               animation-duration: 5s;
               @media (max-width: 1440px) {
@@ -137,7 +138,7 @@
             img{
               &:first-child{
                 width: 2em;
-                height: 2em;
+                height: 100%;
                 animation-name: cube;
                 animation-duration: 10s;
                 @keyframes cube {
@@ -159,7 +160,7 @@
                 }
               }
               &:nth-child(2){
-                height: 7em;
+                height: 100%;
                 width: 8em;     
                 margin-inline: -1em;
                 animation-name: cube1;
@@ -175,17 +176,15 @@
                 @media (max-width: 1440px) {
                   margin-inline: -4%;
                   width: 30%;
-                  height: 30%;
                 }
                 @media (max-width: 500px) {
                   width: 86%;
-                  height: 86%;
                 }
               }
               &:last-child{
                 margin-top: 6em;
                 width: 1.8em;
-                height: 1.8em;
+                height: 100%;
                 animation-name: cube2;
                 animation-duration: 8s;
                 @keyframes cube2 {
@@ -248,7 +247,6 @@
             }
             img{
               width: 8em;
-              height: 9em;
               animation-name: blockchain;
               animation-duration: 8s;
               margin-top: 10%;
@@ -901,10 +899,14 @@
       margin-left: -10em;
       margin-top: -10%;
       margin-bottom: 6%;
-      @media (max-width: 600px) {
-        width: 100%;
+      @media (max-width: 1024px) {
+        margin-top: 0%;
+      }
+        @media (max-width: 600px) {
+          margin-top: -10%;
+          width: 100%;
         margin: 0 auto;
-        margin-left: -4em;
+        margin-left: 0em;
       }
     }
     .comb,
@@ -923,9 +925,10 @@
         margin-bottom: 8vw;
       }
       @media (max-width: 600px) {
-        width: 20%;
-        margin-bottom: 12.4vw;
-        margin-inline: 2.4%;
+        display: none;
+        // width: 20%;
+        // margin-bottom: 12.4vw;
+        // margin-inline: 2.4%;
       }
       img {
         width: 225%;
@@ -936,11 +939,14 @@
           width: 240%;
         }
         @media (max-width: 600px) {
-          width: 240%;
+          width: 100vw;
         }
       }
-    }
 
+    }
+    .mobileDist{
+      width: 100vw;
+    }
     .comb:nth-of-type(2n) {
       top: 9em;
       @media (max-width: 1440px) {

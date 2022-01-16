@@ -58,11 +58,13 @@ import Advisor from '../assets/distribution/advisor.svg'
 
 import Shape0 from '../assets/distribution/Star.svg'
 import Shape1 from '../assets/distribution/Star1.svg'
-import Shape2 from '../assets/distribution/Star2.svg'
+// import Shape2 from '../assets/distribution/Star2.svg'
 import Shape3 from '../assets/distribution/Star3.svg'
-import Shape4 from '../assets/distribution/Star4.svg'
-import Shape5 from '../assets/distribution/Star5.svg'
+// import Shape4 from '../assets/distribution/Star4.svg'
+// import Shape5 from '../assets/distribution/Star5.svg'
 import Shape6 from '../assets/distribution/Star6.svg'
+
+import Mobile from '../assets/distribution/mobile.svg'
 
 // TEAM
 import TeamBack from '../assets/team/Paricles.svg'
@@ -146,12 +148,12 @@ export default function Main() {
     Shape0, Marketing, Shape6, Liq,
     Shape0, Advisor, Shape3]
 
-  const distributionAdapt = [
-    Shape0, Shape1, Eco, Shape0,
-    Shape4, Token, Team, Shape2, Shape3,
-    Reserve, Marketing, Shape6, Shape3,
-    Liq, Advisor, Shape3, null, Shape3, null, Shape5
-  ]
+  // const distributionAdapt = [
+  //   Shape0, Shape1, Eco, Shape0,
+  //   Shape4, Token, Team, Shape2, Shape3,
+  //   Reserve, Marketing, Shape6, Shape3,
+  //   Liq, Advisor, Shape3, null, Shape3, null, Shape5
+  // ]
 
   const team = [
     { member: Alex, name: 'ALEXANDER SIMAKOV', position: 'CO-FOUNDER, CVO', icon: Linkedin, link: 'https://www.linkedin.com/in/simakov5/' },
@@ -243,11 +245,7 @@ export default function Main() {
               <img src={item} alt="" />
             </div>
           ))
-        : distributionAdapt.map((item, index) => (
-          <div key={index} className="combAdaptive">
-            <img src={item} alt="" />
-          </div>
-        ))}
+        : <img src={Mobile} alt="mobileDist" className='mobileDist'/>}
         </div>
       </div>
       <Roadmap />
