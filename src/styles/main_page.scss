@@ -56,7 +56,6 @@
         flex-direction: column;
         align-items: left;
         width: 33%;
-        overflow: hidden;
         @media (max-width: 500px) {
           width: 60%;
         }
@@ -67,6 +66,7 @@
           opacity: 0.2;
           -webkit-filter: blur(90px);
           filter: blur(90px);
+          backdrop-filter: blur(90px); 
           z-index: 0;
           @media (max-width: 1024px) {
             width: 200px;
