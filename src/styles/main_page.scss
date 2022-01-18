@@ -104,7 +104,7 @@
             img{
               width: 9.4em;
               height: 100%;
-              animation-name: example;
+              animation-name: gamepad;
               animation-duration: 5s;
               @media (max-width: 1440px) {
                 width: 35%;
@@ -114,12 +114,12 @@
                 animation-duration: 3s;
               }
             }
-            @keyframes example {
+            @keyframes gamepad {
               0%, 100% {
-                margin-top: -3%;
+                transform: translateY(-15px);
               }
               50% {
-                margin-top: 3%;
+                transform: translateY(15px);
               }
             }
           }
@@ -144,10 +144,10 @@
                 animation-duration: 10s;
                 @keyframes cube {
                   0%, 100% {
-                    margin-top: -3%;
+                    transform: translateY(-10px);
                   }
                   50% {
-                    margin-top: 3%;
+                    transform: translateY(15px);
                   }
                 }
                 @media (max-width: 1440px) {
@@ -168,10 +168,10 @@
                 animation-duration: 7s;
                 @keyframes cube1 {
                   0%, 100% {
-                    margin-top: -4%;
+                    transform: translateY(-10px);
                   }
                   50% {
-                    margin-top: 4%;
+                    transform: translateY(25px);
                   }
                 }
                 @media (max-width: 1440px) {
@@ -190,10 +190,10 @@
                 animation-duration: 8s;
                 @keyframes cube2 {
                   0%, 100% {
-                    margin-top: 4em;
+                    transform: translateY(-12px);
                   }
                   50% {
-                    margin-top: 6em;
+                    transform: translateY(4px);
                   }                  
                 }                
                 @media (max-width: 1440px) {
@@ -253,10 +253,10 @@
               margin-top: 10%;
               @keyframes blockchain {
                 0%, 100% {
-                  margin-top: -14%;
+                  transform: translateY(-12px);
                 }
                 50% {
-                  margin-top: 20%;
+                  transform: translateY(20px);
                 }                        
               }
               @media (max-width: 1440px) {
@@ -303,17 +303,17 @@
               &:first-child{
                 margin-top: 1.8em;
                 animation-name: greenDot;
-                animation-duration: 7s;
+                animation-duration: 5s;
                 @keyframes greenDot {
-                  0%  {margin-top: 5.8em; margin-left: 1em; opacity: 1;}
-                  100% {margin-top: -1.8em; margin-left: -1.8em; opacity: 0;}
+                  0%  {transform: translate(30px, 40px); opacity: 1;}
+                  100% {transform: translate(-45px, -30px); opacity: 0;}
                 }    
                 @media (max-width: 1440px) {
                   margin-top: 5.6%;
-                  @keyframes greenDot {
-                    0%  {margin-top: 17.6%; margin-left: 1%; opacity: 1;}
-                    100% {margin-top: 2.6%; margin-left: -2.6%; opacity: 0;}
-                  }
+                  // @keyframes greenDot {
+                  //   0%  {margin-top: 17.6%; margin-left: 1%; opacity: 1;}
+                  //   100% {margin-top: 2.6%; margin-left: -2.6%; opacity: 0;}
+                  // }
                 }
               }
               &:nth-child(2){
@@ -322,16 +322,16 @@
                 animation-name: greenDot1;
                 animation-duration: 8s;
                 @keyframes greenDot1 {
-                  0%  {margin-top: 1.8em; margin-left: 9.4em; opacity: 1;}
-                  100% {margin-top: -1em; margin-left: 8.4em; opacity: 0;}
+                  0%  {transform: translate(0px, 80px); opacity: 1;}
+                  100% {transform: translate(15px, -50px); opacity: 0;}
                 }    
                 @media (max-width: 1440px) {
                   margin-top: -4%;
                   margin-left: 29.8%;
-                  @keyframes greenDot1 {
-                    0%  {margin-top: 10%; margin-left: 29.8%; opacity: 1;}
-                    100% {margin-top: -6%; margin-left: 23.8%; opacity: 0;}
-                  }                  
+                  // @keyframes greenDot1 {
+                  //   0%  {margin-top: 10%; margin-left: 29.8%; opacity: 1;}
+                  //   100% {margin-top: -6%; margin-left: 23.8%; opacity: 0;}
+                  // }                  
                 }
                 @media (max-width: 500px) {
                   margin-left: 39.8%;
@@ -343,16 +343,16 @@
                 animation-name: greenDot2;
                 animation-duration: 8s;
                 @keyframes greenDot2 {
-                  0%  {margin-top: 3.8em; margin-left: 10em; opacity: 1;}
-                  100% {margin-top: -1em; margin-left: 14.4em; opacity: 0;}
+                  0%  {transform: translate(0px, 40px); opacity: 1;}
+                  100% {transform: translate(45px, -50px); opacity: 0;}
                 } 
                 @media (max-width: 1440px) {
                   margin-top: 8%;
                   margin-left: 35%;
-                  @keyframes greenDot2 {
-                    0%  {margin-top: 20%; margin-left: 28.8%; opacity: 1;}
-                    100% {margin-top: 4%; margin-left: 38%; opacity: 0;}
-                  }                    
+                  // @keyframes greenDot2 {
+                  //   0%  {margin-top: 20%; margin-left: 28.8%; opacity: 1;}
+                  //   100% {margin-top: 4%; margin-left: 38%; opacity: 0;}
+                  // }                    
                 }   
                 @media (max-width: 500px) {
                   margin-left: 55%;
@@ -376,39 +376,40 @@
               &:first-child{
                  margin-top: 3.4em;
                  animation-name: redDot;
-                 animation-duration: 8s;
+                 animation-duration: 4s;
                  @keyframes redDot {
-                   0%  {margin-top: 3.4em; margin-left: 0; opacity: 1;}
-                   100% {margin-top: -1em; margin-left: -2.4em; opacity: 0;}
+                  0%  {transform: translate(10px, 10px); opacity: 1;}
+                  100% {transform: translate(-25px, -50px); opacity: 0;}
                  } 
                  @media (max-width: 1440px) {
                     margin-top: 11%;
-                    @keyframes redDot {
-                      0%  {margin-top: 18%; margin-left: 0; opacity: 1;}
-                      100% {margin-top: 8%; margin-left: -10%; opacity: 0;}
-                    }                     
+                    // @keyframes redDot {
+                    //   0%  {margin-top: 18%; margin-left: 0; opacity: 1;}
+                    //   100% {margin-top: 8%; margin-left: -10%; opacity: 0;}
+                    // }                     
                 }  
               }
               &:last-child{
                 margin-top: -4em;
                 margin-left: 8em;
                 animation-name: redDot1;
-                animation-duration: 9s;
+                animation-duration: 6s;
                 @keyframes redDot1 {
-                  0%  {margin-top: 2.4em; margin-left: 5em; opacity: 1;}
-                  100% {margin-top: -4em; margin-left: 8em; opacity: 0;}
+                  0%  {transform: translate(0px, 0px); opacity: 1;}
+                  100% {transform: translate(25px, -30px); opacity: 0;}
                 }                 
                 @media (max-width: 1440px) {
                   margin-top: -14%;
                   margin-left: 28%;  
-                  @keyframes redDot1 {
-                    0%  {margin-top: -4%; margin-left: 22%; opacity: 1;}
-                    100% {margin-top: -18%; margin-left: 32%; opacity: 0;}
-                  }                   
+                  // @keyframes redDot1 {
+                  //   0%  {margin-top: -4%; margin-left: 22%; opacity: 1;}
+                  //   100% {margin-top: -18%; margin-left: 32%; opacity: 0;}
+                  // }                   
                 }
                 @media (max-width: 500px) {
                   margin-top: -12%;
-                  margin-left: 38%;   }
+                  margin-left: 38%;   
+                }
               }
             }
           }
@@ -431,63 +432,63 @@
                 margin-top: 0em;
                 margin-left: 0em;
                 animation-name: blueDot;
-                animation-duration: 9s;
+                animation-duration: 7s;
                 @keyframes blueDot {
-                  0%  {margin-top: 1em; margin-left: 0em; opacity: 1;}
-                  100% {margin-top: -1em; margin-left: -1em; opacity: 0;}
+                  0%  {transform: translate(0px, 10px); opacity: 1;}
+                  100% {transform: translate(-25px, -30px); opacity: 0;}
                 }   
               }
               &:nth-child(2){
                 margin-top: 1em;
                 margin-left: 8em;
                 animation-name: blueDot1;
-                animation-duration: 7s;
+                animation-duration: 5s;
                 @keyframes blueDot1 {
-                  0%  {margin-top: 4em; margin-left: 4em; opacity: 1;}
-                  100% {margin-top: 1em; margin-left: 8em; opacity: 0;}
+                  0%  {transform: translate(0px, 10px); opacity: 1;}
+                  100% {transform: translate(25px, -30px); opacity: 0;}                  
                 }                   
                 @media (max-width: 1440px) {
                   margin-top: 8%;
                   margin-left: 78%;
-                  @keyframes blueDot1 {
-                    0%  {margin-top: 18%; margin-left: 70%; opacity: 1;}
-                    100% {margin-top: 6%; margin-left: 88%; opacity: 0;}
-                  }                    
+                  // @keyframes blueDot1 {
+                  //   0%  {margin-top: 18%; margin-left: 70%; opacity: 1;}
+                  //   100% {margin-top: 6%; margin-left: 88%; opacity: 0;}
+                  // }                    
                 }
               }         
               &:nth-child(3){
                 margin-top: 5em;
                 margin-left: 10em;
                 animation-name: blueDot2;
-                animation-duration: 10s;
+                animation-duration: 8s;
                 @keyframes blueDot2 {
-                  0%  {margin-top: 10em; margin-left: 8em; opacity: 1;}
-                  100% {margin-top: 5em; margin-left: 12em; opacity: 0;}
+                  0%  {transform: translate(0px, 30px); opacity: 1;}
+                  100% {transform: translate(25px, -30px); opacity: 0;}                        
                 }                   
                 @media (max-width: 1440px) {
                   margin-top: 58%;
                   margin-left: 98%;
-                  @keyframes blueDot2 {
-                    0%  {margin-top: 64%; margin-left: 82%; opacity: 1;}
-                    100% {margin-top: 50%; margin-left: 102%; opacity: 0;}
-                  }                  
+                  // @keyframes blueDot2 {
+                  //   0%  {margin-top: 64%; margin-left: 82%; opacity: 1;}
+                  //   100% {margin-top: 50%; margin-left: 102%; opacity: 0;}
+                  // }                  
                 }                
               }                     
               &:last-child{
                 margin-top: -1em;
                 margin-left: 0em;
                 animation-name: blueDot3;
-                animation-duration: 8s;
+                animation-duration: 6s;
                 @keyframes blueDot3 {
-                  0%  {margin-top: 2em; margin-left: -2em; opacity: 1;}
-                  100% {margin-top: -2em; margin-left: 0em; opacity: 0;}
+                  0%  {transform: translate(0px, 30px); opacity: 1;}
+                  100% {transform: translate(-25px, -30px); opacity: 0;}                     
                 }                    
                 @media (max-width: 1440px) {
                   margin-top: -10%;
-                  @keyframes blueDot3 {
-                    0%  {margin-top: 0; margin-left: 0; opacity: 1;}
-                    100% {margin-top: -14%; margin-left: 10%; opacity: 0;}
-                  }                       
+                  // @keyframes blueDot3 {
+                  //   0%  {margin-top: 0; margin-left: 0; opacity: 1;}
+                  //   100% {margin-top: -14%; margin-left: 10%; opacity: 0;}
+                  // }                       
                 }                        
               }
             }
