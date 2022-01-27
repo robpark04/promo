@@ -80,17 +80,17 @@
             animation-name: blueBar1;
             animation-duration: 8s;
             @keyframes blueBar1 {
-              0%  {transform: translateY(34.4%); opacity: 0;}
-              50% {transform: translateY(32.4%); opacity: 1;}
-              100% {transform: translateY(28.4%); opacity: 0;}
+              0%  {transform: translateY(100%); opacity: 0;}
+              50% {transform: translateY(52.4%); opacity: 1;}
+              100% {transform: translateY(18.4%); opacity: 0;}
             }            
             @media (max-width: 800px) {
               margin-top: 22.4%;
               margin-left: 40%;
               @keyframes blueBar1 {
-                0%  {transform: translateY(28.4%); opacity: 0;}
-                50% {transform: translateY(24.4%); opacity: 1;}
-                100% {transform: translateY(22.4%); opacity: 0;}
+                0%  {transform: translateY(98.4%); opacity: 0;}
+                50% {transform: translateY(44.4%); opacity: 1;}
+                100% {transform: translateY(0.4%); opacity: 0;}
               }                
             }
           } 
@@ -100,9 +100,9 @@
             animation-name: blueBar2;
             animation-duration: 8s;
             @keyframes blueBar2 {
-              0%  {transform: translateY(38.4%); opacity: 0;}
-              50% {transform: translateY(32.4%); opacity: 1;}
-              100% {transform: translateY(26.4%); opacity: 0;}
+              0%  {transform: translateY(108.4%); opacity: 0;}
+              50% {transform: translateY(42.4%); opacity: 1;}
+              100% {transform: translateY(2.4%); opacity: 0;}
             }               
             @media (max-width: 800px) {
               margin-left: 54%;
@@ -114,8 +114,8 @@
             animation-name: blueBar3;
             animation-duration: 14s;
             @keyframes blueBar3 {
-              0%  {transform: translateY(14.4%); opacity: 0;}
-              50% {transform: translateY(2.4%); opacity: 1;}
+              0%  {transform: translateY(114.4%); opacity: 0;}
+              50% {transform: translateY(62.4%); opacity: 1;}
               100% {transform: translateY(-1%); opacity: 0;}
             }             
           }        
@@ -125,8 +125,8 @@
             animation-name: blueBar4;
             animation-duration: 8s;
             @keyframes blueBar4 {
-              0%  {transform: translateY(12.4%); opacity: 0;}
-              50% {transform: translateY(6.4%); opacity: 1;}
+              0%  {transform: translateY(112.4%); opacity: 0;}
+              50% {transform: translateY(86.4%); opacity: 1;}
               100% {transform: translateY(2.4%); opacity: 0;}
             }             
           }                              
@@ -158,8 +158,8 @@
             animation-name: greenBar;
             animation-duration: 11s;
             @keyframes greenBar {
-              0%  {transform: translateY(15%); opacity: 0;}
-              50% {transform: translateY(10%); opacity: 1;}
+              0%  {transform: translateY(115%); opacity: 0;}
+              50% {transform: translateY(50%); opacity: 1;}
               100% {transform: translateY(7%); opacity: 0;}
             }
           }
@@ -168,8 +168,8 @@
             animation-name: greenBar1;
             animation-duration: 14s;
             @keyframes greenBar1 {
-              0%  {transform: translateY(11%); opacity: 0;}
-              50% {transform: translateY(2%); opacity: 1;}
+              0%  {transform: translateY(131%); opacity: 0;}
+              50% {transform: translateY(82%); opacity: 1;}
               100% {transform: translateY(0%); opacity: 0;}
             }
           } 
@@ -179,9 +179,9 @@
             animation-name: greenBar2;
             animation-duration: 8s;
             @keyframes greenBar2 {
-              0%  {transform: translateY(35.4%); opacity: 0;}
-              50% {transform: translateY(30.4%); opacity: 1;}
-              100% {transform: translateY(28.4%); opacity: 0;}
+              0%  {transform: translateY(135.4%); opacity: 0;}
+              50% {transform: translateY(60.4%); opacity: 1;}
+              100% {transform: translateY(8.4%); opacity: 0;}
             }
           }                    
         }
@@ -215,8 +215,8 @@
             animation-name: purpleBar;
             animation-duration: 10s;
             @keyframes purpleBar {
-              0%  {transform: translateY(20%); opacity: 0;}
-              50% {transform: translateY(12%); opacity: 1;}
+              0%  {transform: translateY(120%); opacity: 0;}
+              50% {transform: translateY(62%); opacity: 1;}
               100% {transform: translateY(10%); opacity: 0;}
             }
           }
@@ -226,8 +226,8 @@
             animation-name: purpleBar1;
             animation-duration: 12s;
             @keyframes purpleBar1 {
-              0%  {transform: translateY(15%);opacity: 0;}
-              50% {transform: translateY(6%); opacity: 1;}
+              0%  {transform: translateY(95%);opacity: 0;}
+              50% {transform: translateY(50%); opacity: 1;}
               100% {transform: translateY(4%); opacity: 0;}
             }
           } 
@@ -237,9 +237,9 @@
             animation-name: purpleBar2;
             animation-duration: 9s;
             @keyframes purpleBar2 {
-              0%  {transform: translateY(35.4%); opacity: 0;}
+              0%  {transform: translateY(105.4%); opacity: 0;}
               50% {transform: translateY(30.4%); opacity: 1;}
-              100% {transform: translateY(28.4%); opacity: 0;}
+              100% {transform: translateY(18.4%); opacity: 0;}
             }            
           }             
           &:nth-child(4){
@@ -248,9 +248,9 @@
             animation-name: purpleBar3;
             animation-duration: 11s;
             @keyframes purpleBar3 {
-              0%  {transform: translateY(32.5%); opacity: 0;}
-              50% {transform: translateY(24.4%); opacity: 1;}
-              100% {transform: translateY(22.4%); opacity: 0;}
+              0%  {transform: translateY(102.5%); opacity: 0;}
+              50% {transform: translateY(74.4%); opacity: 1;}
+              100% {transform: translateY(12.4%); opacity: 0;}
             }            
           }                   
         }

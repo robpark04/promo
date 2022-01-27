@@ -19,7 +19,8 @@ import Purple3 from '../assets/header/particles/purple3.svg'
 import Purple4 from '../assets/header/particles/purple4.svg'
 
 import Particles from '../assets/header/particles.svg'
-import Video from '../assets/header/shroom-anim_02.mp4'
+import Video from '../assets/header/shroom-anim_02_1.mp4'
+import VideoAdaptive from '../assets/header/shroom-anim_02.mp4'
 import Top3 from '../assets/header/top3.png'
 
 import Discord from '../assets/services/discord.svg'
@@ -95,7 +96,7 @@ export default function HeaderBanner() {
         </div>
         <div className='threeD'>
           <div style={{ backgroundImage: `url(${Particles})`}} className='particles'/>
-          <video controls={false} src={Video} loop={true} muted={true} autoPlay={true} playsInline={true} />            
+          <video controls={false} src={window.innerWidth > 1024 ? Video : VideoAdaptive} loop={true} muted={true} autoPlay={true} playsInline={true} />            
           <div className='links'>
             {[{link: 'http://shrooms.battleverse.io', value: 'MINT'}, {link: 'https://opensea.io/collection/baby-combat-bots-g1', value: 'BUY'}].map((item, index) => (
               <a key={index} 
