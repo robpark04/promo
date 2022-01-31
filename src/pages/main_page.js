@@ -175,6 +175,8 @@ export default function Main() {
 
   return (
     <div className='mainPage'>
+    {(window.location.hash) !== '#allow' ?
+    <>
       <HeaderBanner />
       <div className='mission'>
         <h1>OUR MISSION</h1>
@@ -270,6 +272,12 @@ export default function Main() {
           ))}
         </div>
       </div>
+      </>
+      : (window.location.hash) === '#allow' &&
+        <div className='whitelist'>
+         sdfsdf
+        </div>
+      }
     </div>
   )
 }
