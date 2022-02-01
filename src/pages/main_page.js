@@ -5,6 +5,8 @@ import HeaderBanner from '../components/header_banner';
 import Characters from '../components/characters';
 import Roadmap from '../components/roadmap';
 
+import NftCheck from '../components/nftCheck';
+
 // CHARACTERS
 import frame1 from '../assets/mission/frame0.png'
 import frame2 from '../assets/mission/frame1.png'
@@ -275,7 +277,7 @@ export default function Main() {
       </>
       : (window.location.hash) === '#allow' &&
         <div className='whitelist'>
-         sdfsdf
+         <NftCheck/>
         </div>
       }
     </div>

@@ -1,0 +1,105 @@
+.playContainer {
+  width: 100vw;
+  height: calc(100vh - 376px);;
+  max-width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .connectWalletContainer {
+    border-radius: 12px;
+    width: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6%;
+    padding: 1.6%;
+    min-width: 200px;
+  }
+  .connectWallet {
+    border-radius: 14px;
+    color: white;
+    text-decoration: none;
+    padding: 4% 6%;
+    font-family: Dela Gothic One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 22px;
+    transition: all 0.2s;
+    background: rgba(114, 28, 255, 0.1);
+    border: 2px solid #721cff;
+    cursor: pointer;
+    &:hover {
+      background: #721cff;
+    }
+    @media (max-width: 800px) {
+      font-size: 18px;
+    }
+  }
+  .nftInfo{
+    border-radius: 14px;
+    color: white;
+    text-decoration: none;
+    padding: 0% 6%;
+    font-family: Dela Gothic One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 22px;
+    transition: all 0.2s;
+    background: rgba(114, 28, 255, 0.1);
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid #00ffa3;
+    @media (max-width: 800px) {
+      font-size: 18px;
+    }
+  }
+  .login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input{
+      width: 100%;
+      background-color: #07161f;
+      border: none;
+      border-radius: 8px;
+      padding: 4.5% 24%;
+      font-size: 18px;
+      color: white;
+      font-family: "Changa One";
+      font-style: italic;
+      font-weight: normal;
+      outline: none;
+      &:focus {
+        border: 2px solid #5416d6;
+        margin: -2px -2px;
+        overflow: hidden;
+      }
+      @media (max-width: 800px) {
+        font-size: 14px;
+      }
+      &:first-child{
+        margin-bottom: 4%;
+      }
+    }
+    button{
+      border-radius: 14px;
+      color: white;
+      text-decoration: none;
+      padding: 2.8% 6%;
+      font-family: Dela Gothic One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 18px;
+      transition: all 0.2s;
+      background: rgba(114, 28, 255, 0.1);
+      border: 2px solid #721cff;
+      &:hover {
+        background: #721cff;
+      }
+    }
+  }
+}
