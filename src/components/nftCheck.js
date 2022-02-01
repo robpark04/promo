@@ -96,12 +96,13 @@ async function signIn() {
   }
 
   const makeTransaction = () => {
-    axios.post(`http://127.0.0.1:5000/wallet_address`, { 
-        wallet: account
-     })
-    .then((response) => {
-        console.log(response)
-    })
+    alert('Нужна инфа как провести транзу')
+    // axios.post(`http://127.0.0.1:5000/wallet_address`, { 
+    //     wallet: account
+    //  })
+    // .then((response) => {
+    //     console.log(response)
+    // })
   }
 
   
