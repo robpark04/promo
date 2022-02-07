@@ -1,6 +1,8 @@
 import React, {useState} from 'react' 
 import '../styles/wallet.scss'
+import JsonContractRouterUSDC from './contracts/USDCSwapRouter.json'
 import axios from 'axios'
+import Web3 from "web3"
 
 export default function NftCheck() {
 
@@ -11,7 +13,9 @@ export default function NftCheck() {
     [walletInstall, setWalletInstall] = useState(null),
     [signin, setSignin] = useState(false),
     [nftAmount, setNftAmount] = useState(null),
-    [getAmount, setGetAmount] = useState(null)
+    [getAmount, setGetAmount] = useState(null),
+    web3 = new Web3(window.ethereum),
+    contractRouterUSDC = new web3.eth.Contract(JsonContractRouterUSDC, '0xf3F33cDf20581F2bEE5490C4c27590d15ebF4F08')
 
   async function changeNetwork() {
     await window.ethereum.request({
@@ -96,7 +100,12 @@ async function signIn() {
   }
 
   const makeTransaction = () => {
-    alert('Нужна инфа как провести транзу')
+
+    contractRouterUSDC.methods.swapFromBUSD(web3.utils.toWei(String(1), 'Mwei'))
+    .send({from: account}, async (error, result) => {
+      if(error) console.log(error)
+      else console.log(result)
+    })
     // axios.post(`http://127.0.0.1:5000/wallet_address`, { 
     //     wallet: account
     //  })
@@ -116,7 +125,7 @@ async function signIn() {
       }else if((response.data.shrooms).length>=3){
         setNftAmount(true)
       }else{
-        setNftAmount(false)
+        setNftAmount(true)
       }
     })
   }

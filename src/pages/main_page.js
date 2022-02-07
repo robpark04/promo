@@ -4,6 +4,7 @@ import '../styles/main_page.scss'
 import HeaderBanner from '../components/header_banner';
 import Characters from '../components/characters';
 import Roadmap from '../components/roadmap';
+import Partnership from '../components/partnership';
 
 import NftCheck from '../components/nftCheck';
 
@@ -253,6 +254,7 @@ export default function Main() {
         </div>
       </div>
       <Roadmap />
+      <Partnership />
       <div className='team' id="Team">
         <div className='blockInfo'>
           <h1>TEAM</h1>

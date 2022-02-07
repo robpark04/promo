@@ -17,7 +17,9 @@
     "react-slick": "^0.28.1",
     "sass": "^1.43.4",
     "scss": "^0.2.4",
-    "web-vitals": "^2.1.2"
+    "styled-components": "^5.3.3",
+    "web-vitals": "^2.1.2",
+    "web3": "^1.7.0"
   },
   "scripts": {
     "predeploy": "yarn run build",
