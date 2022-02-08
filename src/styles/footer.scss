@@ -53,6 +53,7 @@
       }
     }
     a {
+      -webkit-text-size-adjust: none;
       cursor: pointer;
       &:hover {
         text-decoration: underline;
