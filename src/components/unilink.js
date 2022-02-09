@@ -28,11 +28,11 @@ export default function Unilink() {
   const links = [
     { icon: Twitter, title: 'Twitter', link: 'https://twitter.com/BattleVerse_io' },
     { icon: Discord, title: 'Discord', link: 'https://discord.com/invite/HFVAnBS9qA' },
-    { icon: In, title: 'Linkedin', link: 'https://ru.linkedin.com/company/battleverse-io?trk=ppro_cprof' },
     { icon: Telegram, title: 'Telegram', link: 'https://t.me/battleverse_news' },
     { icon: Telegram, title: 'Telegram Chat', link: 'https://t.me/battleverse_io' },
     { icon: Medium,  title: 'Medium', link: 'https://battleverse.medium.com/' },
-    { icon: Youtube,  title: 'Youtube', link: 'https://www.youtube.com/c/BattleVerse/' }
+    { icon: Youtube,  title: 'Youtube', link: 'https://www.youtube.com/c/BattleVerse/' },
+    { icon: In, title: 'Linkedin', link: 'https://ru.linkedin.com/company/battleverse-io?trk=ppro_cprof' }
   ]
 
   const footer = [
