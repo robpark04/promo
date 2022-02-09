@@ -92,6 +92,7 @@
                 max-width: 520px;
                 margin: 1em 0 3em;
                 @media (max-width: 500px){
+                    width: 90%;
                     font-size: 14px;
                 }
             }
@@ -134,8 +135,13 @@
                         padding-right: 34.39px;
                     }
                 }
+                .telegram{
+                    padding-right: 32.39px;
+                    @media (max-width: 500px){
+                        padding-right: 20.39px;
+                    }
+                }
             }
-
         }
         footer{
             display: flex;
@@ -148,6 +154,9 @@
                 display: flex;
                 justify-content: center;
                 z-index: 1;
+                @media (max-width: 500px){
+                    padding-top: 5em;
+                }
                 a{
                     margin: 8px;
                 }

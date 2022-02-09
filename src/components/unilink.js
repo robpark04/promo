@@ -13,6 +13,7 @@ import In from '../assets/services/in.svg'
 import Telegram from '../assets/services/telegram.svg'
 import Twitter from '../assets/services/twitter.svg'
 import Medium from '../assets/services/medium.svg'
+import Youtube from '../assets/services/youtube.svg'
 import BV from '../assets/services/bv_favicon.svg'
 
 import DiscordFooter from '../assets/footer/discord.svg'
@@ -25,12 +26,13 @@ import YoutubeFooter from '../assets/footer/youtube.svg'
 export default function Unilink() {
 
   const links = [
+    { icon: Twitter, title: 'Twitter', link: 'https://twitter.com/BattleVerse_io' },
     { icon: Discord, title: 'Discord', link: 'https://discord.com/invite/HFVAnBS9qA' },
     { icon: In, title: 'Linkedin', link: 'https://ru.linkedin.com/company/battleverse-io?trk=ppro_cprof' },
     { icon: Telegram, title: 'Telegram', link: 'https://t.me/battleverse_news' },
-    { icon: Twitter, title: 'Twitter', link: 'https://twitter.com/BattleVerse_io' },
+    { icon: Telegram, title: 'Telegram Chat', link: 'https://t.me/battleverse_io' },
     { icon: Medium,  title: 'Medium', link: 'https://battleverse.medium.com/' },
-    { icon: BV,  title: 'Website', link: 'https://battleverse.io/' }
+    { icon: Youtube,  title: 'Youtube', link: 'https://www.youtube.com/c/BattleVerse/' }
   ]
 
   const footer = [
@@ -70,7 +72,7 @@ export default function Unilink() {
           {links.map((item, index) => (
             <a href={item.link} key={index} target="_blank" rel="noopener noreferrer">
               <img src={item.icon} alt={item.title} />
-              <span>
+              <span className={index===4 && 'telegram'}>
                 {item.title}
               </span>
             </a>
