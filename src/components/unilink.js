@@ -46,6 +46,7 @@ export default function Unilink() {
     document.body.style.width = '100%'
     document.body.style.height = '100%'
     document.body.style.overflowX = 'hidden'
+    document.body.style.background = '#07161f'
     document.body.style.position = 'absolute'
     
   }
