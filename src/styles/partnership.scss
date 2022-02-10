@@ -221,15 +221,13 @@
                         animation: linear infinite;
                         animation-name: dot;
                         @keyframes dot {
-                            0%  {transform: translate(random(10) * -10px + 30px, random(4)*20px + 50px); opacity: 1;}
-                            100% {transform: translate(0px, random(4)* -10px); opacity: 0;}
+                            0%  {transform: translate(random(10) * -10px + 50px, random(4)*20px + 40px); opacity: 1;}
+                            100% {transform: translate(0px, random(4)* -10px -20px); opacity: 0;}
                         }         
-                        @media (max-width: 600px) {
-                            @keyframes dot {
-                                0%  {transform: translate(random(10) * -10px + 30px, random(4)*25px + 70px); opacity: 1;}
-                                100% {transform: translate(0px, random(4)* -10px); opacity: 0;}
-                            }  
-                        }
+                    }
+                    &:nth-child(2n){
+                        width: 1px;
+                        height: 1px;
                     }
                 }
             }

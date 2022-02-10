@@ -156,7 +156,7 @@ export default function Partnership() {
                       style={{background: '#00C2FF', 
                         marginTop: Math.floor(Math.random() * 90) - 25 + "%",
                         marginLeft: Math.floor(Math.random() * 5) + "%",
-                        animationDuration: Math.floor(Math.random() * 30 + 8) + "s"
+                        animationDuration: Math.floor(Math.random() * 4 + 6) + "s"
                     }}/>
                 ))}
               </div>
