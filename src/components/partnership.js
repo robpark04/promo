@@ -21,6 +21,15 @@ import Truepnl from '../assets/partnership/Partnership/Truepnl.png'
 import Vespertine from '../assets/partnership/Partnership/Vespertine.png'
 import Whitelist from '../assets/partnership/Partnership/Whitelist.png'
 
+import ExcaliburCapital from '../assets/partnership/Partnership/logo-w.png'
+import Magicut from '../assets/partnership/Partnership/Magicut.png'
+import Pixelinc from '../assets/partnership/Partnership/Pixelinc.png'
+import Red_swiss from '../assets/partnership/Partnership/red_swiss.png'
+import SafeLaunch from '../assets/partnership/Partnership/SafeLaunch.png'
+import EmpireVenture from '../assets/partnership/Partnership/EmpireVenture.png'
+import Zephhyrus from '../assets/partnership/Partnership/Zephhyrus.png'
+
+
 // MEDIA 
 import Ap from '../assets/partnership/Media/ap.png'
 import AsiaOne from '../assets/partnership/Media/asiaOne.png'
@@ -52,12 +61,12 @@ import aRight from '../assets/partnership/arrowRight.svg'
 export default function Partnership() {
   
   const LAUNCHPADS = [
-    { img: Bullperks, link: ''},
-    { img: Oxbull, link: ''},
-    { img: Enjinstarter, link: ''},
-    { img: Ex, link: ''},
-    { img: Seedify, link: ''},
-    { img: GameStation, link: ''}
+    { img: Bullperks, link: 'https://bullperks.com/'},
+    { img: Oxbull, link: 'https://www.oxbull.tech/#/home'},
+    { img: Enjinstarter, link: 'https://enjinstarter.com/'},
+    { img: Ex, link: 'https://www.equinox.fund/'},
+    { img: Seedify, link: 'https://launchpad.seedify.fund/'},
+    { img: GameStation, link: 'https://www.gamestation.io/'}
   ]
 
   const PARTNERSHIP = [
@@ -80,7 +89,14 @@ export default function Partnership() {
     { img: Onchain },
     { img: Truepnl },
     { img: Vespertine },
-    { img: Whitelist }
+    { img: Whitelist },
+    { img: ExcaliburCapital },
+    { img: Magicut },
+    { img: Pixelinc },
+    { img: Red_swiss },
+    { img: SafeLaunch },
+    { img: EmpireVenture },
+    { img: Zephhyrus }
   ]
 
   const MEDIA = [
@@ -101,14 +117,20 @@ export default function Partnership() {
     { img: Coinpeake }
   ]
 
+  let [launchNum, setLaunchNum] = React.useState(0)
+  let [partnerNum, setPartnerNum] = React.useState(0)
+  let [mediaNum, setMediaNum] = React.useState(0)
+
   const partnershipDesctop = [
-    {header: ['LAUNCHPADS', 'PARTNERSHIP', 'MEDIA PARTNERSHIP'], partners: [LAUNCHPADS, PARTNERSHIP, MEDIA]}
+    { header: ['LAUNCHPADS', 'PARTNERSHIP', 'MEDIA PARTNERSHIP'], 
+      partners: [LAUNCHPADS, PARTNERSHIP, MEDIA], 
+      num: [launchNum, partnerNum, mediaNum] }
   ]
   
   const adaptivePartners = [
-    {header: ['LAUNCHPADS'], partners: [LAUNCHPADS],},
-    {header: ['PARTNERSHIP'], partners: [PARTNERSHIP],},
-    {header: ['MEDIA PARTNERSHIP'], partners: [MEDIA],}
+    { header: ['LAUNCHPADS'], partners: [LAUNCHPADS], num: [launchNum] },
+    { header: ['PARTNERSHIP'], partners: [PARTNERSHIP], num: [partnerNum] },
+    { header: ['MEDIA PARTNERSHIP'], partners: [MEDIA], num: [mediaNum] }
   ]
 
   let [num, setNum] = React.useState(0)
@@ -122,7 +144,7 @@ export default function Partnership() {
           ))}
         </div>
         <main>
-          {(item.partners[window.innerWidth > 600 ? num : 0]).map((item, index) => (
+          {((item.partners[window.innerWidth > 600 ? num : 0]).slice(item.num[window.innerWidth > 600 ? num : 0], item.num[window.innerWidth > 600 ? num : 0]+9)).map((item, index) => (
             <div className='container' key={index}>
               <div className='light' />
               <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -141,16 +163,45 @@ export default function Partnership() {
             </div>
           ))}
         </main>
-        {window.innerWidth > 600 &&
+        {(item.partners[window.innerWidth > 600 ? num : 0]).length > 9 &&
         <footer>
           <button>
-            <img src={aLeft} alt="left arrow" onClick={() => num===0 ? setNum(2) : setNum(num-1)}/>
+          {window.innerWidth > 600 ? 
+
+            <img src={aLeft} alt="left arrow" onClick={() => 
+            num===0&&launchNum-9>=0 ? setLaunchNum(launchNum-9) : num===0 ? setLaunchNum(Math.ceil((item.partners[num]).length/9)*9-9)
+            : num===1&&partnerNum-9>=0 ? setPartnerNum(partnerNum-9) : num===1 ? setPartnerNum(Math.ceil((item.partners[num]).length/9)*9-9) 
+            : mediaNum-9>=0 ? setMediaNum(mediaNum-9) : setMediaNum(Math.ceil((item.partners[num]).length/9)*9-9)
+              }/>
+              :
+              <img src={aLeft} alt="left arrow" onClick={() => 
+                index===0&&launchNum-9>=0 ? setLaunchNum(launchNum-9) : index===0 ? setLaunchNum(Math.ceil((item.partners[0]).length/9)*9-9)
+                : index===1&&partnerNum-9>=0 ? setPartnerNum(partnerNum-9) : index===1 ? setPartnerNum(Math.ceil((item.partners[0]).length/9)*9-9) 
+                : mediaNum-9>=0 ? setMediaNum(mediaNum-9) : setMediaNum(Math.ceil((item.partners[0]).length/9)*9-9)
+                  }/>}
           </button>
-          {[...Array(3).keys()].map((index) => (
-            <div key={index} onClick={() => setNum(index)}  className={num === index && 'active'}/>
-          ))}
+          {window.innerWidth > 600 ? 
+            [...Array(Math.ceil((item.partners[num]).length/9)).keys()].map((index) => (
+              <div key={index} onClick={() => num === 0 ? setLaunchNum(index*9) : num === 1 ? setPartnerNum(index*9) : setMediaNum(index*9)}  className={item.num[num] === index*9 && 'active'}/>
+            ))
+          :           
+            [...Array(Math.ceil((item.partners[0]).length/9)).keys()].map((indx) => (
+              <div key={indx} onClick={() => index === 0 ? setLaunchNum(indx*9) : index === 1 ? setPartnerNum(indx*9) : setMediaNum(indx*9)}  className={item.num[0] === indx*9 && 'active'}/>
+            ))}
           <button>
-            <img src={aRight} alt="left arrow" onClick={() => num===2 ? setNum(0) : setNum(num+1)}/>
+          {window.innerWidth > 600 ? 
+
+          <img src={aRight} alt="right arrow" onClick={() => 
+            num===0&&(item.partners[num]).length-9>launchNum ? setLaunchNum(launchNum+9) : num===0 ? setLaunchNum(0)
+             : num===1&&(item.partners[num]).length-9>partnerNum ? setPartnerNum(partnerNum+9) : num===1 ? setPartnerNum(0) 
+             : (item.partners[num]).length-9>mediaNum ? setMediaNum(mediaNum+9) : setMediaNum(0)
+             }/>
+             :
+             <img src={aRight} alt="right arrow" onClick={() => 
+              index===0&&(item.partners[0]).length-9>launchNum ? setLaunchNum(launchNum+9) : index===0 ? setLaunchNum(0)
+               : index===1&&(item.partners[0]).length-9>partnerNum ? setPartnerNum(partnerNum+9) : index===1 ? setPartnerNum(0) 
+               : (item.partners[0]).length-9>mediaNum ? setMediaNum(mediaNum+9) : setMediaNum(0)
+               }/>}
           </button>
         </footer>}
       </div>
