@@ -101,13 +101,13 @@ export default function Partnership() {
   ]
 
   const partnershipDesctop = [
-    {header: ['PARTNERSHIP', 'MEDIA PARTNERSHIP', 'LAUNCHPADS'], partners: [PARTNERSHIP, MEDIA, LAUNCHPADS]}
+    {header: ['LAUNCHPADS', 'PARTNERSHIP', 'MEDIA PARTNERSHIP'], partners: [LAUNCHPADS, PARTNERSHIP, MEDIA]}
   ]
   
   const adaptivePartners = [
+    {header: ['LAUNCHPADS'], partners: [LAUNCHPADS],},
     {header: ['PARTNERSHIP'], partners: [PARTNERSHIP],},
-    {header: ['MEDIA PARTNERSHIP'], partners: [MEDIA],},
-    {header: ['LAUNCHPADS'], partners: [LAUNCHPADS],}
+    {header: ['MEDIA PARTNERSHIP'], partners: [MEDIA],}
   ]
 
   let [num, setNum] = React.useState(0)
@@ -118,7 +118,7 @@ export default function Partnership() {
     <div className='partnershipContainer' key={index}>
       <div className='partnerHeader'>
         {(item.header).map((item, indx) => (
-          <button key={indx} onClick={() => setNum(indx)} className={(indx===num||window.innerWidth) < 600 && index===1 ? 'media_active active' : (indx===num||window.innerWidth) < 600 && 'active'}>{item}</button>
+          <button key={indx} onClick={() => setNum(indx)} className={(indx===num||window.innerWidth) < 600 && index===2 ? 'media_active active' : (indx===num||window.innerWidth) < 600 && 'active'}>{item}</button>
         ))}
       </div>
       <main>
