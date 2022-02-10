@@ -42,7 +42,7 @@
             letter-spacing: 0.04em;
             text-transform: uppercase;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            background: linear-gradient(170deg, #63a4c946 40%, #0c212e5d 92%);
+            background: linear-gradient(170deg, #63A3C9 40%, #0C212E 92%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             border: none;
@@ -207,17 +207,19 @@
                 .particle{
                     width: 2px;
                     height: 2px;
-                    animation: linear infinite;
-                    animation-name: dot;
-                    @keyframes dot {
-                        0%  {transform: translate(random(10) * -10px + 30px, random(4)*20px + 50px); opacity: 1;}
-                        100% {transform: translate(0px, random(4)* -10px); opacity: 0;}
-                    }         
-                    @media (max-width: 600px) {
+                    @media (min-width: 600px) {
+                        animation: linear infinite;
+                        animation-name: dot;
                         @keyframes dot {
-                            0%  {transform: translate(random(10) * -10px + 30px, random(4)*25px + 70px); opacity: 1;}
+                            0%  {transform: translate(random(10) * -10px + 30px, random(4)*20px + 50px); opacity: 1;}
                             100% {transform: translate(0px, random(4)* -10px); opacity: 0;}
-                        }  
+                        }         
+                        @media (max-width: 600px) {
+                            @keyframes dot {
+                                0%  {transform: translate(random(10) * -10px + 30px, random(4)*25px + 70px); opacity: 1;}
+                                100% {transform: translate(0px, random(4)* -10px); opacity: 0;}
+                            }  
+                        }
                     }
                 }
             }

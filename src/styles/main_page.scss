@@ -3,11 +3,10 @@
   margin: 0 auto;
   .mission {
     width: 100%;
-    padding: 2% 0 14%;
+    padding: 2% 0 9%;
     background: #041016;
     background-size: 100vw;
-    border-top-left-radius: 52px;
-    border-top-right-radius: 52px;
+    border-radius: 52px;
     @media (max-width: 800px) {
       border-top-left-radius: 36px;
       border-top-right-radius: 36px;

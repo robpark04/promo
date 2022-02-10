@@ -51,53 +51,54 @@ import aRight from '../assets/partnership/arrowRight.svg'
 
 export default function Partnership() {
   
+  const LAUNCHPADS = [
+    { img: Bullperks, link: ''},
+    { img: Oxbull, link: ''},
+    { img: Enjinstarter, link: ''},
+    { img: Ex, link: ''},
+    { img: Seedify, link: ''},
+    { img: GameStation, link: ''}
+  ]
+
   const PARTNERSHIP = [
-    {img: A2, link: 'https://2a.ventures/'},
-    {img: MagnusCapital, link: ''},
-    {img: AVG, link: ''},
-    {img: Ex, link: ''},
-    {img: BigBrainHoldings, link: 'https://www.bigbrain.holdings/'},
-    {img: BlueWheel, link: 'https://www.bluewheelcapital.com/'},
-    {img: Seedify_logo, link: 'https://launchpad.seedify.fund/'},
-    {img: CCK, link: 'https://cckventures.fund/'},
-    {img: CryptoOmg, link: 'https://cryptoomg.com/'},
-    {img: CryptoPing, link: 'https://cryptoping.tech/'},
-    {img: FrenchHunters, link: 'https://frenchhunters.ventures'},
-    {img: Enjinstarter, link: 'https://enjinstarter.com/'},
-    {img: GAP, link: 'https://www.greenaccesspartners.com/'},
-    {img: LegionVentures, link: 'https://www.legion.ventures/'},
-    {img: Onchain, link: 'https://onchain.gg/'},
-    {img: Truepnl, link: 'https://truepnl.com/'},
-    {img: Vespertine, link: 'https://www.vespertine.capital/'},
-    {img: Whitelist, link: 'https://whitelistventures.com/'}
+    { img: A2 },
+    { img: MagnusCapital },
+    { img: AVG },
+    { img: Ex },
+    { img: BigBrainHoldings },
+    { img: BlueWheel },
+    { img: Seedify_logo },
+    { img: CCK },
+    { img: Bullperks },
+    { img: CryptoOmg },
+    { img: CryptoPing },
+    { img: FrenchHunters },
+    { img: Enjinstarter },
+    { img: GAP },
+    { img: GameStation },
+    { img: LegionVentures },
+    { img: Onchain },
+    { img: Truepnl },
+    { img: Vespertine },
+    { img: Whitelist }
   ]
 
   const MEDIA = [
-    {img: Ap, link: 'https://apnews.com/'},
-    {img: AsiaOne, link: 'https://www.asiaone.com/'},
-    {img: Benzinga, link: 'https://www.benzinga.com/'},
-    {img: Bitcoinist, link: 'https://bitcoinist.com/'},
-    {img: Coinquora, link: 'https://coinquora.com/'},
-    {img: Fn, link: 'https://www.finanznachrichten.de/'},
-    {img: Investing, link: 'https://www.investing.com/'},
-    {img: Markerwatch, link: 'https://www.marketwatch.com/'},
-    {img: Menafn, link: 'https://menafn.com/'},
-    {img: Newsbtc, link: 'https://www.newsbtc.com/'},
-    {img: Xzx, link: 'https://0xzx.com/'},
-    {img: YahooFinance, link: 'https://finance.yahoo.com/'},
-    {img: YahooMoney, link: 'https://money.yahoo.com/'},
-    {img: YahooNews, link: 'https://news.yahoo.com/'},
-    {img: Coinpeake, link: 'https://www.coinspeaker.com/'}
-  ]
-
-
-  const LAUNCHPADS = [
-    {img: Bullperks, link: ''},
-    {img: Oxbull, link: ''},
-    {img: Enjinstarter, link: ''},
-    {img: Ex, link: ''},
-    {img: Seedify, link: ''},
-    {img: GameStation, link: ''}
+    { img: Ap  },
+    { img: AsiaOne },
+    { img: Benzinga },
+    { img: Bitcoinist  },
+    { img: Coinquora  },
+    { img: Fn },
+    { img: Investing },
+    { img: Markerwatch },
+    { img: Menafn  },
+    { img: Newsbtc },
+    { img: Xzx  },
+    { img: YahooFinance },
+    { img: YahooMoney },
+    { img: YahooNews },
+    { img: Coinpeake }
   ]
 
   const partnershipDesctop = [
@@ -113,47 +114,46 @@ export default function Partnership() {
   let [num, setNum] = React.useState(0)
 
   return(
-    (window.innerWidth > 600 ? partnershipDesctop :  adaptivePartners).map((item, index) => (
-
-    <div className='partnershipContainer' key={index}>
-      <div className='partnerHeader'>
-        {(item.header).map((item, indx) => (
-          <button key={indx} onClick={() => setNum(indx)} className={(indx===num||window.innerWidth) < 600 && index===2 ? 'media_active active' : (indx===num||window.innerWidth) < 600 && 'active'}>{item}</button>
-        ))}
-      </div>
-      <main>
-        {(item.partners[window.innerWidth > 600 ? num : 0]).map((item, index) => (
-          <div className='container'>
-            <div className='light' />
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
-              <img key={index} src={item.img} alt="partner"/>
-            </a>
-            <div className='particles'>
-              {[...Array(window.width > 1024 ? Math.floor(Math.random() * 4 + 4) : Math.floor(Math.random() * 2 + 3)).keys()].map((indx) => (
-                  <div className='particle' key={indx} 
-                  style={{background: '#00C2FF', 
-                    marginTop: Math.floor(Math.random() * 90) - 25 + "%",
-                    marginLeft: Math.floor(Math.random() * 5) + "%",
-                    animationDuration: Math.floor(Math.random() * 30 + 8) + "s"
-                  }}/>
-              ))}
+    window.innerWidth > 600 ? partnershipDesctop :  adaptivePartners).map((item, index) => (
+      <div className='partnershipContainer' key={index}>
+        <div className='partnerHeader'>
+          {(item.header).map((item, indx) => (
+            <button key={indx} onClick={() => setNum(indx)} className={(indx===num||window.innerWidth) < 600 && index===2 ? 'media_active active' : (indx===num||window.innerWidth) < 600 && 'active'}>{item}</button>
+          ))}
+        </div>
+        <main>
+          {(item.partners[window.innerWidth > 600 ? num : 0]).map((item, index) => (
+            <div className='container' key={index}>
+              <div className='light' />
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <img key={index} src={item.img} alt="partner"/>
+              </a>
+              <div className='particles'>
+                {[...Array(window.width > 1024 ? Math.floor(Math.random() * 4 + 4) : Math.floor(Math.random() * 2 + 3)).keys()].map((indx) => (
+                    <div className='particle' key={indx} 
+                      style={{background: '#00C2FF', 
+                        marginTop: Math.floor(Math.random() * 90) - 25 + "%",
+                        marginLeft: Math.floor(Math.random() * 5) + "%",
+                        animationDuration: Math.floor(Math.random() * 30 + 8) + "s"
+                    }}/>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </main>
-      {window.innerWidth > 600 &&
-      <footer>
-        <button>
-          <img src={aLeft} alt="left arrow" onClick={() => num===0 ? setNum(2) : setNum(num-1)}/>
-        </button>
-        {[...Array(3).keys()].map((index) => (
-          <div key={index} onClick={() => setNum(index)}  className={num === index && 'active'}/>
-        ))}
-        <button>
-          <img src={aRight} alt="left arrow" onClick={() => num===2 ? setNum(0) : setNum(num+1)}/>
-        </button>
-      </footer>}
-    </div>
-    ))
+          ))}
+        </main>
+        {window.innerWidth > 600 &&
+        <footer>
+          <button>
+            <img src={aLeft} alt="left arrow" onClick={() => num===0 ? setNum(2) : setNum(num-1)}/>
+          </button>
+          {[...Array(3).keys()].map((index) => (
+            <div key={index} onClick={() => setNum(index)}  className={num === index && 'active'}/>
+          ))}
+          <button>
+            <img src={aRight} alt="left arrow" onClick={() => num===2 ? setNum(0) : setNum(num+1)}/>
+          </button>
+        </footer>}
+      </div>
+    )
   )
 }
