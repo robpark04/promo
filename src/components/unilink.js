@@ -32,7 +32,8 @@ export default function Unilink() {
     { icon: Telegram, title: 'Telegram Chat', link: 'https://t.me/battleverse_io' },
     { icon: Medium,  title: 'Medium', link: 'https://battleverse.medium.com/' },
     { icon: Youtube,  title: 'Youtube', link: 'https://www.youtube.com/c/BattleVerse/' },
-    { icon: In, title: 'Linkedin', link: 'https://ru.linkedin.com/company/battleverse-io?trk=ppro_cprof' }
+    { icon: In, title: 'Linkedin', link: 'https://ru.linkedin.com/company/battleverse-io?trk=ppro_cprof' },
+    { icon: BV, title: 'Website', link: 'https://battleverse.io' }
   ]
 
   const footer = [
