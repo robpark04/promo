@@ -31,6 +31,7 @@ import Zephhyrus from '../assets/partnership/Partnership/Zephhyrus.png'
 
 
 // MEDIA 
+import Blockohooters from '../assets/partnership/Media/Blockohooters.png'
 import Ap from '../assets/partnership/Media/ap.png'
 import AsiaOne from '../assets/partnership/Media/asiaOne.png'
 import Benzinga from '../assets/partnership/Media/benzinga.png'
@@ -100,6 +101,7 @@ export default function Partnership() {
   ]
 
   const MEDIA = [
+    { img: Blockohooters },
     { img: Ap  },
     { img: AsiaOne },
     { img: Benzinga },
