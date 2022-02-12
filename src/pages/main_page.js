@@ -6,7 +6,6 @@ import Characters from '../components/characters';
 import Roadmap from '../components/roadmap';
 import Partnership from '../components/partnership';
 
-import NftCheck from '../components/nftCheck';
 
 // CHARACTERS
 import frame1 from '../assets/mission/frame0.png'
@@ -178,8 +177,6 @@ export default function Main() {
 
   return (
     <div className='mainPage'>
-    {(window.location.hash) !== '#allow' ?
-    <>
       <HeaderBanner />
       <div className='mission'>
         <h1>OUR MISSION</h1>
@@ -276,12 +273,6 @@ export default function Main() {
           ))}
         </div>
       </div>
-      </>
-      : (window.location.hash) === '#allow' &&
-        <div className='whitelist'>
-         <NftCheck/>
-        </div>
-      }
     </div>
   )
 }

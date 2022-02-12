@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/header';
 import Footer from './components/footer';
 import MainPage from './pages/main_page';
+import NftCheck from './components/nftCheck';
 import PrivacyPolicy from './components/privacy_policy';
 import LegalNotice from './components/legal_notice';
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/legal_notice" element={
             <><Header /><LegalNotice /><Footer /></>
           } />
+          <Route path="/allow" element={<><Header /><NftCheck /><Footer /></>} />
           <Route path="/unilink" element={<Unilink />} />
         </Routes>
       </Router>
