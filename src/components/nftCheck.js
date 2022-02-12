@@ -125,7 +125,7 @@ async function signIn() {
       }else if((response.data.shrooms).length>=3){
         setNftAmount(true)
       }else{
-        setNftAmount(true)
+        setNftAmount(false)
       }
     })
   }
