@@ -1,9 +1,15 @@
 import React, {useState} from 'react' 
 import '../styles/wallet.scss'
-import JsonContractRouterUSDC from './contracts/USDCSwapRouter.json'
+import JsonContractRouterUSDT from './contracts/USDT_Rinkeby.json'
+import JsonContractRouterSwap from './contracts/SWAP_Rinkeby.json'
+
 import axios from 'axios'
 import Web3 from "web3"
 
+const swapContractAddress = "0xbe81a513d341b9d4b254378c020b2c925561c3d2"
+const USDCContractAddress = "0xD9BA894E0097f8cC2BBc9D24D308b98e36dc6D02"
+
+const usdc = 50;
 export default function NftCheck() {
 
    let [signed, setSigned] = useState(false),
@@ -14,10 +20,12 @@ export default function NftCheck() {
     [signin, setSignin] = useState(false),
     [nftAmount, setNftAmount] = useState(null),
     [getAmount, setGetAmount] = useState(null),
+    [approving, setApproving] = useState(false),
     web3 = new Web3(window.ethereum),
-    contractRouterUSDC = new web3.eth.Contract(JsonContractRouterUSDC, '0xf3F33cDf20581F2bEE5490C4c27590d15ebF4F08')
-
+    contractRouterUSDT = new web3.eth.Contract(JsonContractRouterUSDT, USDCContractAddress),
+    contractRouterSWAP = new web3.eth.Contract(JsonContractRouterSwap, swapContractAddress)
   async function changeNetwork() {
+    /*
     await window.ethereum.request({
       method: 'wallet_addEthereumChain',
       params: [{ 
@@ -32,13 +40,28 @@ export default function NftCheck() {
           blockExplorerUrls: ['https://bscscan.com/'],
       }]
     })
+    */
+    await window.ethereum.request({
+      method: 'wallet_addEthereumChain',
+      params: [{ 
+          chainId: '0x04',
+          chainName: 'Rinkeby Chain',
+          nativeCurrency: {
+              name: 'Rinkeby Test Chain',
+              symbol: '1ETH',
+              decimals: 18,
+          },
+          rpcUrls: ['https://bsc-dataseed.binance.org/'],
+          blockExplorerUrls: ['https://bscscan.com/'],
+      }]
+    })
     setSigned(true)
   }
 
   async function checkNetwork() {
     window.ethereum.request({ method: 'net_version' })
     .then((response) => { 
-        if (response === '56'){
+        if (response === '4'){
             setSigned(true)
             setWalletConnection(true) 
         }else{
@@ -90,7 +113,7 @@ async function signIn() {
   }
 
   const handleNetworkChanged = () => {
-    if(Number(window.ethereum.networkVersion) === 56) enterAccount()
+    if(Number(window.ethereum.networkVersion) === 0x04) enterAccount()
     else setSigned(false)
   }
 
@@ -99,13 +122,22 @@ async function signIn() {
     window.ethereum.on('networkChanged', handleNetworkChanged);
   }
 
-  const makeTransaction = () => {
+  async function makeTransaction() {
 
-    contractRouterUSDC.methods.swapFromBUSD(web3.utils.toWei(String(1), 'Mwei'))
+   /* 
+   contractRouterUSDC.methods.swapFromBUSD(web3.utils.toWei(String(1), 'Mwei'))
     .send({from: account}, async (error, result) => {
       if(error) console.log(error)
       else console.log(result)
     })
+    */
+    await contractRouterUSDT.methods.approve(swapContractAddress, web3.utils.toWei('' + usdc)).send({
+      from: account
+    });
+   
+    await contractRouterSWAP.methods.Claim().send({
+      from: account
+    });
     // axios.post(`http://127.0.0.1:5000/wallet_address`, { 
     //     wallet: account
     //  })
@@ -125,7 +157,7 @@ async function signIn() {
       }else if((response.data.shrooms).length>=3){
         setNftAmount(true)
       }else{
-        setNftAmount(false)
+        setNftAmount(true) //false
       }
     })
   }
